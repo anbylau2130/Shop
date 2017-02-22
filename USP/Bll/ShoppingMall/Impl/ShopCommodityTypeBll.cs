@@ -21,46 +21,68 @@ namespace USP.Bll.ShoppingMall.Impl
         }
         public AjaxResult Active(int id, long @operator)
         {
-             AjaxResult result = new AjaxResult();
-
-            if (dal.Enable(id, @operator) > 0)
+            AjaxResult result = new AjaxResult();
+            var procResult = dal.Enable(id, @operator);
+            result.flag = procResult.IsSuccess;
+            if (procResult.IsSuccess)
             {
-                result.flag = true;
                 result.message = "激活成功！";
             }
             else
             {
-                result.flag = false;
-                result.message = "激活失败！";
+                result.message = procResult.ProcMsg;
             }
+           
             return result;
         }
 
-        public bool Add(ShopCommodityType model)
+        public AjaxResult Add(ShopCommodityType model)
         {
-            return dal.Add(model);
+            AjaxResult result = new AjaxResult();
+            var procResult = dal.Add(model);
+            result.flag = procResult.IsSuccess;
+            if (result.flag)
+            {
+                result.message = "新增成功！";
+            }
+            else
+            {
+                result.message = procResult.ProcMsg;
+            }
+            return result;
+           
         }
 
         public AjaxResult Cancel(int id, long @operator)
         {
             AjaxResult result = new AjaxResult();
-
-            if (dal.Cancel(id, @operator) > 0)
+            var procResult = dal.Cancel(id, @operator);
+            result.flag = procResult.IsSuccess;
+            if (result.flag)
             {
-                result.flag = true;
                 result.message = "注销成功！";
             }
             else
             {
-                result.flag = false;
-                result.message = "注销失败！";
+                result.message = procResult.ProcMsg;
             }
             return result;
         }
 
-        public bool Edit(ShopCommodityType model,long @operator)
+        public AjaxResult Edit(ShopCommodityType model,long @operator)
         {
-            return dal.Edit(model, @operator);
+            AjaxResult result = new AjaxResult();
+            var procResult = dal.Edit(model, @operator);
+            result.flag = procResult.IsSuccess;
+            if (result.flag)
+            {
+                result.message = "修改成功！";
+            }
+            else
+            {
+                result.message = procResult.ProcMsg;
+            }
+            return result;
         }
 
         public List<ShopCommodityType> GetAll()

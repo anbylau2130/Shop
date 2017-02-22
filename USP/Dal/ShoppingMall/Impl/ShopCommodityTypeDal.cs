@@ -13,25 +13,26 @@ namespace USP.Dal.ShoppingMall.Impl
     public class ShopCommodityTypeDal : IShopCommodityTypeDal
     {
         USPEntities db = new USPEntities();
-        public bool Add(ShopCommodityType model)
+        public ProcResult Add(ShopCommodityType model)
         {
-            int result;
+            ProcResult result=new ProcResult();
             try
             {
                 db.ShopCommodityType.Add(model);
-                result = db.SaveChanges();
+                result.IsSuccess = db.SaveChanges()>0;
             }
             catch (Exception ex)
             {
-                result = 0;
+                result.ProcMsg = ex.InnerException.Message;
                 LogUtil.Exception("ExceptionLogger", ex);
             }
-            return result > 0 ? true : false;
+            return result ;
         }
 
-        public int Auditor(ShopCommodityType ShopCommodityType, long auditor)
+        public ProcResult Auditor(ShopCommodityType ShopCommodityType, long auditor)
         {
-            int result;
+            ProcResult result = new ProcResult();
+           
             try
             {
                 var entity = GetModelById(ShopCommodityType.ID);
@@ -42,20 +43,20 @@ namespace USP.Dal.ShoppingMall.Impl
                     entity.Creator = auditor;
                 }
                 db.Entry<ShopCommodityType>((ShopCommodityType)entity).State = System.Data.Entity.EntityState.Modified;
-                result = db.SaveChanges();
+                result.IsSuccess = db.SaveChanges()>0;
             }
             catch (Exception ex)
             {
+                result.ProcMsg = ex.InnerException.Message;
                 LogUtil.Exception("ExceptionLogger", ex);
-                result = -1;
             }
             return result;
         }
 
 
-        public int Cancel(long id, long currentOperator)
+        public ProcResult Cancel(long id, long currentOperator)
         {
-            int result;
+            ProcResult result = new ProcResult();
             try
             {
                 var entity = GetModelById(id);
@@ -65,19 +66,20 @@ namespace USP.Dal.ShoppingMall.Impl
                     entity.CancelTime = DateTime.Now;
                 }
                 db.Entry<ShopCommodityType>((ShopCommodityType)entity).State = System.Data.Entity.EntityState.Modified;
-                result = db.SaveChanges();
+                result.IsSuccess = db.SaveChanges()>0;
             }
             catch (Exception ex)
             {
+                result.ProcMsg = ex.InnerException.Message;
                 LogUtil.Exception("ExceptionLogger", ex);
-                result = 0;
+               
             }
             return result;
         }
 
-        public bool Edit(ShopCommodityType model, long currentOperator)
+        public ProcResult Edit(ShopCommodityType model, long currentOperator)
         {
-            int result;
+            ProcResult result = new ProcResult();
             try
             {
                 var entity = GetModelById(model.ID);
@@ -89,19 +91,19 @@ namespace USP.Dal.ShoppingMall.Impl
                     entity.CreateTime = DateTime.Now;
                 }
                 db.Entry<ShopCommodityType>((ShopCommodityType)entity).State = System.Data.Entity.EntityState.Modified;
-                result = db.SaveChanges();
+                result.IsSuccess = db.SaveChanges()>0;
             }
             catch (Exception ex)
             {
+                result.ProcMsg = ex.InnerException.Message;
                 LogUtil.Exception("ExceptionLogger", ex);
-                result = 0;
             }
-            return result > 0 ? true : false;
+            return result ;
         }
 
-        public int Enable(long id, long currentOperator)
+        public ProcResult Enable(long id, long currentOperator)
         {
-            int result;
+            ProcResult result = new ProcResult();
             try
             {
                 var entity = GetModelById(id);
@@ -113,12 +115,12 @@ namespace USP.Dal.ShoppingMall.Impl
                     entity.CreateTime = DateTime.Now;
                 }
                 db.Entry<ShopCommodityType>((ShopCommodityType)entity).State = System.Data.Entity.EntityState.Modified;
-                result = db.SaveChanges();
+                result.IsSuccess = db.SaveChanges()>0;
             }
             catch (Exception ex)
             {
+                result.ProcMsg = ex.InnerException.Message;
                 LogUtil.Exception("ExceptionLogger", ex);
-                result = 0;
             }
             return result;
         }

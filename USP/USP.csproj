@@ -148,6 +148,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\ShoppingMall\Controllers\ShopCommodityTypeController.cs" />
+    <Compile Include="Areas\ShoppingMall\ShoppingMallAreaRegistration.cs" />
     <Compile Include="Areas\System\Controllers\BankController.cs" />
     <Compile Include="Areas\System\Controllers\ChangePasswordController.cs" />
     <Compile Include="Areas\System\Controllers\CorporationController.cs" />
@@ -440,6 +442,8 @@
     <Content Include="Static\Css\font-awesome.min.css" />
     <Content Include="Static\Css\jquery-confirm.min.css" />
     <Content Include="Static\Css\select2.min.css" />
+    <Content Include="Static\Css\shop\usp.shop.commoditytype.add.css" />
+    <Content Include="Static\Css\shop\usp.shop.commoditytype.index.css" />
     <Content Include="Static\Css\themes\black\accordion.css" />
     <Content Include="Static\Css\themes\black\calendar.css" />
     <Content Include="Static\Css\themes\black\combo.css" />
@@ -825,6 +829,11 @@
     <Content Include="Areas\System\Views\SysCorpType\Index.cshtml" />
     <Content Include="Areas\System\Views\SysCorpType\Add.cshtml" />
     <Content Include="Areas\System\Views\Operator\RelationSupplier.cshtml" />
+    <Content Include="Areas\ShoppingMall\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\ShoppingMall\Views\ShopCommodityType\Index.cshtml" />
+    <Content Include="Areas\ShoppingMall\Views\web.config" />
+    <Content Include="Areas\ShoppingMall\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\ShoppingMall\Views\ShopCommodityType\Add.cshtml" />
     <None Include="Properties\PublishProfiles\NewU.pubxml" />
     <Content Include="Static\fonts\fontawesome-webfont.eot">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -883,6 +892,8 @@
     <Content Include="Static\Js\respond.js" />
     <Content Include="Static\Js\respond.min.js" />
     <Content Include="Static\Js\select2.min.js" />
+    <Content Include="Static\Js\shop\usp.shop.commoditytype.add.js" />
+    <Content Include="Static\Js\shop\usp.shop.commoditytype.index.js" />
     <Content Include="Static\Js\toastr.min.js" />
     <Content Include="Static\Js\usp\usp.corporatin.corporations.js" />
     <Content Include="Static\Js\usp\usp.corporation.addcorporation.js" />
@@ -943,6 +954,7 @@
     <Content Include="Static\Js\usp\usp.shop.js" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Areas\ShoppingMall\Models\" />
     <Folder Include="Areas\System\Models\" />
     <Folder Include="obj\" />
     <Folder Include="Views\AuthorizeTest\" />

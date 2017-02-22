@@ -11,9 +11,9 @@ namespace USP.Bll.ShoppingMall
    public interface IShopCommodityTypeBll
     {
          AjaxResult Active(int id, long @operator);
-        bool Add(ShopCommodityType model);
+        AjaxResult Add(ShopCommodityType model);
         AjaxResult Cancel(int id, long @operator);
-        bool Edit(ShopCommodityType model, long @operator);
+        AjaxResult Edit(ShopCommodityType model, long @operator);
         List<ShopCommodityType> GetAll();
         List<SelectOption> GetShopCommodityTypeList(long id);
         ShopCommodityType GetModelById(long id);
