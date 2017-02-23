@@ -503,6 +503,23 @@
           <Property Name="Canceler" Type="bigint" />
           <Property Name="CancelTime" Type="datetime" />
         </EntityType>
+        <EntityType Name="SysDictionary">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Parent" Type="bigint" />
+          <Property Name="Reserve" Type="varchar" MaxLength="250" />
+          <Property Name="Remark" Type="varchar" MaxLength="250" />
+          <Property Name="Creator" Type="bigint" Nullable="false" />
+          <Property Name="Type" Type="varchar" MaxLength="50" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="Auditor" Type="bigint" />
+          <Property Name="AuditTime" Type="datetime" />
+          <Property Name="Canceler" Type="bigint" />
+          <Property Name="CancelTime" Type="datetime" />
+        </EntityType>
         <EntityType Name="SysLoginLog">
           <Key>
             <PropertyRef Name="ID" />
@@ -1023,6 +1040,7 @@
           <EntitySet Name="SysCorpStatus" EntityType="Self.SysCorpStatus" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SysCorpType" EntityType="Self.SysCorpType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SysCorpVocation" EntityType="Self.SysCorpVocation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SysDictionary" EntityType="Self.SysDictionary" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SysLoginLog" EntityType="Self.SysLoginLog" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SysMenu" EntityType="Self.SysMenu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SysMenuTemplate" EntityType="Self.SysMenuTemplate" Schema="dbo" store:Type="Tables" />
@@ -1397,6 +1415,7 @@
             <Parameter Name="strOrder" Mode="In" Type="String" />
             <Parameter Name="strOrderType" Mode="In" Type="String" />
           </FunctionImport>
+          <EntitySet Name="SysDictionary" EntityType="UspModel.SysDictionary" />
           </EntityContainer>
         <EntityType Name="IdCardImg">
           <Key>
@@ -2369,6 +2388,23 @@
           <Property Type="Int64" Name="Canceler" Nullable="true" />
           <Property Type="DateTime" Name="CancelTime" Nullable="true" Precision="23" />
         </ComplexType>
+        <EntityType Name="SysDictionary">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Parent" Type="Int64" />
+          <Property Name="Reserve" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Remark" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Creator" Type="Int64" Nullable="false" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Auditor" Type="Int64" />
+          <Property Name="AuditTime" Type="DateTime" Precision="3" />
+          <Property Name="Canceler" Type="Int64" />
+          <Property Name="CancelTime" Type="DateTime" Precision="3" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -3368,6 +3404,24 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <EntitySetMapping Name="SysDictionary">
+            <EntityTypeMapping TypeName="UspModel.SysDictionary">
+              <MappingFragment StoreEntitySet="SysDictionary">
+                <ScalarProperty Name="CancelTime" ColumnName="CancelTime" />
+                <ScalarProperty Name="Canceler" ColumnName="Canceler" />
+                <ScalarProperty Name="AuditTime" ColumnName="AuditTime" />
+                <ScalarProperty Name="Auditor" ColumnName="Auditor" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Creator" ColumnName="Creator" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Reserve" ColumnName="Reserve" />
+                <ScalarProperty Name="Parent" ColumnName="Parent" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

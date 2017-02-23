@@ -67,6 +67,7 @@ namespace USP.Context
         public virtual DbSet<Area> Area { get; set; }
         public virtual DbSet<SysBank> SysBank { get; set; }
         public virtual DbSet<ShopCommodityType> ShopCommodityType { get; set; }
+        public virtual DbSet<SysDictionary> SysDictionary { get; set; }
     
         public virtual int UP_AddMenu(string name, string icon)
         {

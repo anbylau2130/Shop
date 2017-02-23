@@ -12,7 +12,7 @@ namespace USP.Dal.ShoppingMall
 {
     public interface IShopCommodityTypeDal
     {
-         bool IsExisName(int id, string name);
+         bool IsExisName(long id, string name);
          List<ShopCommodityType> GetAll();
         List<UP_ShowShopCommodityType_Result> GetAll(int? pageIndex, int? pageSize, string whereStr, string strOrder, string strOrderType);
         ShopCommodityType GetModelById(long ID);

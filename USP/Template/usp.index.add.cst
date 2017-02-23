@@ -1,0 +1,245 @@
+﻿<%@ CodeTemplate Inherits="CodeTemplate"TargetLanguage="Text" Description="NetTiers main template."Debug="True" ResponseEncoding="UTF-8"%>
+
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Import Namespace="SchemaExplorer" %>
+
+<%-- 要打印的表 --%>
+<%@ Property Name="Table" Type="TableSchema" DeepLoad="True" Optional="False" Category="01. Getting Started - Required" Description="Database that the tables views, and stored procedures shouldbe based on. IMPORTANT!!! If SourceTables and SourceViews are left blank, theEntire Database will then be generated." %>
+<%@ Property Name="Area" Type="String" DeepLoad="True" Optional="False" Category="01. Getting Started - Required" Description="Database that the tables views, and stored procedures shouldbe based on. IMPORTANT!!! If SourceTables and SourceViews are left blank, theEntire Database will then be generated." %>
+<%@ Property Name="Controller" Type="String" DeepLoad="True" Optional="False" Category="01. Getting Started - Required" Description="Database that the tables views, and stored procedures shouldbe based on. IMPORTANT!!! If SourceTables and SourceViews are left blank, theEntire Database will then be generated." %>
+<%@ Property Name="Action" Type="String" DeepLoad="True" Optional="False" Category="01. Getting Started - Required" Description="Database that the tables views, and stored procedures shouldbe based on. IMPORTANT!!! If SourceTables and SourceViews are left blank, theEntire Database will then be generated." %>
+
+
+@model USP.Models.Entity.<%=Controller%>
+@{
+    ViewBag.Title = "<%=Action%>";
+}
+
+@*@section themes{
+    <link href="~/Static/Css/shop/usp.<%=Controller.ToLower()%>.<%=Action.ToLower()%>.css" rel="stylesheet" />
+}*@
+<div  class="easyui-panel" style="width: 100%; height: 100%">
+
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <div class="pull-right"><a href="javascript:history.go(-1)" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-chevron-left"></span>返回</a></div>
+        <span class="glyphicon glyphicon-plus"></span> 添加
+    </div>
+</div>
+
+@using (Html.BeginForm()){
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+         <%foreach(ColumnSchema col in Table.Columns){ %>
+         <div class="form-group">
+              @Html.LabelFor(model => model.<%=col.Name %>, htmlAttributes: new { @class = "control-label col-md-2" })
+              <div class="col-md-9">
+                  @Html.EditorFor(model => model.<%=col.Name %>, new { htmlAttributes = new { @class = "form-control" } })
+                  @Html.ValidationMessageFor(model => model.<%=col.Name %>, "", new { @class = "text-danger" })
+              </div>
+        </div>
+         <%} %>
+        <div class="form-group form-actions">
+            <div class="col-md-offset-2 col-xs-1 ">
+                <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>添加</button>
+            </div>
+        </div>
+    </div>
+}
+</div>
+@section scripts{
+    <script src="~/Static/Js/shop/usp.<%=Controller.ToLower()%>.<%=Action.ToLower()%>.js"></script>
+    <script type="text/javascript">
+    (function () {
+        usp.namespace("usp.shop.<%=Controller.ToLower()%>.<%=Action.ToLower()%>");
+
+        usp.<%=Controller.ToLower()%>.<%=Action.ToLower()%> = {
+            init : function (btnReturnId,basePage) {
+                usp.<%=Controller.ToLower()%>.<%=Action.ToLower()%>.eventInit.btnReturnInit(btnReturnId, basePage);
+            },
+            eventInit: {
+                btnReturnInit: function (id,basePage) {
+                    $(id).on("click", function () {
+                        location.href = basePage;
+                        return false;
+                    });
+                }
+            }
+        }
+    })(this);
+    
+    $(function () {
+        usp.init();
+
+        usp.shop.<%=Controller.ToLower()%>.<%=Action.ToLower()%>.init("#btnReturn", "'/<%=Area%>/<%=Controller%>/<%=Action%>");
+        if ('@TempData["returnMsgType"]' == 'error') {
+            toastr.error('@TempData["returnMsg"]');
+        }
+    })
+    </script>
+}
+
+
+/////////////////////////////////////////////////
+        [Privilege(Menu = "<%=Controller.ToLower()%>.<%=Action.ToLower()%>列表", Name = "新增")]
+        public ActionResult Add()
+        {
+            <%--ViewData["CorpTypeList"] = dropDownListService.InitCorpTypeDropDownList().Where(x => x.Text != "区域商户").ToList();--%>
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Add(<%=Controller%> model)
+        {
+            var currentUser = HttpContext.Session[Constants.USER_KEY] as USP.Models.POCO.User;
+            if (ModelState.IsValid)
+            {
+                AjaxResult result = <%=Controller.ToString().Substring(0,1).ToLower()+Controller.ToString().Substring(1,Controller.Length-1)%>Bll.Add(model);
+                if (result.flag)
+                {
+                    TempData["returnMsgType"] = "success";
+                    TempData["returnMsg"] = "添加成功";
+                    return View("Index");
+                }
+                else
+                {
+                    TempData["returnMsgType"] = "error";
+                    TempData["returnMsg"] = result.message;
+                }
+
+            }
+
+          <%-- ViewData["CorpTypeList"] = dropDownListService.InitCorpTypeDropDownList().Where(x => x.Text != "区域商户").ToList();--%>
+            return View(model);
+        }
+
+<script runat="template">
+
+//将数据库类型转化为C#类型
+
+public string DataType2CSharpType(System.Data.DbType dbType)
+
+{
+
+    switch (dbType)
+
+    {
+
+        case DbType.AnsiString:
+
+            return "string";
+
+        case DbType.AnsiStringFixedLength:
+
+            return "string";
+
+        case DbType.Binary:
+
+            return "byte[]";
+
+        case DbType.Boolean:
+
+            return "bool";
+
+        case DbType.Byte:
+
+            return "byte";
+
+        case DbType.Currency:
+
+            return "decimal";
+
+        case DbType.Date:
+
+            return "DateTime";
+
+        case DbType.DateTime:
+
+            return "DateTime";
+
+        case DbType.DateTime2:
+
+            return "DateTime";
+
+        case DbType.DateTimeOffset:
+
+            return "DateTime";
+
+        case DbType.Decimal:
+
+            return "decimal";
+
+        case DbType.Double:
+
+            return "double";
+
+        case DbType.Guid:
+
+            return "Guid";
+
+        case DbType.Int16:
+
+            return "short";
+
+        case DbType.Int32:
+
+            return "int";
+
+        case DbType.Int64:
+
+            return "long";
+
+        case DbType.Object:
+
+            return "object";
+
+        case DbType.SByte:
+
+            return "sbyte";
+
+        case DbType.Single:
+
+            return "float";
+
+        case DbType.String:
+
+            return "string";
+
+        case DbType.StringFixedLength:
+
+            return "string";
+
+        case DbType.Time:
+
+            return "TimeSpan";
+
+        case DbType.UInt16:
+
+            return "ushort";
+
+        case DbType.UInt32:
+
+            return "uint";
+
+        case DbType.UInt64:
+
+            return "ulong";
+
+        case DbType.VarNumeric:
+
+            return "decimal";
+
+        case DbType.Xml:
+
+            return "string";
+
+        default:
+
+            return "object";
+
+    }
+
+}
+
+</script>

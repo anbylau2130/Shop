@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using USP.Dal;
 using USP.Models.Entity;
 using USP.Models.POCO;
 
@@ -10,8 +11,8 @@ namespace USP.Bll.Impl
 {
     public class SysMenuBll : ISysMenuBll
     {
-        USP.Dal.ISysMenuDal sysMenuDal;
-        public SysMenuBll(USP.Dal.ISysMenuDal sysMenuDal)
+        ISysMenuDal sysMenuDal;
+        public SysMenuBll(ISysMenuDal sysMenuDal)
         {
             this.sysMenuDal = sysMenuDal;
         }

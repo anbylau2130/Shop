@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using USP.Attributes;
@@ -20,14 +21,12 @@ namespace USP.Areas.ShoppingMall.Controllers
         {
             this.shopCommodityTypeBll = CommodityType;
         }
-
         [MenuItem(Parent = "商城管理", Name = "商品类型管理", Icon = "glyphicon glyphicon-info-sign")]
         // GET: Supplier/Order
         public ActionResult Index()
         {
             return View();
         }
-
         [HttpPost]
         public ActionResult Index(string actionName)
         {
@@ -63,23 +62,26 @@ namespace USP.Areas.ShoppingMall.Controllers
             {
                 wherestr += "  and [" + type + "] like '%" + name + "%' ";
             }
-            var currentUser = HttpContext.Session[Constants.USER_KEY] as User;
-            //if (currentUser != null&&currentUser.SysOperator.ID!=0)
-            //    wherestr += " and FSUPPLIERID='" +currentUser.Supplier.FSUPPLIERID + "'";
-            var result = shopCommodityTypeBll.GetAll();
+            var result = shopCommodityTypeBll.GetAll(page, rows, wherestr.ToString(), "", "");
             return Json(result, JsonRequestBehavior.AllowGet);
         }
-
         [Privilege(Menu = "商品类型管理", Name = "新增")]
         public ActionResult Add()
         {
             return View();
         }
-
         [HttpPost]
         public ActionResult Add(ShopCommodityType model)
         {
             var currentUser = HttpContext.Session[Constants.USER_KEY] as USP.Models.POCO.User;
+            
+            if (shopCommodityTypeBll.IsExisName(model.ID, model.Name).flag)
+            {
+                TempData["returnMsgType"] = "error";
+                TempData["returnMsg"] = "已存在相同的类型！";
+                return View(model);
+            }
+
             if (ModelState.IsValid)
             {
                 model.CreateTime = DateTime.Now;
@@ -98,10 +100,71 @@ namespace USP.Areas.ShoppingMall.Controllers
                     TempData["returnMsgType"] = "error";
                     TempData["returnMsg"] = result.message;
                 }
-
+               
             }
 
             return View(model);
+        }
+        [Privilege(Menu = "商品类型管理", Name = "修改")]
+        public ActionResult Edit(string id)
+        {
+            long idParse;
+            ShopCommodityType model = new ShopCommodityType();
+            if (long.TryParse(id, out idParse))
+            {
+                model = shopCommodityTypeBll.GetModelById(idParse);
+            }
+            return View(model);
+        }
+        [HttpPost]
+        public ActionResult Edit(ShopCommodityType model)
+        {
+            var currentUser = HttpContext.Session[Constants.USER_KEY] as USP.Models.POCO.User;
+            model.Creator = currentUser.SysOperator.ID;
+            model.CreateTime = DateTime.Now;
+            model.Auditor = null;
+            model.AuditTime = null;
+            if (shopCommodityTypeBll.IsExisName(model.ID, model.Name).flag)
+            {
+                TempData["returnMsgType"] = "error";
+                TempData["returnMsg"] = "已存在相同的类型！";
+                return View(model);
+            }
+            if (ModelState.IsValid)
+            {
+                var result = shopCommodityTypeBll.Edit(model, currentUser.SysOperator.ID);
+                TempData["isSuccess"] = result.flag.ToString();
+                if (result.flag)
+                {
+                    TempData["MessageInfo"] = "完善信息成功!";
+                    return View("Index");
+                }
+                else
+                {
+                    TempData["MessageInfo"] = result.message;
+                }
+            }else
+            {
+                ModelState.AddModelError("Name", "完善信息失败!");
+            }
+            return View(model);
+        }
+
+
+
+
+        [Privilege(Menu = "商品类型管理", Name = "注销")]
+        [HttpPost]
+        public ActionResult Cancel(int id)
+        {
+            return Json(shopCommodityTypeBll.Cancel(id, ((User)HttpContext.Session[Common.Constants.USER_KEY]).SysOperator.ID));
+        }
+
+        [Privilege(Menu = "商品类型管理", Name = "激活")]
+        [HttpPost]
+        public ActionResult Active(int id)
+        {
+            return Json(shopCommodityTypeBll.Active(id, ((User)HttpContext.Session[Common.Constants.USER_KEY]).SysOperator.ID));
         }
 
 

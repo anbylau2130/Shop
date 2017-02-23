@@ -112,7 +112,7 @@ namespace USP.Bll.ShoppingMall.Impl
             return dal.GetModelById(id);
         }
        
-        public AjaxResult IsExisName(int id, string name)
+        public AjaxResult IsExisName(long id, string name)
         {
             AjaxResult result = new AjaxResult();
             if (dal.IsExisName(id, name))
@@ -126,6 +126,11 @@ namespace USP.Bll.ShoppingMall.Impl
                 result.message = "";
             }
             return result;
+        }
+
+        public List<UP_ShowShopCommodityType_Result> GetAll(int? pageIndex, int? pageSize, string whereStr, string strOrder, string strOrderType)
+        {
+            return dal.GetAll(pageIndex, pageSize, whereStr, strOrder, strOrderType);
         }
     }
 }

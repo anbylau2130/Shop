@@ -86,12 +86,16 @@
                     striped: true,
                     columns: [
                         [
-                            {
-                                field: '交货日期', title: '交货日期', width: 150,
-                                formatter: function (val) {
-                                    return usp.ParseUTCDate(val);
-                                }
-                            },
+                              <%foreach(ColumnSchema col in Table.Columns){ %>
+                              {
+                                   field: '<%=col.Name %>', title: '<%=col.Name %>', width: 150,
+                                   <% if ( DataType2CSharpType(col.DataType)=="DateTime"){ %>
+                                    formatter: function (val) {
+                                        return usp.ParseUTCDate(val);
+                                    }
+                                   <%} %>
+                               },
+                              <% } %>
                         ]
                     ],
                     toolbar: toolbarmenu + "," + toolbarsearch,
@@ -308,7 +312,7 @@
             return Json(result, JsonRequestBehavior.AllowGet);
         }
     }
-
+    
 ///////////////////////////////////////////////////////
 
 Create PROC UP_Show**

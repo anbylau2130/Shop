@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using USP.Context;
 using USP.Dal;
 using USP.Models.Entity;
 using USP.Models.POCO;
@@ -72,7 +73,7 @@ namespace USP.Bll.Impl
             var roleMenus = new List<SysMenu>();
 
             var list = sysMenuTemplateDal.GetCorpList(corpType).Select(x => x.Menu).ToList();
-            roleMenus = new USP.Context.USPEntities().SysMenu.Where(x => list.Contains(x.ID)).ToList();
+            roleMenus = new USPEntities().SysMenu.Where(x => list.Contains(x.ID)).ToList();
             GetCorpTypeMenuTree(tree, corpTypeMenus, roleMenus, 0);
 
             return tree;

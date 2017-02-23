@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Title";
+}
+
+@section themes{
+    <link href="~/Static/Css/usp/usp.dictionary.index.css" rel="stylesheet" />
+}
+    <div class="panel panel-info" style="height:100%">
+        <div class="panel-heading">
+            字典信息
+            <button id="btnReturn" type="button" class="btn btn-primary btn-xs pull-right">返回</button>
+        </div>
+        <div class="panel-body panel-fit">
+                <div id="p" class="easyui-panel"  data-options="width:300"  style="height:100%"  >
+                   
+                    <div class="panel panel-default">
+                        <div class="panel-heading">字典数据</div>
+                        <div class="panel-body panel-fit">
+                            <ul id="tt" class="easyui-tree" data-options="url:'',method:'post',animate:true"></ul>
+                        </div>
+                    </div>
+                  
+                </div>
+        </div>
+    </div>
+@section scripts{
+    @*<script src="~/Static/Js/shop/usp.shop.dictionary.index.js"></script>*@
+
+    <script type="text/javascript">
+        $(function () {
+            usp.init();
+           
+        })
+    </script>
+}

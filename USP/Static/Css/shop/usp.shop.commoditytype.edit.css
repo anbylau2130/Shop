@@ -1,0 +1,11 @@
+﻿body {
+}
+#fg-ID,
+#fg-Creator,
+#fg-CreateTime,
+#fg-Auditor,
+#fg-AuditTime,
+#fg-Canceler,#fg-CancelTime
+{
+    display: none;
+}

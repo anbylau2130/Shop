@@ -1,0 +1,451 @@
+﻿<%@ CodeTemplate Inherits="CodeTemplate"TargetLanguage="Text" Description="NetTiers main template."Debug="True" ResponseEncoding="UTF-8"%>
+
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Import Namespace="SchemaExplorer" %>
+
+<%-- 要打印的表 --%>
+<%@ Property Name="Table" Type="TableSchema" DeepLoad="True" Optional="False" Category="01. Getting Started - Required" Description="Database that the tables views, and stored procedures shouldbe based on. IMPORTANT!!! If SourceTables and SourceViews are left blank, theEntire Database will then be generated." %>
+
+-----------------------------IDAL----------------------------------------------------
+    public interface I<%=Table.Name%>Dal
+    {
+         bool IsExisName(long id, string name);
+        List<<%=Table.Name%>> GetAll();
+        List<UP_<%=Table.Name%>_Result> GetAll(int? pageIndex, int? pageSize, string whereStr, string strOrder, string strOrderType);
+        <%=Table.Name%> GetModelById(long ID);
+        ProcResult Enable(long id, long currentOperator);
+        ProcResult Edit(<%=Table.Name%> model, long currentOperator);
+        ProcResult Cancel(long id, long currentOperator);
+
+        ProcResult Auditor(<%=Table.Name%> model, long auditor);
+        ProcResult Add(<%=Table.Name%> model);
+    }
+-------------------------DAL----------------------------------------------------------
+   public class <%=Table.Name%>Dal : I<%=Table.Name%>Dal
+    {
+        USPEntities db = new USPEntities();
+        public ProcResult Add(<%=Table.Name%> model)
+        {
+            ProcResult result=new ProcResult();
+            try
+            {
+                db.<%=Table.Name%>.Add(model);
+                result.IsSuccess = db.SaveChanges()>0;
+            }
+            catch (Exception ex)
+            {
+                result.ProcMsg = ex.InnerException.Message;
+                LogUtil.Exception("ExceptionLogger", ex);
+            }
+            return result ;
+        }
+
+        public ProcResult Auditor(<%=Table.Name%> model, long auditor)
+        {
+            ProcResult result = new ProcResult();
+           
+            try
+            {
+                var entity = GetModelById(model.ID);
+                if (entity != null)
+                {
+                    entity.Auditor = auditor;
+                    entity.AuditTime = DateTime.Now;
+                    entity.Creator = auditor;
+                }
+                db.Entry<<%=Table.Name%>>((<%=Table.Name%>)entity).State = System.Data.Entity.EntityState.Modified;
+                result.IsSuccess = db.SaveChanges()>0;
+            }
+            catch (Exception ex)
+            {
+                result.ProcMsg = ex.InnerException.Message;
+                LogUtil.Exception("ExceptionLogger", ex);
+            }
+            return result;
+        }
+
+
+        public ProcResult Cancel(long id, long currentOperator)
+        {
+            ProcResult result = new ProcResult();
+            try
+            {
+                var entity = GetModelById(id);
+                if (entity != null)
+                {
+                    entity.Canceler = currentOperator;
+                    entity.CancelTime = DateTime.Now;
+                }
+                db.Entry<<%=Table.Name%>>((<%=Table.Name%>)entity).State = System.Data.Entity.EntityState.Modified;
+                result.IsSuccess = db.SaveChanges()>0;
+            }
+            catch (Exception ex)
+            {
+                result.ProcMsg = ex.InnerException.Message;
+                LogUtil.Exception("ExceptionLogger", ex);
+               
+            }
+            return result;
+        }
+
+        public ProcResult Edit(<%=Table.Name%> model, long currentOperator)
+        {
+            ProcResult result = new ProcResult();
+            try
+            {
+                var entity = GetModelById(model.ID);
+                if (entity != null)
+                {
+                    entity.Name = model.Name;
+                    entity.Remark = model.Remark;
+                    entity.Creator = currentOperator;
+                    entity.CreateTime = DateTime.Now;
+                }
+                db.Entry<<%=Table.Name%>>((<%=Table.Name%>)entity).State = System.Data.Entity.EntityState.Modified;
+                result.IsSuccess = db.SaveChanges()>0;
+            }
+            catch (Exception ex)
+            {
+                result.ProcMsg = ex.InnerException.Message;
+                LogUtil.Exception("ExceptionLogger", ex);
+            }
+            return result ;
+        }
+
+        public ProcResult Enable(long id, long currentOperator)
+        {
+            ProcResult result = new ProcResult();
+            try
+            {
+                var entity = GetModelById(id);
+                if (entity != null)
+                {
+                    entity.Canceler = null;
+                    entity.CancelTime = null;
+                    entity.Auditor = currentOperator;
+                    entity.AuditTime = DateTime.Now;
+                }
+                db.Entry<<%=Table.Name%>>((<%=Table.Name%>)entity).State = System.Data.Entity.EntityState.Modified;
+                result.IsSuccess = db.SaveChanges()>0;
+            }
+            catch (Exception ex)
+            {
+                result.ProcMsg = ex.InnerException.Message;
+                LogUtil.Exception("ExceptionLogger", ex);
+            }
+            return result;
+        }
+
+        public <%=Table.Name%> GetModelById(long ID)
+        {
+            return db.<%=Table.Name%>.FirstOrDefault(x => x.ID == ID);
+        }
+
+        public List<UP_Show<%=Table.Name%>_Result> GetAll(int? pageIndex, int? pageSize, string whereStr, string strOrder, string strOrderType)
+        {
+            try
+            {
+                return (from i in db.UP_Show<%=Table.Name%>(pageIndex, pageSize, whereStr, strOrder, strOrderType).ToList()
+                        select i).ToList();
+            }
+            catch (Exception ex)
+            {
+                LogUtil.Exception("ExceptionLogger", ex);
+                return new List<UP_Show<%=Table.Name%>_Result>();
+            }
+        }
+
+
+
+
+        public List<<%=Table.Name%>> GetAll()
+        {
+            return db.<%=Table.Name%>.Where(x => x.Canceler == null).ToList();
+        }
+
+        public bool IsExisName(long id, string name)
+        {
+            return db.<%=Table.Name%>.Where(x => x.ID != id && x.Name == name).Count() > 0 ? true : false;
+        }
+
+    }
+    
+    
+    
+    
+-------------------------IBLL---------------------------------------------------------------------------
+
+
+    public interface I<%=Table.Name%>Bll
+    {
+        AjaxResult Active(int id, long @operator);
+        AjaxResult Add(<%=Table.Name%> model);
+        AjaxResult Cancel(int id, long @operator);
+        AjaxResult Edit(<%=Table.Name%> model, long @operator);
+        List<<%=Table.Name%>> GetAll();
+        List<SelectOption> Get<%=Table.Name%>List(long id);
+        <%=Table.Name%> GetModelById(long id);
+        AjaxResult IsExisName(long id, string name);
+        List<UP_Show<%=Table.Name%>_Result> GetAll(int? pageIndex, int? pageSize, string whereStr, string strOrder, string strOrderType);
+    }
+    
+    
+--------------------------BLL---------------------------------------------------------------------------
+
+
+ public class <%=Table.Name%>Bll : I<%=Table.Name%>Bll
+    {
+
+        I<%=Table.Name%>Dal dal;
+
+        public <%=Table.Name%>Bll(I<%=Table.Name%>Dal dal)
+        {
+            this.dal = dal;
+           
+        }
+        public AjaxResult Active(int id, long @operator)
+        {
+            AjaxResult result = new AjaxResult();
+            var procResult = dal.Enable(id, @operator);
+            result.flag = procResult.IsSuccess;
+            if (procResult.IsSuccess)
+            {
+                result.message = "激活成功！";
+            }
+            else
+            {
+                result.message = procResult.ProcMsg;
+            }
+           
+            return result;
+        }
+
+        public AjaxResult Add(<%=Table.Name%> model)
+        {
+            AjaxResult result = new AjaxResult();
+            var procResult = dal.Add(model);
+            result.flag = procResult.IsSuccess;
+            if (result.flag)
+            {
+                result.message = "新增成功！";
+            }
+            else
+            {
+                result.message = procResult.ProcMsg;
+            }
+            return result;
+           
+        }
+
+        public AjaxResult Cancel(int id, long @operator)
+        {
+            AjaxResult result = new AjaxResult();
+            var procResult = dal.Cancel(id, @operator);
+            result.flag = procResult.IsSuccess;
+            if (result.flag)
+            {
+                result.message = "注销成功！";
+            }
+            else
+            {
+                result.message = procResult.ProcMsg;
+            }
+            return result;
+        }
+
+        public AjaxResult Edit(<%=Table.Name%> model,long @operator)
+        {
+            AjaxResult result = new AjaxResult();
+            var procResult = dal.Edit(model, @operator);
+            result.flag = procResult.IsSuccess;
+            if (result.flag)
+            {
+                result.message = "修改成功！";
+            }
+            else
+            {
+                result.message = procResult.ProcMsg;
+            }
+            return result;
+        }
+
+        public List<<%=Table.Name%>> GetAll()
+        {
+            return dal.GetAll();
+        }
+
+        public List<SelectOption> Get<%=Table.Name%>List(long id)
+        {
+            var entity = dal.GetAll();
+            List<SelectOption> list = new List<SelectOption>();
+            foreach (var v in entity)
+            {
+                var temp = new SelectOption()
+                {
+                    id = v.ID.ToString(),
+                    text = v.Name,
+                    selected = v.ID == id
+                };
+                list.Add(temp);
+            }
+            return list;
+        }
+
+        public <%=Table.Name%> GetModelById(long id)
+        {
+            return dal.GetModelById(id);
+        }
+       
+        public AjaxResult IsExisName(long id, string name)
+        {
+            AjaxResult result = new AjaxResult();
+            if (dal.IsExisName(id, name))
+            {
+                result.flag = true;
+                result.message = "已经存在该名称！";
+            }
+            else
+            {
+                result.flag = false;
+                result.message = "";
+            }
+            return result;
+        }
+
+        public List<UP_Show<%=Table.Name%>_Result> GetAll(int? pageIndex, int? pageSize, string whereStr, string strOrder, string strOrderType)
+        {
+            return dal.GetAll(pageIndex, pageSize, whereStr, strOrder, strOrderType);
+        }
+        
+        
+        -----------------------------------------finish-------------------
+    
+<script runat="template">
+
+//将数据库类型转化为C#类型
+
+public string DataType2CSharpType(System.Data.DbType dbType)
+
+{
+
+    switch (dbType)
+
+    {
+
+        case DbType.AnsiString:
+
+            return "string";
+
+        case DbType.AnsiStringFixedLength:
+
+            return "string";
+
+        case DbType.Binary:
+
+            return "byte[]";
+
+        case DbType.Boolean:
+
+            return "bool";
+
+        case DbType.Byte:
+
+            return "byte";
+
+        case DbType.Currency:
+
+            return "decimal";
+
+        case DbType.Date:
+
+            return "DateTime";
+
+        case DbType.DateTime:
+
+            return "DateTime";
+
+        case DbType.DateTime2:
+
+            return "DateTime";
+
+        case DbType.DateTimeOffset:
+
+            return "DateTime";
+
+        case DbType.Decimal:
+
+            return "decimal";
+
+        case DbType.Double:
+
+            return "double";
+
+        case DbType.Guid:
+
+            return "Guid";
+
+        case DbType.Int16:
+
+            return "short";
+
+        case DbType.Int32:
+
+            return "int";
+
+        case DbType.Int64:
+
+            return "long";
+
+        case DbType.Object:
+
+            return "object";
+
+        case DbType.SByte:
+
+            return "sbyte";
+
+        case DbType.Single:
+
+            return "float";
+
+        case DbType.String:
+
+            return "string";
+
+        case DbType.StringFixedLength:
+
+            return "string";
+
+        case DbType.Time:
+
+            return "TimeSpan";
+
+        case DbType.UInt16:
+
+            return "ushort";
+
+        case DbType.UInt32:
+
+            return "uint";
+
+        case DbType.UInt64:
+
+            return "ulong";
+
+        case DbType.VarNumeric:
+
+            return "decimal";
+
+        case DbType.Xml:
+
+            return "string";
+
+        default:
+
+            return "object";
+
+    }
+
+}
+
+</script>

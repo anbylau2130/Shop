@@ -14,7 +14,7 @@ namespace USP.Bll.Impl
     public class SysSkinBll : ISysSkinBll
     {
         ISysSkinDal sysSkinDal;
-        public SysSkinBll(USP.Dal.ISysSkinDal sysSkinDal)
+        public SysSkinBll(ISysSkinDal sysSkinDal)
         {
             this.sysSkinDal = sysSkinDal;
         }

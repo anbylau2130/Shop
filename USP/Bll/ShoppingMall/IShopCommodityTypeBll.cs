@@ -17,6 +17,7 @@ namespace USP.Bll.ShoppingMall
         List<ShopCommodityType> GetAll();
         List<SelectOption> GetShopCommodityTypeList(long id);
         ShopCommodityType GetModelById(long id);
-        AjaxResult IsExisName(int id, string name);
+        AjaxResult IsExisName(long id, string name);
+        List<UP_ShowShopCommodityType_Result> GetAll(int? pageIndex, int? pageSize, string whereStr, string strOrder, string strOrderType);
     }
 }

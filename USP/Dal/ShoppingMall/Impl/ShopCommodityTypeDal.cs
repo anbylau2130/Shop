@@ -111,8 +111,8 @@ namespace USP.Dal.ShoppingMall.Impl
                 {
                     entity.Canceler = null;
                     entity.CancelTime = null;
-                    entity.Creator = currentOperator;
-                    entity.CreateTime = DateTime.Now;
+                    entity.Auditor = currentOperator;
+                    entity.AuditTime = DateTime.Now;
                 }
                 db.Entry<ShopCommodityType>((ShopCommodityType)entity).State = System.Data.Entity.EntityState.Modified;
                 result.IsSuccess = db.SaveChanges()>0;
@@ -152,7 +152,7 @@ namespace USP.Dal.ShoppingMall.Impl
             return db.ShopCommodityType.Where(x => x.Canceler == null).ToList();
         }
 
-        public bool IsExisName(int id, string name)
+        public bool IsExisName(long id, string name)
         {
             return db.ShopCommodityType.Where(x => x.ID != id && x.Name == name).Count() > 0 ? true : false;
         }

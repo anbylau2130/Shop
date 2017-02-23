@@ -15,9 +15,9 @@ namespace USP.Bll
         AjaxResult CheckSso(HttpContextBase httpContext);
 
         #region libei
-        USP.Models.Entity.SysOperator GetModel(long @operator);
-        int Add(USP.Models.Entity.SysOperator model);
-        AjaxResult Edit(USP.Models.Entity.SysOperator model);
+        SysOperator GetModel(long @operator);
+        int Add(SysOperator model);
+        AjaxResult Edit(SysOperator model);
         #endregion
 
         List<SysRole> GetRoleList(Int64 corpid);
