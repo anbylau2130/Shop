@@ -70,4 +70,8 @@ alter table SysRolePrivilege add constraint FK_SysRolePrivilege_Privilege foreig
 alter table SysPrivilege add constraint FK_SysPrivilege_Parent foreign key(Parent) references SysPrivilege(ID)
 alter table SysPrivilegeTemplate add constraint FK_SysPrivilegeTemplate_Privilege foreign key(Privilege) references SysPrivilege(ID)
 alter table SysArea add constraint FK_SysArea_Parent foreign key(Parent) references SysArea(Code)
-alter table SysDictionary add constraint FK_SysDictionary_Parent foreign key(Parent) references SysDictionary_Paren(Code)
+alter table SysDictionary add constraint FK_SysDictionary_Parent foreign key(Parent) references SysDictionary(ID)
+alter table CommodityType add constraint FK_CommodityType_Parent foreign key(Parent) references CommodityType(ID)
+--CONSTRAINT PK_CommodityType_ID primary key(ID),
+--CONSTRAINT UK_CommodityType_Name unique(Name),
+--constraint FK_CommodityType_Parent foreign key(Parent) references CommodityType(ID)

@@ -4,28 +4,29 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using USP.Attributes;
-using USP.Bll;
+using USP.Bll.ShoppingMall;
 using USP.Common;
 using USP.Controllers;
 using USP.Models.Entity;
 using USP.Models.POCO;
 
-namespace USP.Areas.System.Controllers
+namespace USP.Areas.ShoppingMall.Controllers
 {
-    public class DictionaryController : SysPrivilegeController
+    [Menu(Name = "商城管理", Icon = "icon-building")]
+    public class ComodityTypeController : SysPrivilegeController
     {
-       
-        ISysDictionaryBll sysDictionaryBll;
-     
-        public DictionaryController(ISysDictionaryBll sysDictionaryBll)
+        ICommodityTypeBll commodityTypeBll;
+        public ComodityTypeController(ICommodityTypeBll CommodityTypeBll)
         {
-            this.sysDictionaryBll = sysDictionaryBll;
+            this.commodityTypeBll = CommodityTypeBll;
         }
-        [MenuItem(Parent = "系统设置", Name = "字典管理", Icon = "icon-sitemap")]
+        [MenuItem(Parent = "商城管理", Name = "商品类型", Icon = "glyphicon glyphicon-info-sign")]
+        // GET: ShoppingMall/ComodityType
         public ActionResult Index()
         {
             return View();
         }
+       
         [HttpPost]
         public ActionResult Index(string actionName)
         {
@@ -36,37 +37,36 @@ namespace USP.Areas.System.Controllers
         {
             switch (ac)
             {
-                case "DictTree":
-                    return GetDicTree();
-              
+                case "Tree":
+                    return GetTree();
                 default:
                     return Content("");
             }
         }
 
-        private ActionResult GetDicTree()
+        private ActionResult GetTree()
         {
-           return  Json(sysDictionaryBll.GetDictTree(), JsonRequestBehavior.AllowGet);
+            return Json(commodityTypeBll.GetTree(), JsonRequestBehavior.AllowGet);
         }
 
-        
-        [Privilege(Menu = "字典管理", Name = "注销")]
+
+        [Privilege(Menu = "商品类型", Name = "注销")]
         [HttpPost]
         public ActionResult Cancel(int id)
         {
-            return Json(sysDictionaryBll.Cancel(id, ((User)HttpContext.Session[Common.Constants.USER_KEY]).SysOperator.ID));
+            return Json(commodityTypeBll.Cancel(id, ((User)HttpContext.Session[Common.Constants.USER_KEY]).SysOperator.ID));
         }
 
-        [Privilege(Menu = "字典管理", Name = "激活")]
+        [Privilege(Menu = "商品类型", Name = "激活")]
         [HttpPost]
         public ActionResult Active(int id)
         {
-            return Json(sysDictionaryBll.Active(id, ((User)HttpContext.Session[Common.Constants.USER_KEY]).SysOperator.ID));
+            return Json(commodityTypeBll.Active(id, ((User)HttpContext.Session[Common.Constants.USER_KEY]).SysOperator.ID));
         }
 
-        [Privilege(Menu = "字典管理", Name = "新增")]
+        [Privilege(Menu = "商品类型", Name = "新增")]
         [HttpPost]
-        public ActionResult Add(SysDictionary model)
+        public ActionResult Add(CommodityType model)
         {
             var currentUser = HttpContext.Session[Constants.USER_KEY] as USP.Models.POCO.User;
             model.CreateTime = DateTime.Now;
@@ -74,13 +74,13 @@ namespace USP.Areas.System.Controllers
             AjaxResult result = new AjaxResult();
             if (ModelState.IsValid)
             {
-                 result = sysDictionaryBll.Add(model);
+                result = commodityTypeBll.Add(model);
             }
             return Json(result);
         }
-        [Privilege(Menu = "字典管理", Name = "修改")]
+        [Privilege(Menu = "商品类型", Name = "修改")]
         [HttpPost]
-        public ActionResult Edit(SysDictionary model)
+        public ActionResult Edit(CommodityType model)
         {
             var currentUser = HttpContext.Session[Constants.USER_KEY] as USP.Models.POCO.User;
             model.Creator = currentUser.SysOperator.ID;
@@ -90,19 +90,17 @@ namespace USP.Areas.System.Controllers
             var result = new AjaxResult();
             if (ModelState.IsValid)
             {
-                result=sysDictionaryBll.Edit(model, currentUser.SysOperator.ID);
+                result = commodityTypeBll.Edit(model, currentUser.SysOperator.ID);
             }
             return Json(result);
         }
 
-
-
-        [Privilege(Menu = "字典管理", Name = "删除")]
+        [Privilege(Menu = "商品类型", Name = "删除")]
         [HttpPost]
-        public ActionResult Del(SysDictionary model)
+        public ActionResult Del(CommodityType model)
         {
             var currentUser = HttpContext.Session[Constants.USER_KEY] as USP.Models.POCO.User;
-            var result = sysDictionaryBll.Delete(model.ID);
+            var result = commodityTypeBll.Delete(model.ID);
             return Json(result);
         }
     }

@@ -1,35 +1,302 @@
 ﻿@{
     ViewBag.Title = "Title";
 }
-
+@model USP.Models.Entity.SysDictionary
 @section themes{
     <link href="~/Static/Css/usp/usp.dictionary.index.css" rel="stylesheet" />
+    <style>
+        #fg-Auditor,
+        #fg-Canceler,
+        #fg-Creator {
+            display:none;
+        }
+    </style>
 }
-    <div class="panel panel-info" style="height:100%">
-        <div class="panel-heading">
-            字典信息
-            <button id="btnReturn" type="button" class="btn btn-primary btn-xs pull-right">返回</button>
-        </div>
-        <div class="panel-body panel-fit">
-                <div id="p" class="easyui-panel"  data-options="width:300"  style="height:100%"  >
-                   
+
+
+    <div style="height:100%">
+        <div class="panel panel-default" style="width:20%;height:100%;float:left;">
+            <div class="panel-body panel-fit">
+                <div class="easyui-panel" data-options="fit:true,border:false">
                     <div class="panel panel-default">
-                        <div class="panel-heading">字典数据</div>
+                        <div class="panel-heading">字典管理</div>
                         <div class="panel-body panel-fit">
-                            <ul id="tt" class="easyui-tree" data-options="url:'',method:'post',animate:true"></ul>
+                            <ul id="tree"></ul>
+                            <div id="mm" class="easyui-menu" style="width: 120px;">
+                                <div onclick="usp.shop.dictionary.index.tree.append('#tree')" iconcls="icon-add">
+                                    添加节点
+                                </div>
+                                <div onclick="usp.shop.dictionary.index.tree.remove('#tree','#mm','/System/Dictionary/Del','/System/Dictionary/Index?actionName=DictTree')" iconcls="icon-remove">
+                                    删除节点
+                                </div>
+                                <div onclick="usp.shop.dictionary.index.tree.collapseAll('#tree')" iconcls="icon-remove">
+                                    折叠全部
+                                </div>
+                                <div onclick="usp.shop.dictionary.index.tree.expandAll('#tree')" iconcls="icon-remove">
+                                    展开全部
+                                </div>
+                                @*<div onclick="update()" iconcls="icon-edit">修改节点</div>*@
+                            </div>
                         </div>
                     </div>
-                  
                 </div>
+            </div>
+        </div>
+
+        <div class="panel panel-info" style="width:80%;height:100%;float:left">
+            <div class="panel-body panel-fit" >
+                <div id="p" class="easyui-panel" data-options="fit:true,border:false">
+                    <div class="panel panel-default">
+                        <div id="titleInfo" class="panel-heading">&nbsp;</div>
+                        <div class="panel-body panel-fit" style="height:100%">
+                            <input type="hidden" id="opType" />
+                            <br />
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
+                                <div class="form-horizontal">
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                    <div id="fg-ID" class="form-group" style="display:none">
+                                        @Html.LabelFor(model => model.ID, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-9">
+                                            @Html.EditorFor(model => model.ID, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.ID, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Parent, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-4">
+                                            @Html.EditorFor(model => model.Parent, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Parent, "", new { @class = "text-danger" })
+                                        </div>
+                                        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-4">
+                                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Reserve, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-4">
+                                            @Html.EditorFor(model => model.Reserve, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Reserve, "", new { @class = "text-danger" })
+                                        </div>
+                                        @Html.LabelFor(model => model.Remark, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-4">
+                                            @Html.EditorFor(model => model.Remark, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Remark, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-4">
+                                            @Html.EditorFor(model => model.Type, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div id="fg-Creator" class="form-group">
+                                        @Html.LabelFor(model => model.Creator, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-4">
+                                            @Html.EditorFor(model => model.Creator, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Creator, "", new { @class = "text-danger" })
+                                        </div>
+                                        @Html.LabelFor(model => model.CreateTime, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-4">
+                                            @Html.EditorFor(model => model.CreateTime, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.CreateTime, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div id="fg-Auditor" class="form-group">
+
+                                        @Html.LabelFor(model => model.Auditor, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-4">
+                                            @Html.EditorFor(model => model.Auditor, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Auditor, "", new { @class = "text-danger" })
+                                        </div>
+                                        @Html.LabelFor(model => model.AuditTime, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-4">
+                                            @Html.EditorFor(model => model.AuditTime, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.AuditTime, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div id="fg-Canceler" class="form-group">
+                                        @Html.LabelFor(model => model.Canceler, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-4">
+                                            @Html.EditorFor(model => model.Canceler, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Canceler, "", new { @class = "text-danger" })
+                                        </div>
+                                        @Html.LabelFor(model => model.CancelTime, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-4">
+                                            @Html.EditorFor(model => model.CancelTime, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.CancelTime, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group form-actions">
+                                        <div class="col-md-offset-2 col-xs-1 ">
+                                            <button type="button" onclick="usp.shop.dictionary.index.tree.save('#tree','#opType', '#mm', '/System/Dictionary/Add', '/System/Dictionary/Edit', '/System/Dictionary/Index?actionName=DictTree')" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>保存</button>
+                                        </div>
+                                        <div class="col-xs-1 ">
+                                            <button type="button" onclick="usp.shop.dictionary.index.tree.active('#tree', '#mm', '/System/Dictionary/Active', '/System/Dictionary/Index?actionName=DictTree')" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>启用</button>
+                                        </div>
+                                        <div class="col-xs-1 ">
+                                            <button type="button" onclick="usp.shop.dictionary.index.tree.cancel('#tree', '#mm', '/System/Dictionary/Cancel', '/System/Dictionary/Index?actionName=DictTree')" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>禁用</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-@section scripts{
-    @*<script src="~/Static/Js/shop/usp.shop.dictionary.index.js"></script>*@
 
-    <script type="text/javascript">
-        $(function () {
-            usp.init();
-           
-        })
-    </script>
-}
+    @section scripts{
+        @*<script src="~/Static/Js/shop/usp.shop.dictionary.index.js"></script>*@
+
+        <script type="text/javascript">
+
+            (function () {
+                usp.namespace("usp.shop.dictionary.index");
+                usp.shop.dictionary.index = {
+                    init: function (treeid,treeDataUrl,menu) {
+                        usp.shop.dictionary.index.tree.init(treeid, treeDataUrl, menu);
+                    },
+                    tree: {
+                        init: function (id, url, menu) {
+                            $(id).tree({
+                                url: url,
+                                onClick: function (node) {
+                                    var parentNode = $(id).tree('getParent', node.target);
+                                    $("#opType").val("add");
+                                    $("#titleInfo").text("新增节点");
+                                    $("#Parent").val(parentNode ? parentNode.id : '');
+                                    $("#ID").val(node.id);
+                                    $("#Name").val(node.text);
+                                    if (node.attributes) {
+                                        $("#opType").val("update");
+                                        $("#titleInfo").text("修改节点");
+                                        $("#Type").val(node.attributes.Type);
+                                        $("#Reserve").val(node.attributes.Reserve);
+                                        $("#Remark").val(node.attributes.Remark);
+                                        $("#Creator").val(node.attributes.Creator);
+                                        $("#CreateTime").val(node.attributes.CreateTime);
+                                        $("#Auditor").val(node.attributes.Auditor);
+                                        $("#AuditTime").val(node.attributes.AuditTime);
+                                        $("#Canceler").val(node.attributes.Canceler);
+                                        $("#CancelTime").val(node.attributes.CancelTime);
+                                    }
+                                },
+                                onContextMenu: function (e, node) {
+                                    e.preventDefault();
+                                    $(id).tree('select', node.target);
+                                    $(menu).menu('show', {
+                                        left: e.pageX,
+                                        top: e.pageY
+                                    });
+                                }
+                            });
+                        },
+                        remove: function (id, menuId,delUrl, dataUrl) {
+                            var node = $(id).tree('getSelected');
+                            $.post(delUrl, { "id": node.id }, function (data) {
+                                usp.shop.dictionary.index.tree.init(id, dataUrl, menuId);
+                            });
+                        },
+                        append: function (id) {
+                            var node = $(id).tree('getSelected');
+                            $(id).tree('append', {
+                                parent: (node ? node.target : null),
+                                data:
+                                [
+                                    {
+                                        text: 'node',
+                                        checked: true
+                                    }
+                                ]
+                            });
+                            $("#opType").val("add");
+                            $("#titleInfo").text("新增节点");
+                            $("#Type").val("");
+                            $("#Parent").val(node ? node.id : null);
+                            $("#Name").val("node");
+                            $("#Reserve").val("");
+                            $("#Remark").val("");
+                        },
+                        collapseAll: function (id) {
+                            $(id).tree("collapseAll");
+                        },
+                        expandAll:function(id){
+                            $(id).tree("expandAll");
+                        },
+                        save: function (treeId,opId,menuId,addUrl,editUrl,dataUrl) {
+                            var type = $(opId).val();
+                            switch (type) {
+                                case "add":
+                                    $.post(addUrl, {
+                                        Parent: $("#Parent").val(), Name: $("#Name").val(),
+                                        Reserve: $("#Reserve").val(), Remark: $("#Remark").val()
+                                    }, function (data) {
+                                        toastr.success(data.message);
+                                        usp.shop.dictionary.index.tree.init(treeId, dataUrl, menuId);
+                                    });
+                                    break;
+                                case "update":
+                                    $.post(editUrl, {
+                                        ID: $("#ID").val(),
+                                        Parent: $("#Parent").val(), Name: $("#Name").val(),
+                                        Reserve: $("#Reserve").val(), Remark: $("#Remark").val()
+                                    }, function (data) {
+                                        toastr.success(data.message);
+                                        usp.shop.dictionary.index.tree.init(treeId, dataUrl, menuId);
+                                    });
+                                    break;
+                            }
+                        },
+                        update:function (id) {
+                            var node = $(id).tree('getSelected');
+                            if (node) {
+                                node.text = '修改';  //-->txt-->DB
+                                node.iconCls = 'icon-save'; //-->sel-->DB
+                                $(id).tree('update', node);
+                            }
+                        },
+                        active: function (id, menuId, activeUrl, dataUrl) {
+                            var node = $(id).tree('getSelected');
+                            if(node){
+                                $.post(activeUrl, { "id": node.id }, function (data) {
+                                    toastr.success(data.message);
+                                    usp.shop.dictionary.index.tree.init(id, dataUrl, menuId);
+                                });
+                            } else {
+                                toastr.warning("请先选择节点再操作！")
+                            }
+                        },
+                        cancel: function (id, menuId, cancelUrl, dataUrl) {
+                            var node = $(id).tree('getSelected');
+                            if (node) {
+                                $.post(cancelUrl, { "id": node.id }, function (data) {
+                                    toastr.success(data.message);
+                                    usp.shop.dictionary.index.tree.init(id, dataUrl, menuId);
+                                });
+                            } else {
+                                toastr.warning("请先选择节点再操作！")
+                            }
+                        }
+                    }
+                }
+            })(this);
+
+               
+               
+
+                
+                $(function () {
+                    usp.init();
+                    usp.shop.dictionary.index.init('#tree', '/System/Dictionary/Index?actionName=DictTree', '#mm');
+                })
+        </script>
+    }

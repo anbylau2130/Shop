@@ -66,8 +66,8 @@ namespace USP.Context
         public virtual DbSet<OpenPlatformType> OpenPlatformType { get; set; }
         public virtual DbSet<Area> Area { get; set; }
         public virtual DbSet<SysBank> SysBank { get; set; }
-        public virtual DbSet<ShopCommodityType> ShopCommodityType { get; set; }
         public virtual DbSet<SysDictionary> SysDictionary { get; set; }
+        public virtual DbSet<CommodityType> CommodityType { get; set; }
     
         public virtual int UP_AddMenu(string name, string icon)
         {
@@ -1079,7 +1079,7 @@ namespace USP.Context
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<UP_ShowOperatorInfo_Result>("UP_ShowOperatorInfo", serverParameter, dataBaseParameter, uIDParameter, pWDParameter, pageIndexParameter, pageSizeParameter, whereStrParameter, strOrderParameter, strOrderTypeParameter);
         }
     
-        public virtual ObjectResult<UP_ShowShopCommodityType_Result> UP_ShowShopCommodityType(Nullable<int> pageIndex, Nullable<int> pageSize, string whereStr, string strOrder, string strOrderType)
+        public virtual int UP_ShowShopCommodityType(Nullable<int> pageIndex, Nullable<int> pageSize, string whereStr, string strOrder, string strOrderType)
         {
             var pageIndexParameter = pageIndex.HasValue ?
                 new ObjectParameter("PageIndex", pageIndex) :
@@ -1101,7 +1101,7 @@ namespace USP.Context
                 new ObjectParameter("strOrderType", strOrderType) :
                 new ObjectParameter("strOrderType", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<UP_ShowShopCommodityType_Result>("UP_ShowShopCommodityType", pageIndexParameter, pageSizeParameter, whereStrParameter, strOrderParameter, strOrderTypeParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("UP_ShowShopCommodityType", pageIndexParameter, pageSizeParameter, whereStrParameter, strOrderParameter, strOrderTypeParameter);
         }
     }
 }

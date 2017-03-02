@@ -1,8 +1,8 @@
 ﻿/*bootstrap兼容问题和easyui的bug*/  
 .panel-header, .panel-body {  
-border-width: 0px;  
+ border-width: 1px; 
 }  
-.datagrid,.combo-p{  
+/*.datagrid,.combo-p{  
 border:solid 1px #D4D4D4;  
 }  
 .datagrid *{  
@@ -10,3 +10,7 @@ border:solid 1px #D4D4D4;
 -moz-box-sizing: content-box;  
 box-sizing: content-box;  
 }  
+
+.panel-header, .panel-body {
+    border-width: 1px;
+}*/

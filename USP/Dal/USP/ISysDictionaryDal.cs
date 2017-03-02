@@ -5,7 +5,7 @@ using System.Web;
 using USP.Models.Entity;
 using USP.Models.POCO;
 
-namespace USP.Dal.USP
+namespace USP.Dal
 {
     public interface ISysDictionaryDal
     {
@@ -19,5 +19,6 @@ namespace USP.Dal.USP
 
         ProcResult Auditor(SysDictionary model, long auditor);
         ProcResult Add(SysDictionary model);
+        ProcResult Delete(long id);
     }
 }

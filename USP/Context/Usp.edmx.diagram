@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="099bb2c761c243e1a11a80d72fce99aa" Name="Diagram1" ZoomLevel="29">
+      <Diagram DiagramId="099bb2c761c243e1a11a80d72fce99aa" Name="Diagram1" ZoomLevel="63">
         <EntityTypeShape EntityType="UspModel.IdCardImg" Width="1.5" PointX="0.75" PointY="0.75" />
         <EntityTypeShape EntityType="UspModel.OpenPlatform" Width="1.5" PointX="2.75" PointY="0.75" />
         <EntityTypeShape EntityType="UspModel.OpenPlatformAccessToken" Width="1.5" PointX="4.75" PointY="0.75" />
@@ -43,8 +43,8 @@
         <EntityTypeShape EntityType="UspModel.OpenPlatformType" Width="1.5" PointX="18.75" PointY="12.75" />
         <EntityTypeShape EntityType="UspModel.Area" Width="1.5" PointX="13.375" PointY="18.75" />
         <EntityTypeShape EntityType="UspModel.SysBank" Width="1.5" PointX="15.375" PointY="18.75" />
-        <EntityTypeShape EntityType="UspModel.ShopCommodityType" Width="1.5" PointX="5.375" PointY="19.75" />
         <EntityTypeShape EntityType="UspModel.SysDictionary" Width="1.5" PointX="17.375" PointY="18.75" />
+        <EntityTypeShape EntityType="UspModel.CommodityType" Width="1.5" PointX="5.375" PointY="19.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

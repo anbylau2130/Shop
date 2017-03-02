@@ -7,17 +7,17 @@ using USP.Models.Entity;
 using USP.Models.POCO;
 using USP.Utility;
 
-namespace USP.Dal.Impl
+namespace USP.Dal.ShoppingMall.Impl
 {
-    public class SysDictionaryDal : ISysDictionaryDal
+    public class CommodityTypeDal : ICommodityTypeDal
     {
         USPEntities db = new USPEntities();
-        public ProcResult Add(SysDictionary model)
+        public ProcResult Add(CommodityType model)
         {
             ProcResult result = new ProcResult();
             try
             {
-                db.SysDictionary.Add(model);
+                db.CommodityType.Add(model);
                 result.IsSuccess = db.SaveChanges() > 0;
             }
             catch (Exception ex)
@@ -28,7 +28,7 @@ namespace USP.Dal.Impl
             return result;
         }
 
-        public ProcResult Auditor(SysDictionary model, long auditor)
+        public ProcResult Auditor(CommodityType model, long auditor)
         {
             ProcResult result = new ProcResult();
 
@@ -41,7 +41,7 @@ namespace USP.Dal.Impl
                     entity.AuditTime = DateTime.Now;
                     entity.Creator = auditor;
                 }
-                db.Entry<SysDictionary>((SysDictionary)entity).State = System.Data.Entity.EntityState.Modified;
+                db.Entry<CommodityType>((CommodityType)entity).State = System.Data.Entity.EntityState.Modified;
                 result.IsSuccess = db.SaveChanges() > 0;
             }
             catch (Exception ex)
@@ -64,7 +64,7 @@ namespace USP.Dal.Impl
                     entity.Canceler = currentOperator;
                     entity.CancelTime = DateTime.Now;
                 }
-                db.Entry<SysDictionary>((SysDictionary)entity).State = System.Data.Entity.EntityState.Modified;
+                db.Entry<CommodityType>((CommodityType)entity).State = System.Data.Entity.EntityState.Modified;
                 result.IsSuccess = db.SaveChanges() > 0;
             }
             catch (Exception ex)
@@ -76,7 +76,7 @@ namespace USP.Dal.Impl
             return result;
         }
 
-        public ProcResult Edit(SysDictionary model, long currentOperator)
+        public ProcResult Edit(CommodityType model, long currentOperator)
         {
             ProcResult result = new ProcResult();
             try
@@ -85,17 +85,11 @@ namespace USP.Dal.Impl
                 if (entity != null)
                 {
                     entity.Name = model.Name;
-                    entity.Type = model.Type;
-                    entity.Reserve = model.Reserve;
-                    entity.Auditor = model.Auditor;
-                    entity.AuditTime = model.AuditTime;
-                    entity.Canceler = model.Canceler;
-                    entity.CancelTime = model.CancelTime;
                     entity.Remark = model.Remark;
                     entity.Creator = currentOperator;
                     entity.CreateTime = DateTime.Now;
                 }
-                db.Entry<SysDictionary>((SysDictionary)entity).State = System.Data.Entity.EntityState.Modified;
+                db.Entry<CommodityType>((CommodityType)entity).State = System.Data.Entity.EntityState.Modified;
                 result.IsSuccess = db.SaveChanges() > 0;
             }
             catch (Exception ex)
@@ -119,7 +113,7 @@ namespace USP.Dal.Impl
                     entity.Auditor = currentOperator;
                     entity.AuditTime = DateTime.Now;
                 }
-                db.Entry<SysDictionary>((SysDictionary)entity).State = System.Data.Entity.EntityState.Modified;
+                db.Entry<CommodityType>((CommodityType)entity).State = System.Data.Entity.EntityState.Modified;
                 result.IsSuccess = db.SaveChanges() > 0;
             }
             catch (Exception ex)
@@ -130,37 +124,37 @@ namespace USP.Dal.Impl
             return result;
         }
 
-        public SysDictionary GetModelById(long ID)
+        public CommodityType GetModelById(long ID)
         {
-            return db.SysDictionary.FirstOrDefault(x => x.ID == ID);
+            return db.CommodityType.FirstOrDefault(x => x.ID == ID);
         }
 
-        //public List<UP_ShowSysDictionary_Result> GetAll(int? pageIndex, int? pageSize, string whereStr, string strOrder, string strOrderType)
+        //public List<UP_ShowCommodityType_Result> GetAll(int? pageIndex, int? pageSize, string whereStr, string strOrder, string strOrderType)
         //{
         //    try
         //    {
-        //        return (from i in db.UP_ShowSysDictionary(pageIndex, pageSize, whereStr, strOrder, strOrderType).ToList()
+        //        return (from i in db.UP_ShowCommodityType(pageIndex, pageSize, whereStr, strOrder, strOrderType).ToList()
         //                select i).ToList();
         //    }
         //    catch (Exception ex)
         //    {
         //        LogUtil.Exception("ExceptionLogger", ex);
-        //        return new List<UP_ShowSysDictionary_Result>();
+        //        return new List<UP_ShowCommodityType_Result>();
         //    }
         //}
 
 
 
 
-        public List<SysDictionary> GetAll()
+        public List<CommodityType> GetAll()
         {
-            return db.SysDictionary.ToList();
-            //return db.SysDictionary.Where(x => x.Canceler == null).ToList();
+            return db.CommodityType.ToList();
+            //return db.CommodityType.Where(x => x.Canceler == null).ToList();
         }
 
         public bool IsExisName(long id, string name)
         {
-            return db.SysDictionary.Where(x => x.ID != id && x.Name == name).Count() > 0 ? true : false;
+            return db.CommodityType.Where(x => x.ID != id && x.Name == name).Count() > 0 ? true : false;
         }
 
         public ProcResult Delete(long id)
@@ -169,9 +163,9 @@ namespace USP.Dal.Impl
             try
             {
                 var entity = GetModelById(id);
-                db.SysDictionary.Remove(entity);
+                db.CommodityType.Remove(entity);
                 result.IsSuccess = db.SaveChanges() > 0;
-                
+
             }
             catch (Exception ex)
             {
@@ -181,6 +175,7 @@ namespace USP.Dal.Impl
             return result;
         }
     }
+
 
 
 }

@@ -3290,18 +3290,9 @@ values (0, 0, null, null, 0, getdate(), 0, getdate(), null, null);
 insert into SysRolePrivilege (Role, Privilege, Reserve, Remark, Creator, CreateTime, Auditor, AuditTime, Canceler, CancelTime)
 values (0, 0, null, null, 0, getdate(), 0, getdate(), null, null);
 
-alter table SysCorpVocation add CONSTRAINT FK_SysCorpVocation_Parent foreign key(Parent) references SysCorpVocation(ID);
-alter table SysCorpVocation add CONSTRAINT FK_SysCorpVocation_Creator foreign key(Creator) references SysOperator(ID);
-alter table SysCorpStatus add CONSTRAINT FK_SysCorpStatus_Creator foreign key(Creator) references SysOperator(ID);
-alter table SysCorpType add CONSTRAINT FK_SysCorpType_Creator foreign key(Creator) references SysOperator(ID);
-alter table SysCorpGrade add CONSTRAINT FK_SysCorpGrade_Creator foreign key(Creator) references SysOperator(ID);
-alter table SysCorpFeeType add CONSTRAINT FK_SysCorpFeeType_Creator foreign key(Creator) references SysOperator(ID);
-alter table SysCorp add CONSTRAINT FK_SysCorp_Parent foreign key(Parent) references SysCorp(ID);
-alter table SysCorp add CONSTRAINT FK_SysCorp_Creator foreign key(Creator) references SysOperator(ID);
-alter table SysOperator add CONSTRAINT FK_SysOperator_Creator foreign key(Creator) references SysOperator(ID);
-alter table SysMenu add CONSTRAINT FK_SysMenu_parent foreign key(Parent) references SysMenu(ID);
-alter table SysPrivilege add CONSTRAINT FK_SysPrivilege_Parent foreign key(Parent) references SysPrivilege(ID);
-alter table OpenPlatformMenu add CONSTRAINT FK_OpenPlatformMenu_Parent FOREIGN KEY (Parent) REFERENCES OpenPlatformMenu(ID);
+insert into SysDictionary(Name,Parent,Creator,CreateTime)values('Parent',0,0,GETDATE())
+
+insert into CommodityType(Name,Parent,Creator,CreateTime)values('Parent',0,0,GETDATE())
 
 
 

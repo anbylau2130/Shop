@@ -70,5 +70,5 @@ alter table SysRolePrivilege drop constraint FK_SysRolePrivilege_Privilege
 alter table SysPrivilege drop constraint FK_SysPrivilege_Parent
 alter table SysPrivilegeTemplate drop constraint FK_SysPrivilegeTemplate_Privilege
 alter table SysArea drop constraint FK_SysArea_Parent
-
 alter table SysDictionary drop constraint FK_SysDictionary_Parent
+alter table CommodityType drop constraint FK_CommodityType_Parent

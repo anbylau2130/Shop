@@ -19,6 +19,23 @@
           <Property Name="Name" Type="varchar" MaxLength="100" />
           <Property Name="Type" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="CommodityType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Parent" Type="bigint" />
+          <Property Name="Group" Type="varchar" MaxLength="50" />
+          <Property Name="Reserve" Type="varchar" MaxLength="250" />
+          <Property Name="Remark" Type="varchar" MaxLength="250" />
+          <Property Name="Creator" Type="bigint" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="Auditor" Type="bigint" />
+          <Property Name="AuditTime" Type="datetime" />
+          <Property Name="Canceler" Type="bigint" />
+          <Property Name="CancelTime" Type="datetime" />
+        </EntityType>
         <EntityType Name="IdCardImg">
           <Key>
             <PropertyRef Name="ID" />
@@ -319,21 +336,6 @@
           <Property Name="Reserve" Type="varchar" MaxLength="250" />
           <Property Name="Remark" Type="varchar" MaxLength="250" />
           <Property Name="CreateTime" Type="datetime" Nullable="false" />
-        </EntityType>
-        <EntityType Name="ShopCommodityType">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Reserve" Type="varchar" MaxLength="250" />
-          <Property Name="Remark" Type="varchar" MaxLength="250" />
-          <Property Name="Creator" Type="bigint" Nullable="false" />
-          <Property Name="CreateTime" Type="datetime" Nullable="false" />
-          <Property Name="Auditor" Type="bigint" />
-          <Property Name="AuditTime" Type="datetime" />
-          <Property Name="Canceler" Type="bigint" />
-          <Property Name="CancelTime" Type="datetime" />
         </EntityType>
         <EntityType Name="SysArea">
           <Key>
@@ -1010,14 +1012,8 @@
           <Parameter Name="strOrderType" Type="varchar(max)" Mode="In" />
         </Function>
         <Function Name="UP_ShowProvince" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-        <Function Name="UP_ShowShopCommodityType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="PageIndex" Type="int" Mode="In" />
-          <Parameter Name="PageSize" Type="int" Mode="In" />
-          <Parameter Name="WhereStr" Type="nvarchar" Mode="In" />
-          <Parameter Name="strOrder" Type="varchar(max)" Mode="In" />
-          <Parameter Name="strOrderType" Type="varchar(max)" Mode="In" />
-        </Function>
         <EntityContainer Name="UspModelStoreContainer">
+          <EntitySet Name="CommodityType" EntityType="Self.CommodityType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="IdCardImg" EntityType="Self.IdCardImg" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OpenPlatform" EntityType="Self.OpenPlatform" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OpenPlatformAccessToken" EntityType="Self.OpenPlatformAccessToken" Schema="dbo" store:Type="Tables" />
@@ -1032,7 +1028,6 @@
           <EntitySet Name="OpenPlatformMT" EntityType="Self.OpenPlatformMT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OpenPlatformSubscriber" EntityType="Self.OpenPlatformSubscriber" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OpenPlatformUserInfo" EntityType="Self.OpenPlatformUserInfo" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="ShopCommodityType" EntityType="Self.ShopCommodityType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SysArea" EntityType="Self.SysArea" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SysCorp" EntityType="Self.SysCorp" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SysCorpFeeType" EntityType="Self.SysCorpFeeType" Schema="dbo" store:Type="Tables" />
@@ -1407,8 +1402,7 @@
             <Parameter Name="strOrder" Mode="In" Type="String" />
             <Parameter Name="strOrderType" Mode="In" Type="String" />
           </FunctionImport>
-          <EntitySet Name="ShopCommodityType" EntityType="UspModel.ShopCommodityType" />
-          <FunctionImport Name="UP_ShowShopCommodityType" ReturnType="Collection(UspModel.UP_ShowShopCommodityType_Result)">
+          <FunctionImport Name="UP_ShowShopCommodityType">
             <Parameter Name="PageIndex" Mode="In" Type="Int32" />
             <Parameter Name="PageSize" Mode="In" Type="Int32" />
             <Parameter Name="WhereStr" Mode="In" Type="String" />
@@ -1416,6 +1410,7 @@
             <Parameter Name="strOrderType" Mode="In" Type="String" />
           </FunctionImport>
           <EntitySet Name="SysDictionary" EntityType="UspModel.SysDictionary" />
+          <EntitySet Name="CommodityType" EntityType="UspModel.CommodityType" />
           </EntityContainer>
         <EntityType Name="IdCardImg">
           <Key>
@@ -2359,35 +2354,6 @@
           <Property Type="Int64" Name="Supplier" Nullable="true" />
           <Property Type="String" Name="SupplierName" Nullable="true" MaxLength="1" />
         </ComplexType>
-        <EntityType Name="ShopCommodityType">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Reserve" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
-          <Property Name="Remark" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
-          <Property Name="Creator" Type="Int64" Nullable="false" />
-          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Auditor" Type="Int64" />
-          <Property Name="AuditTime" Type="DateTime" Precision="3" />
-          <Property Name="Canceler" Type="Int64" />
-          <Property Name="CancelTime" Type="DateTime" Precision="3" />
-        </EntityType>
-        <ComplexType Name="UP_ShowShopCommodityType_Result">
-          <Property Type="Int64" Name="RowNo" Nullable="true" />
-          <Property Type="Int64" Name="RowCnt" Nullable="true" />
-          <Property Type="Int64" Name="ID" Nullable="false" />
-          <Property Type="String" Name="Name" Nullable="false" MaxLength="100" />
-          <Property Type="String" Name="Reserve" Nullable="true" MaxLength="250" />
-          <Property Type="String" Name="Remark" Nullable="true" MaxLength="250" />
-          <Property Type="Int64" Name="Creator" Nullable="false" />
-          <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="23" />
-          <Property Type="Int64" Name="Auditor" Nullable="true" />
-          <Property Type="DateTime" Name="AuditTime" Nullable="true" Precision="23" />
-          <Property Type="Int64" Name="Canceler" Nullable="true" />
-          <Property Type="DateTime" Name="CancelTime" Nullable="true" Precision="23" />
-        </ComplexType>
         <EntityType Name="SysDictionary">
           <Key>
             <PropertyRef Name="ID" />
@@ -2399,6 +2365,23 @@
           <Property Name="Remark" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
           <Property Name="Creator" Type="Int64" Nullable="false" />
           <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Auditor" Type="Int64" />
+          <Property Name="AuditTime" Type="DateTime" Precision="3" />
+          <Property Name="Canceler" Type="Int64" />
+          <Property Name="CancelTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="CommodityType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Parent" Type="Int64" />
+          <Property Name="Group" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Reserve" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Remark" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Creator" Type="Int64" Nullable="false" />
           <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Auditor" Type="Int64" />
           <Property Name="AuditTime" Type="DateTime" Precision="3" />
@@ -3370,40 +3353,6 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="UP_GetOperatorRole" FunctionName="UspModel.Store.UP_GetOperatorRole" />
           <FunctionImportMapping FunctionImportName="UP_EditOperator" FunctionName="UspModel.Store.UP_EditOperator" />
-          <EntitySetMapping Name="ShopCommodityType">
-            <EntityTypeMapping TypeName="UspModel.ShopCommodityType">
-              <MappingFragment StoreEntitySet="ShopCommodityType">
-                <ScalarProperty Name="CancelTime" ColumnName="CancelTime" />
-                <ScalarProperty Name="Canceler" ColumnName="Canceler" />
-                <ScalarProperty Name="AuditTime" ColumnName="AuditTime" />
-                <ScalarProperty Name="Auditor" ColumnName="Auditor" />
-                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
-                <ScalarProperty Name="Creator" ColumnName="Creator" />
-                <ScalarProperty Name="Remark" ColumnName="Remark" />
-                <ScalarProperty Name="Reserve" ColumnName="Reserve" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="UP_ShowShopCommodityType" FunctionName="UspModel.Store.UP_ShowShopCommodityType">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="UspModel.UP_ShowShopCommodityType_Result">
-                <ScalarProperty Name="RowNo" ColumnName="RowNo" />
-                <ScalarProperty Name="RowCnt" ColumnName="RowCnt" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Reserve" ColumnName="Reserve" />
-                <ScalarProperty Name="Remark" ColumnName="Remark" />
-                <ScalarProperty Name="Creator" ColumnName="Creator" />
-                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
-                <ScalarProperty Name="Auditor" ColumnName="Auditor" />
-                <ScalarProperty Name="AuditTime" ColumnName="AuditTime" />
-                <ScalarProperty Name="Canceler" ColumnName="Canceler" />
-                <ScalarProperty Name="CancelTime" ColumnName="CancelTime" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
           <EntitySetMapping Name="SysDictionary">
             <EntityTypeMapping TypeName="UspModel.SysDictionary">
               <MappingFragment StoreEntitySet="SysDictionary">
@@ -3416,6 +3365,24 @@
                 <ScalarProperty Name="Creator" ColumnName="Creator" />
                 <ScalarProperty Name="Remark" ColumnName="Remark" />
                 <ScalarProperty Name="Reserve" ColumnName="Reserve" />
+                <ScalarProperty Name="Parent" ColumnName="Parent" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CommodityType">
+            <EntityTypeMapping TypeName="UspModel.CommodityType">
+              <MappingFragment StoreEntitySet="CommodityType">
+                <ScalarProperty Name="CancelTime" ColumnName="CancelTime" />
+                <ScalarProperty Name="Canceler" ColumnName="Canceler" />
+                <ScalarProperty Name="AuditTime" ColumnName="AuditTime" />
+                <ScalarProperty Name="Auditor" ColumnName="Auditor" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Creator" ColumnName="Creator" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Reserve" ColumnName="Reserve" />
+                <ScalarProperty Name="Group" ColumnName="Group" />
                 <ScalarProperty Name="Parent" ColumnName="Parent" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="ID" ColumnName="ID" />

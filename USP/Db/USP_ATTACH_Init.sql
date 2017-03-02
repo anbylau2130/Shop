@@ -1,0 +1,2410 @@
+﻿insert into SysDictionary(Name,Parent,Creator,CreateTime)values('Parent',0,0,GETDATE())
+
+
+insert into CommodityType (Name,Parent,Creator,CreateTime)values('Parent',0,0,GETDATE())
+
+
+
+
+
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(1,'游戏话费',0,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(2,'服装鞋包',0,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(3,'手机数码',0,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(4,'家用电器',0,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(5,'美妆饰品',0,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(6,'母婴用品',0,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(7,'家居建材',0,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(8,'百货食品',0,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(9,'运动户外',0,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(10,'文化玩乐',0,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(11,'生活服务',0,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(12,'汽配摩托',0,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(13,'其他',0,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(14,'网游装备/游戏币/帐号/代练',1,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(15,'腾讯QQ专区',1,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(16,'网络游戏点卡',1,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(17,'男装',2,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(18,'流行男鞋',2,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(19,'女装/女士精品',2,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(20,'女鞋',2,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(21,'箱包皮具/热销女包/男包',2,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(22,'女士内衣/男士内衣/家居服',2,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(23,'服饰配件/皮带/帽子/围巾',2,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(24,'电子元器件市场',3,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(25,'国货精品数码',3,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(26,'手机',3,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(27,'数码相机/单反相机/摄像机',3,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(28,'MP3/MP4/iPod/录音笔',3,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(29,'笔记本电脑',3,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(30,'平板电脑/MID',3,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(31,'DIY电脑',3,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(32,'电脑硬件/显示器/电脑周边',3,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(33,'网络设备/网络相关',3,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(34,'3C数码配件',3,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(35,'闪存卡/U盘/存储/移动硬盘',3,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(36,'办公设备/耗材/相关服务',3,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(37,'电子词典/电纸书/文化用品',3,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(38,'电玩/配件/游戏/攻略',3,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(39,'品牌台机/品牌一体机/服务器',3,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(40,'大家电',4,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(41,'影音电器',4,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(42,'生活电器',4,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(43,'厨房电器',4,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(44,'个人护理/保健/按摩器材',4,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(45,'家庭保健',4,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(46,'彩妆/香水/美妆工具',5,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(47,'美容护肤/美体/精油',5,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(48,'美发护发/假发',5,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(49,'珠宝/钻石/翡翠/黄金',5,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(50,'ZIPPO/瑞士军刀/眼镜',5,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(51,'饰品/流行首饰/时尚饰品新',5,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(52,'手表',5,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(53,'奶粉/辅食/营养品/零食',6,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(54,'尿片/洗护/喂哺/推车床',6,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(55,'孕妇装/孕产妇用品/营养',6,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(56,'童装/婴儿装/亲子装',6,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(57,'玩具/童车/益智/积木/模型',6,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(58,'童鞋/婴儿鞋/亲子鞋',6,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(59,'母婴用品',6,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(60,'家居饰品',7,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(61,'特色手工艺',7,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(62,'住宅家具',7,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(63,'商业/办公家具',7,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(64,'家装主材',7,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(65,'基础建材',7,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(66,'五金/工具',7,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(67,'电子/电工',7,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(68,'床上用品',7,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(69,'装修设计/施工/监理',7,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(70,'居家布艺',7,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(71,'全屋定制',7,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(72,'居家日用',8,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(73,'厨房/烹饪用具',8,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(74,'家庭/个人清洁工具',8,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(75,'传统滋补营养品',8,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(76,'零食/坚果/特产',8,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(77,'粮油米面/南北干货/调味品',8,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(78,'成人用品/情趣用品',8,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(79,'洗护清洁剂/卫生巾/纸/香薰',8,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(80,'咖啡/麦片/冲饮',8,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(81,'保健食品/膳食营养补充食品',8,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(82,'水产肉类/新鲜蔬果/熟食',8,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(83,'节庆用品/礼品',8,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(84,'餐饮具',8,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(85,'收纳整理',8,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(86,'茶',8,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(87,'运动/瑜伽/健身/球迷用品',9,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(88,'户外/登山/野营/旅行用品',9,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(89,'运动服/休闲服装',9,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(90,'运动鞋new',9,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(91,'运动包/户外包/配件',9,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(92,'自行车/骑行装备/零配件',9,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(93,'电动车/配件/交通工具',9,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(94,'度假线路/签证送关/旅游服务',10,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(95,'特价酒店/特色客栈/公寓旅馆',10,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(96,'古董/邮币/字画/收藏',10,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(97,'书籍/杂志/报纸',10,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(98,'音乐/影视/明星/音像',10,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(99,'乐器/吉他/钢琴/配件',10,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(100,'宠物/宠物食品及用品',10,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(101,'景点门票/演艺演出/周边游',10,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(102,'模玩/动漫/周边/cos/桌游',10,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(103,'购物提货券',11,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(104,'休闲娱乐',11,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(105,'餐饮美食',11,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(106,'消费卡',11,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(107,'教育培训',11,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(108,'医疗及健康服务',11,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(109,'婚庆/摄影/摄像服务',11,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(110,'鲜花速递/花卉仿真/绿植园艺',11,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(111,'网店/网络服务/软件',11,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(112,'房产/租房/新房/二手房/委托服务',11,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(113,'外卖/外送/订餐(请勿发布)',11,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(114,'个性定制/设计服务/DIY',11,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(115,'电影/演出/体育赛事',11,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(116,'网络店铺代金/优惠券',11,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(117,'本地化生活服务',11,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(118,'汽车/用品/配件/改装',12,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(119,'新车/二手车',12,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(120,'摩托车/装备/配件',12,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(121,'众筹',13,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(122,'包装',13,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(123,'淘女郎',13,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(124,'其他',13,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(125,'服务商品',13,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(126,'阿里通信专属类目',13,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(127,'智能设备',13,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(128,'农用物资',13,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(129,'农机/农具/农膜',13,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(130,'畜牧/养殖物资',13,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(131,'室内设计师',13,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(132,'装修服务',13,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(133,'拍卖会专用',13,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(134,'全球购官网直购（专用）',13,0,getdate())
+INSERT INTO [CommodityType](ID,[Name],[Parent] ,[Creator],[CreateTime]) VALUES(135,'到家业务',13,0,getdate())
+
+
+
+
+
+
+
+
+--INSERT INTO [CommodityType]([Name],[Parent] ,[Creator],[CreateTime]) VALUES
+--('虚拟票务',0,0,getdate()),
+--('数码市场',0,0,getdate()),
+--('家电市场',0,0,getdate()),
+--('女装市场',0,0,getdate()),
+--('男装市场',0,0,getdate()),
+--('童装童鞋',0,0,getdate()),
+--('女鞋市场',0,0,getdate()),
+--('男鞋市场',0,0,getdate()),
+--('内衣市场',0,0,getdate()),
+--('箱包市场',0,0,getdate()),
+--('服饰配件',0,0,getdate()),
+--('珠宝饰品',0,0,getdate()),
+--('美容市场',0,0,getdate()),
+--('母婴市场',0,0,getdate()),
+--('家居市场',0,0,getdate()),
+--('日用市场',0,0,getdate()),
+--('食品/保健',0,0,getdate()),
+--('运动鞋服',0,0,getdate()),
+--('运动户外',0,0,getdate()),
+--('汽车摩托',0,0,getdate()),
+--('玩具市场',0,0,getdate()),
+--('文化用品',0,0,getdate()),
+--('爱好市场',0,0,getdate()),
+--('生活服务',0,0,getdate())
+
+
+
+
+
+
+--INSERT INTO [CommodityType]
+--           (
+--           [Name]
+--           ,[Parent]
+--           ,[Creator]
+--           ,[CreateTime]
+--           )
+-- VALUES
+--('充值中心',1,0,getdate()),
+--('腾讯qq专区',1,0,getdate()),
+--('网游物品',1,0,getdate()),
+--('点卡',1,0,getdate()),
+--('网游服务',1,0,getdate()),
+--('彩票',1,0,getdate()),
+--('机票',1,0,getdate()),
+--('旅游/酒店',1,0,getdate()),
+--('手机',2,0,getdate()),
+--('摄影摄像',2,0,getdate()),
+--('移动影音',2,0,getdate()),
+--('热门电脑',2,0,getdate()),
+--('办公用品',2,0,getdate()),
+--('电玩/配件',2,0,getdate()),
+--('电脑硬件',2,0,getdate()),
+--('数码配件',2,0,getdate()),
+--('大家电',3,0,getdate()),
+--('环境/衣物护理',3,0,getdate()),
+--('欢乐厨房',3,0,getdate()),
+--('个人生活护理',3,0,getdate()),
+--('健康按摩',3,0,getdate()),
+--('影音及配件',3,0,getdate()),
+--('冬日衣橱',4,0,getdate()),
+--('女装热搜',4,0,getdate()),
+--('毛衣',4,0,getdate()),
+--('裤子',4,0,getdate()),
+--('特色服饰',4,0,getdate()),
+--('热卖风格',4,0,getdate()),
+--('品牌/其他',4,0,getdate()),
+--('价格',4,0,getdate()),
+--('冬装',5,0,getdate()),
+--('春秋装',5,0,getdate()),
+--('夏装',5,0,getdate()),
+--('裤子',5,0,getdate()),
+--('品质男装',5,0,getdate()),
+--('时尚休闲',5,0,getdate()),
+--('特色市场',5,0,getdate()),
+--('儿童上装',6,0,getdate()),
+--('儿童下装',6,0,getdate()),
+--('童鞋',6,0,getdate()),
+--('儿童套装',6,0,getdate()),
+--('婴幼宝贝',6,0,getdate()),
+--('儿童配饰',6,0,getdate()),
+--('女鞋款型',7,0,getdate()),
+--('女鞋热搜词',7,0,getdate()),
+--('鞋型',7,0,getdate()),
+--('尺码',7,0,getdate()),
+--('跟高',7,0,getdate()),
+--('风格',7,0,getdate()),
+--('价格',7,0,getdate()),
+--('热门品牌',7,0,getdate()),
+--('男鞋款型',8,0,getdate()),
+--('热门品牌',8,0,getdate()),
+--('价格',8,0,getdate()),
+--('男鞋热搜词',8,0,getdate()),
+--('款式',8,0,getdate()),
+--('适合人群',8,0,getdate()),
+--('文胸/内衣套装',9,0,getdate()),
+--('女士内裤',9,0,getdate()),
+--('女士内衣/睡衣',9,0,getdate()),
+--('塑身/保暖/内衣',9,0,getdate()),
+--('男士内衣专区',9,0,getdate()),
+--('美丽女袜',9,0,getdate()),
+--('女士热门品牌',9,0,getdate()),
+--('情侣必备',9,0,getdate()),
+--('女包',10,0,getdate()),
+--('男包',10,0,getdate()),
+--('品牌女包',10,0,getdate()),
+--('品牌男包',10,0,getdate()),
+--('材质/款式',10,0,getdate()),
+--('热门品牌',10,0,getdate()),
+--('休闲旅行',10,0,getdate()),
+--('休闲旅游品牌',10,0,getdate()),
+--('女士配件',11,0,getdate()),
+--('男士配件',11,0,getdate()),
+--('饰品类型',12,0,getdate()),
+--('饰品材质',12,0,getdate()),
+--('眼镜/护理用品',12,0,getdate()),
+--('烟具军刀',12,0,getdate()),
+--('珠宝材质',12,0,getdate()),
+--('珠宝类型',12,0,getdate()),
+--('手表类型',12,0,getdate()),
+--('手表品牌',12,0,getdate()),
+--('护肤',13,0,getdate()),
+--('彩妆',13,0,getdate()),
+--('香水',13,0,getdate()),
+--('美容/化妆工具',13,0,getdate()),
+--('身体/头发保养',13,0,getdate()),
+--('热门品牌',13,0,getdate()),
+--('防晒热卖品牌',13,0,getdate()),
+--('男士专区',13,0,getdate()),
+--('宝贝吃什么',14,0,getdate()),
+--('宝贝穿什么',14,0,getdate()),
+--('孕产妇',14,0,getdate()),
+--('宝贝用什么',14,0,getdate()),
+--('宝贝玩什么',14,0,getdate()),
+--('母婴人群',14,0,getdate()),
+--('住宅家具',15,0,getdate()),
+--('家居饰品',15,0,getdate()),
+--('家纺布艺',15,0,getdate()),
+--('特色工艺',15,0,getdate()),
+--('家装主材',15,0,getdate()),
+--('五金工具',15,0,getdate()),
+--('日用品',16,0,getdate()),
+--('卧室床品',16,0,getdate()),
+--('厨房用品',16,0,getdate()),
+--('卫浴用品',16,0,getdate()),
+--('家务整理',16,0,getdate()),
+--('家庭清洁',16,0,getdate()),
+--('休闲食品',17,0,getdate()),
+--('进口食品',17,0,getdate()),
+--('茶酒冲饮',17,0,getdate()),
+--('菜市场',17,0,getdate()),
+--('传统滋补类',17,0,getdate()),
+--('各地特产',17,0,getdate()),
+--('健康用品',17,0,getdate()),
+--('药品/保健',17,0,getdate()),
+--('运动鞋款型',18,0,getdate()),
+--('运动上衣',18,0,getdate()),
+--('运动裤/裙',18,0,getdate()),
+--('运动包',18,0,getdate()),
+--('热门品牌',18,0,getdate()),
+--('运动风格',18,0,getdate()),
+--('户外品牌',19,0,getdate()),
+--('户外鞋服',19,0,getdate()),
+--('瘦身纤体',19,0,getdate()),
+--('球类拍类',19,0,getdate()),
+--('户外活动',19,0,getdate()),
+--('骑行极限',19,0,getdate()),
+--('户外装备',19,0,getdate()),
+--('健身器械',19,0,getdate()),
+--('车内饰品',20,0,getdate()),
+--('GPS/车载电器',20,0,getdate()),
+--('车身加装',20,0,getdate()),
+--('爱车养护',20,0,getdate()),
+--('洗车工具',20,0,getdate()),
+--('配件/工具',20,0,getdate()),
+--('摩托车/整车',20,0,getdate()),
+--('热门车系',20,0,getdate()),
+--('毛绒玩具',21,0,getdate()),
+--('遥控动力',21,0,getdate()),
+--('动漫爱好',21,0,getdate()),
+--('创意玩具',21,0,getdate()),
+--('益智互动',21,0,getdate()),
+--('模型玩具',21,0,getdate()),
+--('电子文具',22,0,getdate()),
+--('文化用品',22,0,getdate()),
+--('案台用品',22,0,getdate()),
+--('笔类',22,0,getdate()),
+--('纸簿本册',22,0,getdate()),
+--('办公用品',22,0,getdate()),
+--('宠物',23,0,getdate()),
+--('鲜花园艺',23,0,getdate()),
+--('书报杂志',23,0,getdate()),
+--('乐器/影音',23,0,getdate()),
+--('成人用品',23,0,getdate()),
+--('收藏',23,0,getdate()),
+--('个性定制',24,0,getdate()),
+--('跳蚤市场',24,0,getdate()),
+--('吃喝玩乐',24,0,getdate()),
+--('网络服务',24,0,getdate()),
+--('保险市场',24,0,getdate()),
+--('房产市场',24,0,getdate()),
+--('婚庆市场',24,0,getdate()),
+--('全球购',24,0,getdate())
+
+
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('自动充值',25,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('平台代充',25,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('移动',25,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('联通',25,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电信',25,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('小灵通/固话',25,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('资费套餐',25,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('手机卡号',25,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('3G上网卡',25,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('宽带',25,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('QQ币/QQ卡',26,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('QQ增值服务',26,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('QQ会员',26,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('QQ黄钻',26,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('QQ红钻',26,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('QQ黑钻',26,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('QQ空间',26,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('QQ宠物',26,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('QQ秀',26,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('龙之谷',27,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('魔兽',27,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('地下城与勇士',27,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('天龙八部',27,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('QQ三国',27,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('梦幻西游',27,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('天下',27,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('征途2',27,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('传奇世界',27,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('永恒之塔',27,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('魔兽',28,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('诛仙2',28,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('征途',28,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('穿越火线',28,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('热血传奇',28,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('冒险岛',28,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('梦幻西游',28,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('地下城与勇士',28,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('完美世界',28,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('天龙八部2',28,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('龙之谷',28,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('游戏币',29,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('游戏装备',29,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('游戏帐号',29,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('游戏代练',29,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('网页游戏物品/资源',29,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('激活码内测号专区',29,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('手机游戏',29,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('双色球',30,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('大乐透',30,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('时时彩',30,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('福彩3D',30,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('七乐彩',30,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('排列三',30,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('足球14场',30,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('足球单场',30,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('竞彩足球',30,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('竞彩篮球',30,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('购物送彩票',30,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('特价国内机票',31,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('特价国际机票',31,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('特价往返机票',31,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('国际机票团购',31,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('手机订机票',31,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('东方航空直营机票',31,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('深圳航空直营机票',31,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('海南航空旗舰店',31,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('景区门票',32,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('旅游折扣券',32,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('三亚攻略',32,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('丽江攻略',32,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('交通票券',32,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('香格里拉',32,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('阳朔攻略',32,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('特价酒店',32,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('特色客栈',32,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('香港酒店',32,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('三亚酒店',32,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('普吉岛',32,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('巴厘岛',32,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('温泉',32,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('马尔代夫',32,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('厦门攻略',32,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('iphone',33,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('诺基亚',33,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('三星',33,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('HTC',33,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('摩托罗拉',33,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('索爱',33,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('全国联保',33,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('安卓',33,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('智能',33,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('CDMA',33,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('大屏',33,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('老人手机',33,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('新品',33,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('千元以下',33,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('翻盖',33,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('滑盖',33,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('直板',33,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('旋转',33,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('2011热销款',33,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('数码相机',34,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('单反',34,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('镜头',34,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('单电',34,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('摄像机',34,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('长焦',34,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('LOMO',34,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('拍立得',34,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('胶卷相机',34,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('相机配件',34,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('摄影灯具/背景',34,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('佳能',34,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('索尼',34,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('三星',34,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('尼康',34,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('富士',34,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('松下',34,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('腾龙',34,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('适马',34,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('MP3',35,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('MP4',35,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('MP5',35,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('录音笔',35,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('移动/掌上电视',35,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('U盘',35,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('SD卡',35,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('记忆棒',35,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('闪存卡',35,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('移动硬盘',35,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('音箱',35,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('数码相框',35,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电纸书',35,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('Apple',35,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('爱国者',35,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('纽曼',35,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('索尼',35,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('台电',35,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('昂达',35,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('笔记本',36,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('组装机',36,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('联想',36,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('苹果',36,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('Thinkpad',36,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('索尼',36,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('华硕',36,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('三星',36,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('惠普',36,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('戴尔',36,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('宏基',36,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('平板电脑',36,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('ipad2',36,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('Android',36,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('HTC',36,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('蓝魔',36,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('台电',36,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('黑莓',36,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('百元平板',36,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('打印机',37,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('投影机',37,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('一体机',37,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('传真机',37,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('扫描仪',37,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('保险箱',37,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('条码扫描器',37,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('标签机',37,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('刻录盘',37,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('通讯设备',37,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('墨盒',37,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('墨粉',37,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('纸类',37,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('线材',37,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('点钞机',37,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('其他办公设备',37,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('PSP',38,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('掌上游戏机',38,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('家用游戏机',38,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('游戏软件',38,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('游戏手柄',38,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('摇杆',38,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('方向盘',38,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('PSP配件',38,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('WII配件',38,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('PS2/3配件',38,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('NDSI配件',38,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('XBOX配件',38,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('任天堂配件',38,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('体感游戏',38,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('红白机',38,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('键盘',39,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('鼠标',39,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('鼠标套装',39,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('摄像头',39,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('音响',39,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('手写板',39,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('显示器',39,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('内存',39,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('主板',39,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('硬盘',39,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('显卡',39,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('声卡',39,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('机箱',39,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电源',39,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('散热',39,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('光驱',39,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('游戏专区',39,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('其他硬件',39,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('手机保护壳',40,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('贴膜',40,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电池',40,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('充电器',40,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('闪存卡',40,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('蓝牙耳塞',40,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('耳机',40,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('数据线',40,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('笔记本包',40,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电源',40,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('贴膜',40,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('散热',40,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('相机电池',40,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('充电器',40,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('路由器',40,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('网卡',40,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('交换机',40,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('宽带猫',40,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('液晶电视',41,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('等离子电视',41,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('LED电视',41,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('洗衣机',41,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('空调',41,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('冰箱',41,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电热水器',41,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('家庭影院',41,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('海尔',41,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('美的',41,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('格力',41,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('西门子',41,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('LG',41,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('容声',41,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('三洋',41,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('帅康',41,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('方太',41,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('老板',41,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电风扇',42,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('空调扇',42,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('吊扇',42,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电子灭蚊器',42,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('加湿',42,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('洗衣机',42,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('干衣机',42,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('熨斗',42,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('挂烫',42,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('蒸汽清洁',42,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电话',42,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('对讲机',42,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('干鞋',42,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('吸尘',42,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('净水',42,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('扫地机',42,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('净化氧吧',42,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('温度计',42,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('豆浆机',43,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电水壶',43,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('燃气灶',43,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('油烟机',43,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('消毒柜',43,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电饭锅',43,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电炖锅',43,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('微波炉',43,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电压力锅',43,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('净水器',43,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('煮蛋器',43,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('冰箱',43,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('料理机',43,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电烤箱',43,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('酸奶机',43,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电磁炉',43,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电饼铛',43,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('剃须刀',44,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('剃毛机',44,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电动牙刷',44,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电吹风',44,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('鼻毛修剪器',44,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('健康称',44,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('卷/直发棒',44,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('美甲护理器',44,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电动美容仪',44,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电动丰胸器',44,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('瘦腿带/瘦身腰带',44,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('配件专区',44,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('足浴器',45,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('按摩枕',45,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('按摩椅',45,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('按摩垫',45,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('迷你按摩器',45,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('眼部按摩器',45,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('按摩足疗机',45,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('血压计',45,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('按摩披肩',45,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('体温计',45,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('计步器',45,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('拔罐器',45,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('拐杖',45,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('耳机',46,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('音响',46,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('迷你音响',46,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('组合音响',46,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('硬盘播放器',46,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('DVD影碟机',46,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('麦克风',46,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('功放',46,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('低音炮',46,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('扩音器',46,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('收音机',46,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('复读机',46,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('配件',46,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('羽绒服',47,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('呢外套',47,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('毛衣',47,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('棉衣',47,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('风衣',47,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('卫衣',47,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('羊绒外套',47,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('棉背心',47,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('皮衣',47,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('机车夹克',47,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('针织衫',47,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('短外套',47,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('小西装',47,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('长袖T恤',47,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('长袖衬衫',47,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('马甲',47,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('连衣裙',47,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('春夏新款',48,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('宽松T恤',48,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('碎花连衣裙',48,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('第三方质检',48,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('吊带',48,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('热裤',48,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('超短裙',48,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('复古',48,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('名媛',48,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('性感',48,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('混搭',48,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('欧美',48,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('森女',48,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('蕾丝',48,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('雪纺',48,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('撞色',48,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('条纹',48,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('显瘦',48,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('透视',48,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('蝙蝠衫',49,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('圆领',49,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('套头衫',49,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('长款',49,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('修身',49,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('宽松',49,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('高领',49,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('打底衫',49,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('粗线毛衣',49,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('羊绒衫',49,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('兔绒',49,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('纯色',49,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('圆点',49,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('连体裤',50,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('西装裤',50,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('裙裤',50,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('小脚裤',50,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('牛仔裤',50,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('运动裤',50,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('背带裤',50,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('哈伦裤',50,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('打底裤',50,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('短裤',50,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('工装裤',50,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('阔腿裤',50,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('喇叭裤',50,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('紧身裤',50,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('直筒裤',50,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('五/七分裤',50,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('九分裤',50,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('中老年女装',51,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('胖MM装',51,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('婚纱礼服',51,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('职业套装',51,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('舞台装',51,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('甜美优雅',51,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('街头潮人',51,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('气质通勤',51,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('情侣装',51,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('亲子装',51,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('淑女',52,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('欧美',52,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('韩版',52,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('日系',52,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('性感',52,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('简约通勤派',52,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('街头中性风',52,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('甜美学院风',52,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('基本/百搭款',52,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('森木系',52,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('搞怪',52,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('波司登',53,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('秋水伊人',53,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('O.SA',53,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('歌莉娅',53,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('太平鸟',53,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('韩国SZ',53,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('艾格',53,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('韩都衣舍',53,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('每日新品',53,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('0-50元',54,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('51-100元',54,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('101-200元',54,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('201-500元',54,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('501-1000元',54,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('1000元以上',54,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('短款羽绒服',55,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('中长羽绒服',55,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('长款羽绒服',55,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('羽绒背心',55,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('羽绒内胆',55,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('皮羽绒服',55,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('短款棉衣',55,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('中长棉衣',55,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('长款棉衣',55,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('呢克服',55,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('棉背心',55,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('皮棉衣',55,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('羊绒衫',55,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('羊毛衫',55,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('抓绒卫衣',55,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('呢大衣',55,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('皮草',55,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('真皮皮衣',56,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('仿皮皮衣',56,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('背心',56,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('夹克',56,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('皮夹克',56,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('棉夹克',56,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('短款风衣',56,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('长款风衣',56,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('长袖衬衫',56,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('长袖POLO',56,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('长袖T恤',56,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('套头卫衣',56,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('开衫卫衣',56,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('线衫',56,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('短袖T恤',57,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('商务短袖polo',57,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('休闲短袖polo',57,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('休闲短袖衬衫',57,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('商务短袖衬衫',57,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('工字背心',57,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('牛仔长裤',58,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('牛仔短裤',58,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('休闲长裤',58,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('休闲短裤',58,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('工装裤',58,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('沙滩裤',58,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('羽绒裤',58,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('皮裤',58,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('梦特娇',59,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('金利来',59,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('七匹狼',59,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('劲霸',59,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('鄂尔多斯',59,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('利郎',59,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('九牧王',59,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('雅戈尔',59,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('波司登',59,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('G2000',59,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('与狼共舞',59,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('衫衫',59,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('恒源祥',59,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('杰克琼斯',60,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('马克华菲',60,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('GXG',60,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('卡宾',60,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('太子龙',60,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('美斯特邦威',60,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('Esprit',60,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('格男仕',60,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('森马',60,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('班尼路',60,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('佐丹奴',60,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('唐狮',60,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('森马',60,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('真维斯',60,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('优衣库',60,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('里维斯',60,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('T恤频道',61,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('羽绒频道',61,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('棉衣频道',61,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('毛衣频道',61,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('夹克频道',61,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('加大服装',61,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('民族服装',61,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('中年服装',61,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('工装制服',61,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('情侣装',61,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('全球购',61,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('T恤',62,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('衬衫',62,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('毛衣/针织衫',62,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('卫衣',62,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('马甲',62,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('外套',62,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('开衫',62,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('小西装',62,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('风衣',62,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('夹克/皮衣',62,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('棉衣/羽绒',62,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('牛仔裤',63,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('背带裤',63,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('打底/小脚裤',63,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('哈伦/灯笼裤',63,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('休闲裤',63,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('运动裤',63,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('背带裙',63,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('连衣裙',63,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('裙子',63,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('皮鞋',64,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('凉鞋',64,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('拖鞋',64,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('雨鞋',64,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('帆布鞋',64,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('球鞋',64,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('靴子/雪地靴',64,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('舞蹈鞋',64,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('亲子鞋',64,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('鞋垫/鞋带',64,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('魔术贴',64,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('系带',64,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('松紧带',64,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('运动套装',65,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('秋衣/棉毛衫裤',65,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('睡衣',65,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('校服/定制服',65,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('舞蹈/演出服',65,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('旗袍/唐装/礼服',65,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('儿童泳衣/裤',65,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('亲子装',65,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('礼盒',66,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('内衣',66,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('连身衣/爬服',66,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('外出服',66,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('披风/斗篷',66,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('罩衣/围嘴',66,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('防抓手套',66,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('婴儿袜',66,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('大PP裤',66,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('学步鞋',66,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('袜子',67,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('帽子/围巾/手套/口罩',67,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('发饰',67,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('儿童首饰',67,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('太阳镜',67,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('腰带/皮带',67,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('领带/领结',67,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('其它配饰',67,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('单鞋',68,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('帆布鞋',68,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('靴子',68,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('短靴',68,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('中筒靴',68,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('高筒靴',68,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('雪地靴',68,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('松糕鞋',68,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('鱼嘴鞋',68,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('凉鞋',68,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('凉拖',68,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('雨鞋/靴',68,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('2011新款',69,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('罗马风',69,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('网状',69,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('镂空',69,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('真皮',69,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('水钻',69,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('复古',69,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('韩版',69,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('日系',69,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('原单',69,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('专柜代购',69,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('秒杀',69,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('包邮',69,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('34',71,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('35',71,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('36',71,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('37',71,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('38',71,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('39',71,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('40',71,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('小码鞋',71,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('大码鞋',71,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('平跟',72,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('低跟',72,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('中跟',72,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('高跟',72,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('超高跟',72,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('防水台',72,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('淑女',73,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('休闲',73,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('宴会',73,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('波西米亚',73,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('碎花',73,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('韩版',73,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('日系',73,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('0-30元',74,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('31-100元',74,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('101-200元',74,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('201-500元',74,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('501-1000元',74,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('1000元以上',74,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('他她',75,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('百丽',75,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('达芙妮',75,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('思加图',75,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('红蜻蜓',75,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('天美意',75,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('千百度',75,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('星期六',75,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('奥康',75,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('玖熙',75,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('Kiss Cat',75,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('Vans',75,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('日常休闲',76,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('运动休闲',76,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('商务休闲',76,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('男式帆布',76,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('商务正装',76,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('高帮系列',76,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('靴子系列',76,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('内增高鞋',76,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('凉鞋',76,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('拖鞋',76,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('懒人鞋',76,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('高帮鞋',76,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('大码鞋',76,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('男童鞋',76,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('新品',76,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('迪奥',77,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('美国骆驼',77,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('百丽',77,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('奥康',77,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('红蜻蜓',77,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('意尔康',77,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('木林森',77,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('金利来',77,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('康奈',77,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('阿玛尼',77,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('Vans',77,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('LV',77,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('爱步',77,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('其乐',77,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('梦特娇',77,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('森达',77,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('公牛世家',77,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('0-30元',78,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('31-100元',78,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('101-200元',78,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('201-500元',78,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('501-1000元',78,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('1000元以上',78,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('内增高',79,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('英伦',79,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('韩版',79,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('透气',79,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('磨砂皮',79,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('夏季',79,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('原单',79,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('专柜代购',79,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('促销',79,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('包邮',79,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('特价',79,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('秒杀',79,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('系带',80,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('套脚',80,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('魔术贴',80,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('搭扣',80,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('松紧带',80,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('男童',81,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('少年',81,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('青年',81,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('中年',81,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('老年',81,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('情侣',81,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('少女文胸',82,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('性感文胸',82,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('聚拢文胸',82,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('文胸套装',82,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('运动文胸',82,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('新娘文胸',82,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('A-C罩杯',82,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('D-F罩杯',82,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('平角裤',83,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('三角裤',83,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('丁字裤/T裤',83,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('全棉',83,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('莫代尔',83,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('莱卡',83,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('蕾丝',83,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('低腰',83,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('中腰',83,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('高腰',83,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('纯色',83,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('睡衣/家居服套装',84,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('睡裤/家居裤',84,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('睡衣上装',84,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('睡裙/家居裙',84,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('睡袍/浴袍',84,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('塑身上衣',85,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('塑身裤',85,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('塑身腰封/腰夹',85,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('塑身分体套装',85,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('塑身连体衣',85,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('抹胸/吊带',85,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('女保暖内衣',85,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('三角裤',86,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('平角裤',86,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('睡裤',86,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('睡衣套装',86,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('睡袍/浴袍',86,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('保暖内衣/套装',86,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('保暖裤',86,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('背心',86,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('袜子',86,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('七匹狼',86,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('英塔吉',86,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('猫人',86,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('恒源祥',86,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('三枪',86,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('浪莎',86,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('连裤袜',87,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('九分裤袜',87,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('脚踩袜',87,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('七分/五分裤袜',87,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('高筒袜',87,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('中筒袜',87,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('短筒袜',87,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('袜套',87,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('隐形船袜',87,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('吊袜带',87,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('超薄',87,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('薄款',87,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('中等',87,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('加厚',87,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('浪莎',87,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('宝娜斯',87,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('梦娜',87,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('黛安芬',88,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('爱慕',88,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('华歌尔',88,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('安莉芳',88,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('曼妮芬',88,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('维多利亚的秘密',88,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('CK',88,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('欧迪芬',88,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('婷美',88,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('芬腾',88,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('歌瑞尔',88,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('情侣睡衣/家居服',89,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('情侣内裤',89,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('情侣保暖内衣',89,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('情侣袜',89,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('奢华包',90,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('品质包',90,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('单肩',90,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('双肩',90,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('手提',90,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('斜挎',90,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('手拿包',90,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('单肩斜跨',90,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('钱包',90,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('腰包',90,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('卡包',90,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('零钱包',90,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('钥匙包',90,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('帆布包',90,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('品质包',91,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('单肩',91,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('双肩',91,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('斜挎',91,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('手提',91,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('手拿包',91,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('公文包',91,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('钱包',91,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('卡包',91,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('钥匙包',91,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('腰包',91,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('帆布包',91,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('胸包',91,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('爱玛仕',92,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('香奈儿',92,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('LV',92,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('Coach',92,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('Gucci',92,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('瑟令',92,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('迪奥',92,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('巴黎世家',92,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('普拉达',92,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('巴宝利',92,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('宝缇嘉',92,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('miu miu',92,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('芬迪',92,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('克洛伊',92,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('Fion',92,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('贝蒂',92,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('LV',93,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('Coach',93,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('普拉达',93,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('保罗',93,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('巴宝利',93,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('巴利',93,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('阿玛尼',93,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('金利来',93,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('七匹狼',93,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('梦特娇',93,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('老人头',93,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('贝尔',93,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('CK',93,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('卡帝乐鳄鱼',93,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('斐格',93,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('万宝龙',93,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('澳洲袋鼠',93,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('真皮包',94,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('PU女包',94,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('帆布包',94,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('编织包',94,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('机车包',94,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('韩版',94,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('鳄鱼纹',94,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('铆钉包',94,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('格纹包',94,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('流苏包',94,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('豹纹',94,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('复古包',94,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('浪美',95,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('梦特娇',95,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('千姿百袋',95,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('猫猫',95,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('伊米妮',95,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('薇茉',95,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('沐鱼',95,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('奥丽薇',95,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('DU DU',95,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('戈尔本',95,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('plover',95,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('Wenger',95,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('旅行箱',96,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('拉杆箱',96,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('旅行箱（无拉杆）',96,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('登机箱',96,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('托运箱',96,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('旅行包',96,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('运动背包',96,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('帆布背包',96,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('单肩背包',96,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('双肩包',96,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('休闲钱包',96,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('帆布腰包',96,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('耐克',97,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('阿迪达斯',97,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('李宁',97,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('Kipling',97,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('新秀丽',97,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('三叶草',97,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('匡威',97,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('Marc Jacobs',97,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('时尚起义',97,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('Jansport',97,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('万里马',97,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('威豹',97,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('漂流木',97,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('户外大师',97,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('361度',97,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('腰带',98,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('宽腰带',98,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('腰封',98,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('腰链',98,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('帽子',98,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('鸭舌帽',98,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('棒球帽',98,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('贝雷帽',98,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('遮阳帽',98,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('围巾',98,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('丝巾',98,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('头巾/手帕',98,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('背带',98,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('运动颈环',98,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('面料',98,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('服装配件',98,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('婚纱配件',98,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('皮带',99,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('真皮',99,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('针扣',99,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('自动扣',99,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('平滑扣',99,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('双环扣',99,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('领带',99,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('领带夹',99,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('领结',99,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('袖扣',99,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('帽子',99,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('鸭舌帽',99,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('棒球帽',99,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('贝雷帽',99,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('围巾',99,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('背带',99,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('运动颈环',99,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('面料',99,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('服装配件',99,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('项链',100,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('项坠/吊坠',100,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('耳饰',100,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('手链',100,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('手镯',100,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('脚链',100,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('戒指/指环',100,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('胸针',100,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('发饰',100,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('眼镜',100,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('烟具军刀',100,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('摆件',100,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('DIY饰品配件',100,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('首饰盒/展示架',100,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('其它首饰',100,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('银饰',101,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('合金/镀银/镀金',101,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('天然水晶/半宝石',101,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('半成品水晶',101,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('钛钢',101,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('锆石/水钻',101,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('人造水晶',101,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('珍珠母贝',101,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('亚克力',101,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('混合宝石镶嵌',101,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('琉璃',101,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('钯金',101,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('硅胶',101,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('太阳镜',102,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('偏光太阳镜',102,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('功能眼镜',102,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('镜架',102,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('镜片',102,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('装饰/搭配眼镜',102,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('滴眼液/护眼用品',102,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('眼镜配件',102,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('品牌打火机/其它打火机',103,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('ZIPPO/芝宝',103,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('酒具',103,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('烟具/烟斗/烟嘴/戒烟',103,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('瑞士军刀',103,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('钻石',104,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('翡翠',104,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('黄金',104,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('铂金/PT',104,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('天然琥珀',104,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('水晶',104,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('天然珍珠',104,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('天然玉石',104,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('和田玉',104,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('红蓝宝石/贵重宝石',104,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('戒指',105,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('对戒',105,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('裸钻',105,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('项链',105,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('挂饰',105,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('手镯',105,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('手链',105,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('耳环',105,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('耳钉',105,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('发簪',105,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('玉佩',105,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('胸针',105,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('金兔',105,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('平安扣',105,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('摆件',105,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('女表',106,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('男表',106,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('中性表',106,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('情侣表',106,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('儿童表',106,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('怀表',106,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('机械表',106,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电子表',106,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('时装表',106,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('手表配件',106,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('卡西欧',107,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('西铁城',107,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('浪琴',107,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('精工',107,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('斯沃琪',107,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('天梭',107,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('梅花',107,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('依波路',107,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('汉米尔顿',107,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('积家',107,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('美度',107,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('阿玛尼',107,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('艾奇',107,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('卸妆',108,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('洁面',108,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('化妆水/爽肤水',108,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('精华液',108,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('眼部护理',108,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('乳液/面霜',108,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('面膜',108,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('面部磨砂/去角质',108,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('防晒霜',108,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('隔离霜',109,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('BB霜',109,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('粉底',109,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('遮瑕膏',109,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('粉饼',109,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('腮红/胭脂',109,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('蜜粉/散粉',109,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('修颜/高光',109,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('唇彩/唇蜜',109,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('唇膏/口红',109,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('指甲油',109,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('正常规格',110,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('Q版小香',110,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('试管香水',110,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('礼盒/套装',110,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('假睫毛',111,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('化妆刷',111,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('化妆棉',111,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('化妆包',111,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('身体护理',112,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('假发',112,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('身体防晒',112,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('身体乳液',112,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('脱毛膏',112,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('磨砂膏',112,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('手部保养',112,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('胸部护理',112,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('瘦身霜',112,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('身体去角质',112,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('洗发护发',112,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('烫染造型',112,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('碧欧泉',113,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('香奈儿',113,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('倩碧',113,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('雅诗兰黛',113,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('兰蔻',113,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('玫琳凯',113,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('迪奥',113,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('欧莱雅',113,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('相宜本草',113,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('玉兰油',113,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('the face shop',113,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('美宝莲',113,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('skin79',113,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('benefit',113,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('卡姿兰',113,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('fancl',114,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('安耐晒',114,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('玉兰油',114,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('水宝宝',114,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('雅诗兰黛',114,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('雅漾',114,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('曼秀雷敦',114,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('洁面',115,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('爽肤水',115,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('乳液',115,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('剃须产品',115,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('须后',115,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('防晒',115,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('洗发沐浴',115,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('香水',115,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('男士彩妆',115,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('面膜',115,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('磨砂膏',115,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('护理套装',115,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('牛奶粉',116,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('羊奶粉',116,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('米粉',116,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('面条',116,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('钙铁锌',116,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('牛初乳',116,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('果泥',116,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('菜粉',116,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('鱼肝油',116,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('益生菌',116,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('肉松',116,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('果汁',116,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('维生素',116,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('拌饭料',116,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('奶酪',116,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('泡芙',116,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('葡萄糖',116,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('磨牙棒',116,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('DHA',116,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('棉衣',117,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('羽绒服',117,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('毛衣',117,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('T恤',117,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('卫衣',117,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('外套',117,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('风衣',117,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('连衣裙',117,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('牛仔裤',117,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('裤',117,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('靴子',117,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('学步鞋',117,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('内衣/裤',117,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('婴儿礼盒',117,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('袜子',117,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('发饰',117,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('叶酸',118,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('孕产妇奶粉',118,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('月子餐',118,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('防辐射',118,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('孕装',118,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('孕裤',118,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('哺乳文胸',118,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('待产包',118,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('妈咪包',118,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('吸奶器',118,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('必备用品',118,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('纸尿裤',119,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('隔尿垫',119,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('温奶',119,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('湿巾',119,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('浴盆',119,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('婴儿床',119,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('摇篮',119,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('床品',119,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('口水巾',119,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('安全座椅',119,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('睡袋',119,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('抱毯',119,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('理发器',119,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('指甲钳',119,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('推车',119,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('餐椅',119,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('奶瓶/奶嘴',119,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('消毒锅',119,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('游戏垫',120,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('惯性玩具',120,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('布书',120,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('摇铃',120,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('手偶',120,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('爬行垫',120,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('音乐玩具',120,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('遥控车',120,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电动玩具',120,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('橡皮泥',120,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('溜溜球',120,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('拼图拼板',120,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('积木',120,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('智能玩具',120,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('过家家',120,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('新生儿送礼',121,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('孕妇/产妇',121,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('童装新款',121,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('奶粉用品',121,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('早教益智',121,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('宝宝秀场',121,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('皮沙发',122,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('布艺沙发',122,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('懒人沙发',122,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('实木沙发',122,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电视柜',122,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('衣柜',122,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('书柜',122,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('皮床',122,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('实木床',122,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('布艺床',122,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('高低床',122,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('儿童床',122,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('笔记本电脑桌',122,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('床垫',122,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('茶几',122,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('成套家具',122,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('餐桌',122,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('餐椅',122,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('书桌',122,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('摆件',123,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('相片墙',123,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('墙贴',123,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('花瓶',123,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('仿真花',123,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('无框画',123,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('蜡烛',123,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('挂钟',123,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('果盘',123,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('台钟',123,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('饰品盒',123,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('纸巾盒',123,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('竹炭包',123,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('装饰器皿',123,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('装饰隔板',123,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('雕刻工艺品',123,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('十字绣',124,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('窗帘',124,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('地毯',124,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('桌布',124,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('靠垫',124,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('家电罩',124,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('四件套',124,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('枕头',124,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('床单',124,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('被子',124,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('沙发套',124,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('圣诞用品',125,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('北欧原木',125,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('名族工艺品',125,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('佛教工艺品',125,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('基督教工艺品',125,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('道教工艺品',125,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('俄罗斯套娃',125,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('泰国工艺品',125,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('淋浴花洒',126,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('浴室柜组合',126,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('坐便器',126,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('面盆龙头',126,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('浴缸',126,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('角阀',126,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('台上盆',126,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('水槽',126,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('厨房龙头',126,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('拉篮',126,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('吊灯',126,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('吸顶灯',126,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('装饰台灯',126,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('光源',126,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('地板',126,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电热水器',126,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('集成吊顶',126,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('浴霸',126,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('墙纸',126,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('家用五金',127,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('手动工具',127,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电动工具',127,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('仪器仪表',127,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('机械五金',127,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('液压起重',127,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('气动工具',127,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电子电工',127,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('基础建材',127,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('雨伞',128,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('雨披',128,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('相册',128,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('时尚烟灰缸',128,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('钥匙扣',128,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('音乐盒',128,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('储蓄罐',128,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('招财猫',128,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('阳光罐',128,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('幸运星/瓶',128,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('鞋用品',128,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('扇',128,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('蜡烛',128,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('体重秤',128,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('防蚊贴/手环',128,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电蚊香',128,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('灭蚊灯',128,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('灭鼠/杀虫剂',128,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('防辐射/防尘',128,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('床品套件',129,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('保健枕',129,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('U型旅行枕',129,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('枕头/枕芯',129,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('蚕丝被',129,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('羽绒被',129,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('秋冬被/棉被',129,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('羊毛被',129,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('毛毯/绒毯',129,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('床垫/床褥',129,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('床单床笠',129,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('被套被罩',129,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('枕套枕巾',129,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('沙发垫',129,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('坐垫/靠垫',129,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('棉拖鞋',129,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('闹钟',129,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('挂钟',129,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('梳妆镜',129,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('保鲜盒',130,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('杯具/水壶',130,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('保温杯',130,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('马克杯',130,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('杯具套装',130,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('玻璃杯',130,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('碗',130,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('碟/盆/盘',130,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('筷子',130,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('煎锅/平底锅',130,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('压力锅',130,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('烹饪工具',130,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('烹饪勺铲',130,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('燃气灶',130,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('咖啡杯',130,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('酒杯',130,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('飘逸杯',130,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('功夫茶具',130,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('整套茶具',130,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('挂钩',131,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('毛巾/浴巾',131,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('毛巾挂/架',131,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('沐浴品',131,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('沐浴桶',131,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('足浴盆',131,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('浴帘',131,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('浴室角架',131,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('浴室用品套件',131,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('浴球',131,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('浴镜',131,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('浴室拖鞋',131,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('牙膏',131,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('挤牙膏器',131,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('牙刷',131,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('牙刷架/座',131,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('洗发水',131,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('足部护理',131,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('卫生巾/卷筒纸',131,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('杂物收纳',132,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('纸巾盒/架',132,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('首饰收纳盒',132,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('鞋盒/鞋收纳',132,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('药盒/药箱',132,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('CD盒/架',132,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('卡包/卡套',132,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电线收纳',132,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('卫生棉收纳',132,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('脏衣篮',132,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('晒衣篮',132,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('置地/升降晾晒衣架',132,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('衣架',132,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('裤架',132,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('毛球修剪器',132,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('衣物除尘滚',132,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('拖把',133,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('擦地拖鞋',133,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('桌面除尘扫',133,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('扫把簸箕',133,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('环保袋',133,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('垃圾桶',133,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('垃圾袋',133,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('除尘掸',133,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('地板护理',133,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('玻璃清洁器',133,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('浴室角架',133,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('护洗袋',133,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('洗衣粉',133,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('洗衣皂',133,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('洗衣液',133,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('甲醛清除剂',133,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('竹炭包',133,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('马桶座圈',133,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('洁厕剂',133,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('巧克力',134,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('蜜饯',134,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('枣类',134,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('梅类',134,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('蔬果干',134,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('坚果类',134,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('山核桃',134,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('糖果',134,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('奶酪',134,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('肉脯',134,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('海味即食',134,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('豆类制品',134,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('饼干',134,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('蜜饯',135,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('果干',135,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('饼干',135,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('咖啡',135,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('茶饮',135,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('巧克力',135,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('豆类',135,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('花生',135,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('炒货',135,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('糖果',135,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('果冻/布丁',135,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('粮油/速食品',135,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('调味品',135,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('葡萄酒',135,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('威士忌/进口烈酒',135,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('铁观音',136,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('龙井',136,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('碧螺春',136,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('黄山毛峰',136,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('信阳毛尖',136,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('祁门红茶',136,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('普洱茶',136,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('花草茶',136,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('养生茶',136,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('咖啡',136,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('冲饮品',136,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('酒',136,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('饮料',136,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('果蔬汁',136,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('蔬果类',137,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('蛋禽类',137,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('海鲜类',137,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('肉类',137,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('罐头食品',137,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('速食',137,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('调味品',137,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('蜂蜜蜂胶',137,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('土特产',137,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('五谷杂粮',137,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('粽子',137,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('参类',138,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('鹿茸',138,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('鹿胎膏',138,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('冬虫夏草',138,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('灵芝',138,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('枸杞',138,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('雪蛤',138,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('燕窝',138,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('蜂蜜蜂胶',138,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('阿胶',138,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('越南',139,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('台湾',139,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('内蒙古',139,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('浙江',139,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('新疆',139,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('河南',139,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('四川',139,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('湖南',139,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('山西',139,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('山东',139,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('云南',139,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('福建',139,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('广西',139,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('陕西',139,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('江苏',139,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('北京',139,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('天津',139,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('湖北',139,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('海南',139,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('成人用品',140,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('保健枕',140,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('保健床垫',140,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('足浴/沐浴',140,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('香薰用品',140,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('按摩棒/锤',140,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('按摩足疗机',140,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('血压计',140,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('榨汁机',140,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('加湿器',140,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('果蔬清洗机',140,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('美容美体',140,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('身体护理',140,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('美发护理',140,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('品牌保健',141,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('胶原蛋白',141,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('螺旋藻',141,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('钙片',141,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('维生素E',141,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('葡萄籽',141,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('维生素C',141,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('蛋白粉',141,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('左旋肉碱',141,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('减肥茶',141,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('维矿物质',141,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('避孕套',141,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('避孕药',141,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('美瞳',141,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('隐形眼镜护理液',141,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('中西药品',141,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('妇科用药',141,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('血压仪器',141,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('血糖用品',141,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('板鞋',142,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('帆布鞋',142,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('休闲鞋',142,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('跑步鞋',142,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('篮球鞋',142,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('网球鞋',142,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('训练鞋/健身鞋',142,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('足球鞋',142,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('羽毛球鞋',142,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('乒乓球鞋',142,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('运动凉鞋',142,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('运动拖鞋',142,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('情侣休闲鞋',142,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('其他运动鞋',142,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('卫衣',143,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('茄克',143,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('毛衣',143,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('风衣',143,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('单马甲',143,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('运动T恤',143,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('polo衫',143,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('球服',143,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('休闲运动吊带',143,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('休闲运动背心',143,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('棉马甲',143,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('羽绒服',143,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('抓绒卫衣',143,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('运动套装',143,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('健身衣',143,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('健身套装',143,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('运动长裤',144,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('运动中/短裤',144,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('卫裤/休闲裤',144,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('抓绒裤',144,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('牛仔裤',144,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('健身裤',144,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('半身裙',144,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('连衣裙',144,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('运动单/双肩背包',145,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('运动单肩斜挎包/手拎包',145,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('运动单肩挎包',145,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('运动腰包',145,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('运动鼓包/旅行包',145,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('钱包卡袋',145,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('彪马',146,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('阿迪达斯',146,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('耐克',146,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('锐步',146,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('背靠背',146,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('鸿星尔克',146,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('李宁',146,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('安踏',146,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('特步',146,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('361',146,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('德尔惠',146,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('CBA',146,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('运动休闲风',147,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('球类运动风',147,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('炫酷潮流风',147,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('经典学院风',147,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('甜蜜情侣风',147,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('球星战靴风',147,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('骆驼',148,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('Columbia',148,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('探路者',148,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('Crocs',148,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('狼爪',148,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('The North Face',148,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('GW/光威',148,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('凯乐石',148,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('Merrell/麦乐',148,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('神火',148,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('迪佳',148,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('拯救者',148,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('希格',148,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('冲锋衣',149,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('冲锋裤',149,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('皮肤风衣',149,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('抓绒衣',149,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('速干衣',149,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('速干裤',149,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('登山鞋',149,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('徒步鞋',149,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('溯溪鞋',149,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('攀岩鞋',149,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('高山靴',149,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('沙滩鞋/凉鞋/拖鞋',149,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('鞋服配饰',149,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('分体泳衣',150,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('连体泳衣',150,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('比基尼',150,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('泳裤',150,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('泳镜',150,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('泳帽',150,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('儿童戏水',150,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('瑜伽服',150,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('瑜伽垫',150,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('瑜伽球',150,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('室内足球',150,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('拉丁舞',150,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('肚皮舞',150,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('健美',150,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('跆拳道',150,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('棋牌',150,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('毽子',150,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('健身卡',150,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('羽球拍',151,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('羽球',151,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('羽球服',151,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('羽球鞋',151,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('乒乓球',151,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('乒乓拍',151,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('网球',151,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('网球拍',151,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('壁球',151,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('足球服',151,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('足球',151,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('足球鞋',151,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('篮球服',151,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('篮球',151,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('篮球鞋',151,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('高尔夫球杆',151,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('高尔夫球服',151,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('台球',151,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('休闲垂钓',152,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('徒步远足',152,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('岩壁攀登',152,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('冲浪划水',152,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('趣味潜水',152,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('激情滑雪',152,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('美味烧烤',152,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('露营帐篷',152,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('乡村骑马',152,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('水上观光',152,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('风筝滑翔',152,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('太阳浴',152,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('自驾游',152,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('山地车',153,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('公路车',153,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('折叠车',153,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('通勤车',153,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('骑行服饰',153,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('单车零配',153,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('单车装备',153,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('修车工具',153,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('直排轮',153,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('滑板',153,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('活力板',153,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('漂移板',153,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('滑板车',153,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('头盔',153,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('滑板鞋',153,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('暴走鞋',153,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电动车',153,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('F1',153,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('户外背包',154,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('户外腰包',154,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('户外照明',154,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('野营帐篷',154,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('登山杖',154,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('睡袋',154,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('野餐炉具',154,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('水具/水壶',154,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('望远镜',154,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('多用工具',154,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('野外通讯',154,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('旅行洗漱',154,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('急救防护',154,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('其他户外装备',154,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('家用跑步机',155,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('商用跑步机',155,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('健身车',155,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('动感单车',155,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('椭圆机',155,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('力量器械',155,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('踏步机',155,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('仰卧板',155,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('美腰机',155,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('拉力器',155,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('跳绳',155,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('蹦蹦床',155,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('呼啦圈',155,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('举重床',155,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('哑铃',155,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('俯卧撑架',155,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('护具',155,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('脚垫',156,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('座套',156,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('遮阳挡',156,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('置物箱',156,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('冰丝座垫',156,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('方向盘套',156,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('后备箱垫',156,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('CD夹/袋',156,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('汽车摆件',156,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('香水挂饰',156,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('头枕/腰靠',156,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('车用纸巾盒',156,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('手机架/杯架',156,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('儿童安全座椅',156,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('导航仪',157,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('DVD导航',157,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('行车记录仪',157,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('倒车雷达',157,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('车载冰箱',157,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('车载MP3',157,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('车载低音炮',157,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('车载充电器',157,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('车载吸尘器',157,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('车载防盗器',157,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('车载摄像头',157,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('车载蓝牙',157,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('逆变器',157,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('车衣',158,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('汽车贴',158,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('车牌架',158,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('腰线贴',158,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('氙气灯',158,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('爆闪灯',158,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('雨眉/雨挡',158,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('防撞胶条',158,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('LED氛围灯',158,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('防爆隔热膜',158,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('碳纤维贴纸',158,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('后备箱遮物帘',158,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('机油',159,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('车蜡',159,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('千斤顶',159,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('汽车玻璃水',159,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('龟牌车蜡',159,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('壳牌机油',159,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('汽车贴膜',159,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('补漆笔',159,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('空调清洗剂',159,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('汽油添加剂',159,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('车刷',160,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('洗车机',160,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('清洁剂',160,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('擦车巾',160,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('清洗液',160,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('鹿皮巾',160,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('汽车蜡',160,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('洗车泥',160,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('洗车水枪',160,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('洗车海绵',160,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('车掸/蜡拖',160,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('汽车包围',161,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('轮胎',161,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('轮毂',161,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('车灯',161,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电瓶',161,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('挡泥板',161,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('后视镜',161,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('火花塞',161,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('雨刮器',161,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('隔音棉',161,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('日行灯',161,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('汽车钥匙',161,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('头盔',162,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('车灯',162,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('车把',162,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('脚踏板',162,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('雅马哈',162,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('踏板车',162,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('改装/配件',162,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('沙滩摩托车',162,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('摩托防盗器',162,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('越野摩托车',162,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('大众',163,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('奥迪',163,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('本田',163,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('宝马',163,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('别克',163,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('丰田',163,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('奇瑞',163,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('现代',163,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('福特',163,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('标志',163,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('雪佛兰',163,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('马自达',163,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('比亚迪',163,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('雪铁龙',163,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('斯柯达',163,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('科鲁兹',163,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('福克斯',163,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('高尔夫',163,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('朗逸',163,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('泰迪熊',164,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('蒙奇奇',164,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('粉红豹',164,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('多啦A梦',164,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('喜羊羊和灰太狼',164,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('麦兜',164,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('米菲兔',164,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('BUBU熊',164,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('情侣公仔',164,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('遥控车?',165,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('遥控飞机',165,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('遥控船',165,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('遥控机器人',165,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('四驱车',165,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电动坦克',165,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('油动电动模型',165,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('遥控设备',165,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('变形金刚',166,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('高达模型',166,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('Cosplay',166,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('BJD娃娃',166,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('机器人专区',166,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('动漫周边',166,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('手办',166,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('扭蛋',166,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('网游周边',166,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('迪斯尼系列',166,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('魔术道具',167,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('魔术扑克',167,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('聚会装扮',167,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('整蛊搞怪',167,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('桌面玩具',167,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('星空投影仪',167,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('DIY小屋',167,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('创意礼品',167,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('迷你场景',167,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('桌面游戏',168,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('三国杀',168,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('积木',168,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('平面拼图',168,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('立体拼图',168,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('魔方',168,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('磁力球',168,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('云霄飞车',168,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('戏水玩具',168,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('摇摆机',168,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('桌上足球',168,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('合金车模',169,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('飞机模型',169,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('坦克模型',169,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('船模',169,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('3D纸模',169,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('铁皮模型',169,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('木质拼装模型',169,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('模型制作工具',169,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('兵人模型',169,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('娃娃屋',169,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('DIY辅件',169,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('建筑场景模型',169,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('点读机',170,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('点读笔',170,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电子辞典',170,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('学习机',170,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('录音笔',170,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电子阅览器/电纸书',170,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('U盘',170,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电子辞典/学习机配件',170,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('点读机/点读笔配件',170,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('财会用品',171,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('绘画用品',171,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('绘图测量文具',171,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('计算器',171,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('旗帜',171,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('色卡',171,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('文件夹/袋',171,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('印刷品',171,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('纸簿本册',171,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('文房四宝',171,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('写字板',171,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('文具',171,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('笔袋',171,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('书包',171,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('铅笔刀',171,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('装订',172,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('胶粘',172,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('涂改',172,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('裁剪',172,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('书签',172,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('便签/便条夹',172,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('笔筒/座/插/架',172,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('名片盒',172,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('名片座/夹',172,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('放大镜',172,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('台历',172,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('书架',172,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('铅笔',173,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('圆珠笔',173,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('中性笔',173,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('钢笔',173,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('水彩笔',173,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('记号笔',173,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('荧光笔',173,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('油画棒',173,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('激光笔',173,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('笔记本',174,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('日记本',174,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('软面抄',174,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('记账本',174,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('便利贴',174,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('防辐射贴',174,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('复印纸',174,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('打印纸',174,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('相片纸',174,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('不干胶标签',174,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('打印机',175,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('投影机',175,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('一体机',175,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('传真机',175,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('扫描仪',175,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('保险箱',175,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('墨盒',175,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('线材',175,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('通讯设备',175,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('条码扫描器',175,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('其他设备',175,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('狗狗',176,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('猫咪',176,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('主粮',176,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('零食',176,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('玩具',176,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('日用品',176,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('服饰配件',176,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('清洁美容',176,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('医疗保健',176,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('水族用品',176,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('小宠用品',176,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('寄养/配种/托运',176,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('领养/助养',176,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('鲜花速递（同城）',177,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('仿真花',177,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('园艺',177,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('花卉绿植',177,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('卡通/巧克力花',177,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('商务/婚礼用花',177,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('花瓶/花盆',177,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('花草种子',177,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('庭院植物/树木',177,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('奠仪用花/果篮',177,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('考试',178,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('小说',178,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('漫画',178,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('儿童读物',178,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('文学',178,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('艺术',178,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('育儿',178,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('理财',178,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('心理',178,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('计算机/网络',178,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('工具书/百科全书',178,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('外语/语言',178,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('传记',178,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('经济',178,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('管理',178,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('娱乐时尚',178,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('地理/地图',178,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('吉他/贝司',179,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('小/中/大提琴',179,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('西洋管/笛/号',179,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电子琴',179,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('古筝',179,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('西洋鼓',179,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('儿童乐器',179,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('口琴',179,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('乐器教材',179,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('音乐',179,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电影',179,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('电视剧',179,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('教育',179,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('动画片',179,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('瑜珈',179,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('戏曲',179,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('胎教/儿童',179,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('情趣',180,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('男用',180,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('女用',180,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('安全套',180,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('情趣套装/睡衣',180,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('情趣内衣',180,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('情趣丝袜/配饰',180,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('情趣家具',180,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('早孕试纸',180,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('体温计/仪器',180,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('杜蕾斯',180,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('倍力乐',180,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('冈本OK',180,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('邮票',181,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('钱币',181,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('和田玉',181,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('国画书法',181,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('古玩杂项',181,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('宗教/风水',181,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('连环画',181,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('明星纪念品',181,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('趣味收藏',181,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('工艺礼品',181,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('文房四宝',181,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('其他收藏品',181,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('杯子',182,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('水晶',182,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('相册',182,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('写真/海报',182,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('装饰画',182,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('服饰箱包',182,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('婚纱礼服',182,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('T恤',182,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('制服',182,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('钱包',182,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('饰品',182,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('奖状/奖杯',182,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('新奇创意',182,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('人偶',182,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('拼图',182,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('印章',182,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('iphone壳',182,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('趣味证书',182,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('淘闲置',183,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('一键转卖',183,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('闲置帮派',183,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('二手手机',183,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('二手电脑',183,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('大件同城',183,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('闲置名品',183,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('折扣卡券',183,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('闲置拍卖',183,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('杭州跳蚤街',183,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('自助餐',184,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('冰激凌店',184,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('中餐',184,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('西餐/东南亚美食',184,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('快餐/小吃',184,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('超市/购物卡',184,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('面包/蛋糕券',184,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('食品提货券',184,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('加油卡',184,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('咖啡厅',184,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('茶馆',184,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('酒吧',184,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('KTV',184,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('周末休闲',184,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('足疗/洗浴/按摩',184,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('美容/美发/美体/瘦身',184,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('健身卡',184,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('瑜伽',184,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('舞蹈',184,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('摄影/写真',185,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('照片冲印',185,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('设计服务',185,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('翻译/笔译',185,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('在线学习卡',185,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('教育软件',185,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('系统软件',185,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('行业软件',185,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('杀毒',185,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('炒股',185,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('网站建设',185,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('程序/软件开发',185,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('网络推广',185,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('广告制作/打印复印',185,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('网店服务',185,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('物流包装',185,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('旅行意外',186,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('综合意外',186,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('交通工具',186,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('家庭财产',186,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('医疗疾病',186,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('车险',186,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('租房',187,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('新房',187,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('二手房',187,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('好房出租',187,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('委托找房',187,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('婚纱礼服',188,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('婚鞋',188,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('婚庆家纺',188,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('喜糖',188,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('喜帖',188,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('婚房装饰',188,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('手捧花',188,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('婚庆用品',188,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('婚庆团购',188,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('服饰箱包',189,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('优质母婴',189,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('美容护肤',189,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('美食家居',189,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('爱好动漫',189,0,getdate());
+--INSERT INTO [CommodityType]([Name],[Parent],[Creator],[CreateTime])VALUES('手机数码',189,0,getdate());
