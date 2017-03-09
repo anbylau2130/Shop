@@ -180,6 +180,15 @@ namespace USP.Dal.Impl
             }
             return result;
         }
+
+        public List<SysDictionary> GetSubTreeNodesByName(string nodeName)
+        {
+            var pnode= db.SysDictionary.Where(x => x.Name == nodeName).First();
+            if (pnode == null) {
+                return new List<SysDictionary>();
+            }
+            return db.SysDictionary.Where(x => x.Parent == pnode.ID).ToList();
+        }
     }
 
 

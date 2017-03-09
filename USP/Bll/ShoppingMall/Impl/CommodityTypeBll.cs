@@ -125,6 +125,8 @@ namespace USP.Bll.ShoppingMall.Impl
             return dal.GetModelById(id);
         }
 
+   
+
         public List<TreeNode> GetTree()
         {
             List<TreeNode> resultTree = new List<TreeNode>();

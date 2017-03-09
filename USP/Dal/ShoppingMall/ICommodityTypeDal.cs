@@ -20,5 +20,7 @@ namespace USP.Dal.ShoppingMall
         ProcResult Auditor(CommodityType model, long auditor);
         ProcResult Add(CommodityType model);
         ProcResult Delete(long id);
+
+      
     }
 }

@@ -48,6 +48,10 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="log4net">
       <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
     </Reference>
@@ -60,6 +64,22 @@
     </Reference>
     <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
       <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.2.1\lib\net40\NPOI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.2.1\lib\net40\NPOI.OOXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.2.1\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.2.1\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -148,6 +168,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\ShoppingMall\Controllers\ComodityController.cs" />
     <Compile Include="Areas\ShoppingMall\Controllers\ComodityTypeController.cs" />
     <Compile Include="Areas\ShoppingMall\ShoppingMallAreaRegistration.cs" />
     <Compile Include="Areas\System\Controllers\BankController.cs" />
@@ -168,7 +189,9 @@
     <Compile Include="Areas\System\Controllers\TestController.cs" />
     <Compile Include="Areas\System\SystemAreaRegistration.cs" />
     <Compile Include="Attributes\NoFilter.cs" />
+    <Compile Include="Bll\ShoppingMall\ICommodityBll.cs" />
     <Compile Include="Bll\ShoppingMall\ICommodityTypeBll.cs" />
+    <Compile Include="Bll\ShoppingMall\Impl\CommodityBll.cs" />
     <Compile Include="Bll\ShoppingMall\Impl\CommodityTypeBll.cs" />
     <Compile Include="Bll\USP\Impl\SysAreaBll.cs" />
     <Compile Include="Bll\USP\Impl\SysBankBll.cs" />
@@ -213,6 +236,7 @@
     <Compile Include="Common\JObjectModelBinder.cs" />
     <Compile Include="Common\JsonChecker.cs" />
     <Compile Include="Common\MVCExtensions.cs" />
+    <Compile Include="Common\NPOIHelper.cs" />
     <Compile Include="Context\Usp.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -225,7 +249,9 @@
     </Compile>
     <Compile Include="Controllers\OEMController.cs" />
     <Compile Include="Controllers\ShopController.cs" />
+    <Compile Include="Dal\ShoppingMall\ICommodityDal.cs" />
     <Compile Include="Dal\ShoppingMall\ICommodityTypeDal.cs" />
+    <Compile Include="Dal\ShoppingMall\Impl\CommodityDal.cs" />
     <Compile Include="Dal\ShoppingMall\Impl\CommodityTypeDal.cs" />
     <Compile Include="Dal\USP\Impl\SysAreaDal.cs" />
     <Compile Include="Dal\USP\Impl\SysBankDal.cs" />
@@ -256,59 +282,167 @@
     <Compile Include="Dal\USP\ISysPrivilegeTemplateDal.cs" />
     <Compile Include="Dal\USP\ISysSkinDal.cs" />
     <Compile Include="Dal\USP\ISysUserDal.cs" />
-    <Compile Include="Models\Entity\temp\Area.cs" />
-    <Compile Include="Models\Entity\temp\CommodityType.cs" />
-    <Compile Include="Models\Entity\temp\IdCardImg.cs" />
-    <Compile Include="Models\Entity\temp\OpenPlatform.cs" />
-    <Compile Include="Models\Entity\temp\OpenPlatformAccessToken.cs" />
-    <Compile Include="Models\Entity\temp\OpenPlatformDefaultMsg.cs" />
-    <Compile Include="Models\Entity\temp\OpenPlatformMenu.cs" />
-    <Compile Include="Models\Entity\temp\OpenPlatformMenuType.cs" />
-    <Compile Include="Models\Entity\temp\OpenPlatformMO.cs" />
-    <Compile Include="Models\Entity\temp\OpenPlatformMsg.cs" />
-    <Compile Include="Models\Entity\temp\OpenPlatformMsgChildren.cs" />
-    <Compile Include="Models\Entity\temp\OpenPlatformMsgKey.cs" />
-    <Compile Include="Models\Entity\temp\OpenPlatformMsgType.cs" />
-    <Compile Include="Models\Entity\temp\OpenPlatformMT.cs" />
-    <Compile Include="Models\Entity\temp\OpenPlatformSubscriber.cs" />
-    <Compile Include="Models\Entity\temp\OpenPlatformType.cs" />
-    <Compile Include="Models\Entity\temp\OpenPlatformUserInfo.cs" />
-    <Compile Include="Models\Entity\temp\ShopCommodityType.cs" />
-    <Compile Include="Models\Entity\temp\SysArea.cs" />
-    <Compile Include="Models\Entity\temp\SysBank.cs" />
-    <Compile Include="Models\Entity\temp\SysCorp.cs" />
-    <Compile Include="Models\Entity\temp\SysCorpFeeType.cs" />
-    <Compile Include="Models\Entity\temp\SysCorpGrade.cs" />
-    <Compile Include="Models\Entity\temp\SysCorpStatus.cs" />
-    <Compile Include="Models\Entity\temp\SysCorpType.cs" />
-    <Compile Include="Models\Entity\temp\SysCorpVocation.cs" />
-    <Compile Include="Models\Entity\temp\SysDictionary.cs" />
-    <Compile Include="Models\Entity\temp\SysLoginLog.cs" />
-    <Compile Include="Models\Entity\temp\SysMenu.cs" />
-    <Compile Include="Models\Entity\temp\SysMenuTemplate.cs" />
-    <Compile Include="Models\Entity\temp\SysOperator.cs" />
-    <Compile Include="Models\Entity\temp\SysOperatorGrade.cs" />
-    <Compile Include="Models\Entity\temp\SysOperatorStar.cs" />
-    <Compile Include="Models\Entity\temp\SysOperatorStatus.cs" />
-    <Compile Include="Models\Entity\temp\SysOperatorSupplier.cs" />
-    <Compile Include="Models\Entity\temp\SysPrivilege.cs" />
-    <Compile Include="Models\Entity\temp\SysPrivilegeTemplate.cs" />
-    <Compile Include="Models\Entity\temp\SysRole.cs" />
-    <Compile Include="Models\Entity\temp\SysRoleMenu.cs" />
-    <Compile Include="Models\Entity\temp\SysRoleOperator.cs" />
-    <Compile Include="Models\Entity\temp\SysRolePrivilege.cs" />
-    <Compile Include="Models\Entity\temp\SysSkin.cs" />
-    <Compile Include="Models\Entity\temp\UP_AreaList_Result.cs" />
-    <Compile Include="Models\Entity\temp\UP_GetMenuTemplate_Result.cs" />
-    <Compile Include="Models\Entity\temp\UP_ShowArea_Result.cs" />
-    <Compile Include="Models\Entity\temp\UP_ShowCity_Result.cs" />
-    <Compile Include="Models\Entity\temp\UP_ShowCorp_Result.cs" />
-    <Compile Include="Models\Entity\temp\UP_ShowCounty_Result.cs" />
-    <Compile Include="Models\Entity\temp\UP_ShowOperatorInfo_Result.cs" />
-    <Compile Include="Models\Entity\temp\UP_ShowPrivilegeTemplate_Result.cs" />
-    <Compile Include="Models\Entity\temp\UP_ShowProvince_Result.cs" />
-    <Compile Include="Models\Entity\temp\UP_ShowShopCommodityType_Result.cs" />
-    <Compile Include="Models\Entity\temp\Usp.cs" />
+    <Compile Include="Models\Entity\Area.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\Commodity.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\CommodityType.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\IdCardImg.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\OpenPlatform.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\OpenPlatformAccessToken.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\OpenPlatformDefaultMsg.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\OpenPlatformMenu.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\OpenPlatformMenuType.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\OpenPlatformMO.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\OpenPlatformMsg.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\OpenPlatformMsgChildren.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\OpenPlatformMsgKey.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\OpenPlatformMsgType.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\OpenPlatformMT.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\OpenPlatformSubscriber.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\OpenPlatformType.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\OpenPlatformUserInfo.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\SysArea.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\SysBank.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\SysCorp.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\SysCorpFeeType.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\SysCorpGrade.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\SysCorpStatus.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\SysCorpType.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\SysCorpVocation.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\SysDictionary.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\SysLoginLog.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\SysMenu.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\SysMenuTemplate.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\SysOperator.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\SysOperatorGrade.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\SysOperatorStar.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\SysOperatorStatus.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\SysPrivilege.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\SysPrivilegeTemplate.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\SysRole.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\SysRoleMenu.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\SysRoleOperator.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\SysRolePrivilege.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\SysSkin.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\UP_GetMenuTemplate_Result.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\UP_GetOperatorRole_Result.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\UP_GetRoleByOperator_Result.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\UP_ShowArea_Result.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\UP_ShowCity_Result.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\UP_ShowCommodity_Result.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\UP_ShowCorp_Result.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\UP_ShowCounty_Result.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\UP_ShowOperatorInfo_Result.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\UP_ShowPrivilegeTemplate_Result.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\UP_ShowProvince_Result.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\Usp.cs">
+      <DependentUpon>Usp.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
     <Compile Include="Models\POCO\BankAddEdit.cs" />
     <Compile Include="Models\POCO\BankType.cs" />
     <Compile Include="Models\POCO\Bank_Extend.cs" />
@@ -326,49 +460,134 @@
     <Compile Include="Models\POCO\TreeOptions.cs" />
     <Compile Include="Models\POCO\UspCreateList.cs" />
     <Compile Include="Models\POCO\UspOperater.cs" />
-    <Compile Include="Models\ViewModel\temp\AreaMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\CommodityTypeMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\GenMetadata.cs" />
-    <Compile Include="Models\ViewModel\temp\IdCardImgMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\OpenPlatformAccessTokenMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\OpenPlatformDefaultMsgMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\OpenPlatformMenuMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\OpenPlatformMenuTypeMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\OpenPlatformMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\OpenPlatformMOMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\OpenPlatformMsgChildrenMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\OpenPlatformMsgKeyMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\OpenPlatformMsgMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\OpenPlatformMsgTypeMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\OpenPlatformMTMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\OpenPlatformSubscriberMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\OpenPlatformTypeMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\OpenPlatformUserInfoMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\ShopCommodityTypeMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\SysAreaMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\SysBankMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\SysCorpFeeTypeMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\SysCorpGradeMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\SysCorpMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\SysCorpStatusMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\SysCorpTypeMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\SysCorpVocationMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\SysDictionaryMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\SysLoginLogMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\SysMenuMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\SysMenuTemplateMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\SysOperatorGradeMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\SysOperatorMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\SysOperatorStarMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\SysOperatorStatusMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\SysOperatorSupplierMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\SysPrivilegeMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\SysPrivilegeTemplateMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\SysRoleMenuMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\SysRoleMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\SysRoleOperatorMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\SysRolePrivilegeMetaData.cs" />
-    <Compile Include="Models\ViewModel\temp\SysSkinMetaData.cs" />
+    <Compile Include="Models\ViewModel\AreaMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\CommodityMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\CommodityTypeMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\GenMetadata.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\IdCardImgMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\OpenPlatformAccessTokenMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\OpenPlatformDefaultMsgMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\OpenPlatformMenuMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\OpenPlatformMenuTypeMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\OpenPlatformMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\OpenPlatformMOMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\OpenPlatformMsgChildrenMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\OpenPlatformMsgKeyMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\OpenPlatformMsgMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\OpenPlatformMsgTypeMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\OpenPlatformMTMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\OpenPlatformSubscriberMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\OpenPlatformTypeMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\OpenPlatformUserInfoMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\SysAreaMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\SysBankMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\SysCorpFeeTypeMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\SysCorpGradeMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\SysCorpMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\SysCorpStatusMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\SysCorpTypeMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\SysCorpVocationMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\SysDictionaryMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\SysLoginLogMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\SysMenuMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\SysMenuTemplateMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\SysOperatorGradeMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\SysOperatorMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\SysOperatorStarMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\SysOperatorStatusMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\SysPrivilegeMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\SysPrivilegeTemplateMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\SysRoleMenuMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\SysRoleMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\SysRoleOperatorMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\SysRolePrivilegeMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\SysSkinMetaData.cs">
+      <DependentUpon>GenMetadata.tt</DependentUpon>
+    </Compile>
     <Compile Include="Service\IDropDownListService.cs" />
     <Compile Include="Service\Impl\DropDownListService.cs" />
     <Compile Include="Service\Impl\TreeService.cs" />
@@ -448,6 +667,14 @@
     <Content Include="Db\USP_BASE\USP_procedure.sql" />
     <Content Include="Db\USP_BASE\清空usp测试数据.sql" />
     <Content Include="Db\USP_ResetMenu.sql" />
+    <Content Include="Models\Entity\Usp.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Usp.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ViewModel\GenMetadata.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>GenMetadata.cs</LastGenOutput>
+    </Content>
     <Content Include="Static\Css\bootstrap.css" />
     <Content Include="Static\Css\bootstrap.min.css" />
     <Content Include="Static\Css\datepicker.css" />
@@ -790,6 +1017,9 @@
     </Content>
     <Content Include="Static\Js\bootstrap.js" />
     <Content Include="Static\Js\bootstrap.min.js" />
+    <Content Include="Static\Js\datagrid-defaultview.js" />
+    <Content Include="Static\Js\datagrid-detailview.js" />
+    <Content Include="Static\Js\datagrid-filter.js" />
     <Content Include="Static\Js\easyloader.js" />
     <Content Include="Areas\System\Views\web.config" />
     <Content Include="Areas\System\Views\_ViewStart.cshtml" />
@@ -849,6 +1079,10 @@
     <Content Include="Areas\ShoppingMall\Views\_ViewStart.cshtml" />
     <Content Include="Areas\System\Views\Dictionary\Index.cshtml" />
     <Content Include="Areas\ShoppingMall\Views\ComodityType\Index.cshtml" />
+    <Content Include="Areas\ShoppingMall\Views\Comodity\Index.cshtml" />
+    <Content Include="Areas\ShoppingMall\Views\Comodity\Add.cshtml" />
+    <Content Include="Areas\ShoppingMall\Views\Comodity\Edit.cshtml" />
+    <Content Include="Areas\ShoppingMall\Views\Comodity\ExcelImport.cshtml" />
     <None Include="Properties\PublishProfiles\NewU.pubxml" />
     <Content Include="Static\fonts\fontawesome-webfont.eot">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -871,10 +1105,9 @@
     <Content Include="Static\Js\jquery-1.11.1.min.map" />
     <None Include="Static\Js\jquery.validate-vsdoc.js" />
     <Content Include="Static\Js\jquery-confirm.min.js" />
-    <Content Include="Static\Js\jquery.easyui-1.4.2.js" />
-    <Content Include="Static\Js\jquery.easyui.min-1.4.2.js" />
-    <Content Include="Static\Js\jquery.easyui.mobile-1.4.2.js" />
-    <Content Include="Static\Js\jquery.easyui.mobile-1.4.2.min.js" />
+    <Content Include="Static\Js\jquery.easyui.min-1.5.1.js" />
+    <Content Include="Static\Js\jquery.easyui.mobile-1.5.1.js" />
+    <Content Include="Static\Js\jquery.min.js" />
     <Content Include="Static\Js\jquery.validate.js" />
     <Content Include="Static\Js\jquery.validate.min.js" />
     <Content Include="Static\Js\jquery.validate.unobtrusive.js" />

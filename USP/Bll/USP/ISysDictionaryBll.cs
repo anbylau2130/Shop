@@ -21,6 +21,7 @@ namespace USP.Bll
         AjaxResult IsExisName(long id, string name);
 
         List<TreeNode> GetDictTree();
+        List<SysDictionary> GetSubTreeNodesByName(string nodeName);
         //List<UP_ShowSysDictionary_Result> GetAll(int? pageIndex, int? pageSize, string whereStr, string strOrder, string strOrderType);
     }
 }

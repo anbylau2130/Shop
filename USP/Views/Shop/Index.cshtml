@@ -2,6 +2,8 @@
     Layout = "";
     ViewBag.Title = "商城";
 }
+@using USP.Models.Entity;
+@using USP.Models.POCO;;
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -33,41 +35,24 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand">网站标题</a>
+                <a class="navbar-brand">啦啦啦</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li>
-                        <a href="./">首页</a>
-                    </li>
+                    @*<li>
+                            <a href="./">首页</a>
+                        </li>*@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">所有分类 <span class="caret"></span></a>
+                        <input id="CommodityType" type="hidden" />
                         <ul class="dropdown-menu">
-                            <li><a href="#">女装/内衣</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">男装/运动户外</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">女鞋/男鞋/箱包</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">化妆品/个人护理</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">腕表/珠宝饰品/眼睛</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">手机/数码/办公用品/鲜花</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">零食/进口食品/茶酒</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">大家电/生活电器</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">家具建材/家纺/家饰</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">汽车/配件/用品</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">医药保健//生鲜水果</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">厨具/收纳/宠物</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">图书音像/母婴玩具</a></li>
+                            @{
+                                foreach (var item in (List<CommodityType>)ViewBag.CommodityType)
+                                {
+                                    <li id="commodityType_@item.ID"><a href="javascript:setCommodityType('@item.ID')">@item.Name</a></li>
+                                    <li role="separator" class="divider"></li>
+                                }
+                            }
                         </ul>
                     </li>
                 </ul>
@@ -87,226 +72,34 @@
 
     <main class="container" style="margin-top:10px">
         <div class="row">
+            @*-----------------左侧目录开始-----------------*@
             <div id="navleftbar" class="col-md-2" role="complementary" style="margin-top:5px; position:fixed">
-
+                <input id="PromotionType" type="hidden" />
                 <div class="list-group">
-                    <a href="#" class="list-group-item active">最新</a>
-                    <a href="#" class="list-group-item">所有分类</a>
-                    <a href="#" class="list-group-item">9块9包邮</a>
-                    <a href="#" class="list-group-item">畅销产品</a>
+                    @{
+                        for (int i = 0; i < ((List<SysDictionary>)ViewBag.LeftMenus).Count; i++)
+                        {
+                            <a id="promotionType_@ViewBag.LeftMenus[i].ID" href="javascript:setPromotionType('@ViewBag.LeftMenus[i].ID')" class="list-group-item">@ViewBag.LeftMenus[i].Name</a>
+                        }
+                    }
                 </div>
-
             </div>
+            @*-----------------左侧目录结束-----------------*@
 
+            @*-----------------产品项开始-----------------*@
             <div id="products" class="row col-md-8 col-md-offset-2">
-                <div class="newsstyle  col-sm-4 col-md-3">
-                    <div class="thumbnail ">
-                        <div class="thumbpic ">
-                            <a href="/news/6238250021572608/" target="_blank">
-                                <img src="http://ig.zhaoyangmao.cn/static/img/news/2017/eb667adc60fedd9c9e0d59c6ace606123690ea90.jpg" alt="【包邮】酷宝 不锈钢烟盒 20支烟">
-                                <div id="intro" class="pdetail">
-                                    天猫黑米烟具专营店39元，可用10元优惠券，实付29元包邮。普通纸质烟盒容易受压变形，造成香烟折断或者折损，让烟时影响面子。这款烟盒采用不锈钢材质，亮白光面还不生锈，超薄设计携带方便，品质高端上档次，拿出去倍有面子。
-                                </div>
-                            </a>
-                        </div>
-                        <div class="caption">
-                            <a href="/news/6238250021572608/" target="_blank">
-                                <h2>【包邮】酷宝 不锈钢烟盒 20支烟</h2>
-                                <p class="tpriceinfo">29元包邮39减10元券后送煤油打火机免费刻字</p>
-                            </a>
-                            <p class="tsrcinfo">值值值&nbsp;&nbsp;<span class="infos" title="2017-02-17T06:58:00.000Z">2小时前</span></p>
-                            <p class="binfo"><a href="/mall/?mall=淘宝" target="_blank" class="mallinfo">淘宝</a><a id="ifav6238250021572608" href="javascript:void(0);" onclick="favnews(6238250021572608);" class="favor"><i class="glyphicon glyphicon-star-empty" title="收藏"></i></a><span class="cnum"></span><a href="http://www.zhaoyangmao.com/goo/en/?u=a2lGdjFmJzR2XzRGa9MmczZyNwATN1QDM5MTM00DZJ1WZ0l2PslaMHjRM0lcFH2MY65LUyT9Y1jbRGTFYuzZQCT5Z0hYlWT9Yi4YYWG8Nu5YU2G9OtyLQ2TNOv0dAXDBZvxbIiz9Ml9ZQGWVS05YRWX=" class=" btn md_btn" role="button" target="_blank">购买</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="newsstyle  col-sm-4 col-md-3">
-                    <div class="thumbnail ">
-                        <div class="thumbpic ">
-                            <a href="/news/6238250021572608/" target="_blank">
-                                <img src="http://ig.zhaoyangmao.cn/static/img/news/2017/eb667adc60fedd9c9e0d59c6ace606123690ea90.jpg" alt="【包邮】酷宝 不锈钢烟盒 20支烟">
-                                <div id="intro" class="pdetail">
-                                    天猫黑米烟具专营店39元，可用10元优惠券，实付29元包邮。普通纸质烟盒容易受压变形，造成香烟折断或者折损，让烟时影响面子。这款烟盒采用不锈钢材质，亮白光面还不生锈，超薄设计携带方便，品质高端上档次，拿出去倍有面子。
-                                </div>
-                            </a>
-                        </div>
-                        <div class="caption">
-                            <a href="/news/6238250021572608/" target="_blank">
-                                <h2>【包邮】酷宝 不锈钢烟盒 20支烟</h2>
-                                <p class="tpriceinfo">29元包邮39减10元券后送煤油打火机免费刻字</p>
-                            </a>
-                            <p class="tsrcinfo">值值值&nbsp;&nbsp;<span class="infos" title="2017-02-17T06:58:00.000Z">2小时前</span></p>
-                            <p class="binfo"><a href="/mall/?mall=淘宝" target="_blank" class="mallinfo">淘宝</a><a id="ifav6238250021572608" href="javascript:void(0);" onclick="favnews(6238250021572608);" class="favor"><i class="glyphicon glyphicon-star-empty" title="收藏"></i></a><span class="cnum"></span><a href="http://www.zhaoyangmao.com/goo/en/?u=a2lGdjFmJzR2XzRGa9MmczZyNwATN1QDM5MTM00DZJ1WZ0l2PslaMHjRM0lcFH2MY65LUyT9Y1jbRGTFYuzZQCT5Z0hYlWT9Yi4YYWG8Nu5YU2G9OtyLQ2TNOv0dAXDBZvxbIiz9Ml9ZQGWVS05YRWX=" class=" btn md_btn" role="button" target="_blank">购买</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="newsstyle  col-sm-4 col-md-3">
-                    <div class="thumbnail ">
-                        <div class="thumbpic ">
-                            <a href="/news/6238250021572608/" target="_blank">
-                                <img src="http://ig.zhaoyangmao.cn/static/img/news/2017/eb667adc60fedd9c9e0d59c6ace606123690ea90.jpg" alt="【包邮】酷宝 不锈钢烟盒 20支烟">
-                                <div id="intro" class="pdetail">
-                                    天猫黑米烟具专营店39元，可用10元优惠券，实付29元包邮。普通纸质烟盒容易受压变形，造成香烟折断或者折损，让烟时影响面子。这款烟盒采用不锈钢材质，亮白光面还不生锈，超薄设计携带方便，品质高端上档次，拿出去倍有面子。
-                                </div>
-                            </a>
-                        </div>
-                        <div class="caption">
-                            <a href="/news/6238250021572608/" target="_blank">
-                                <h2>【包邮】酷宝 不锈钢烟盒 20支烟</h2>
-                                <p class="tpriceinfo">29元包邮39减10元券后送煤油打火机免费刻字</p>
-                            </a>
-                            <p class="tsrcinfo">值值值&nbsp;&nbsp;<span class="infos" title="2017-02-17T06:58:00.000Z">2小时前</span></p>
-                            <p class="binfo"><a href="/mall/?mall=淘宝" target="_blank" class="mallinfo">淘宝</a><a id="ifav6238250021572608" href="javascript:void(0);" onclick="favnews(6238250021572608);" class="favor"><i class="glyphicon glyphicon-star-empty" title="收藏"></i></a><span class="cnum"></span><a href="http://www.zhaoyangmao.com/goo/en/?u=a2lGdjFmJzR2XzRGa9MmczZyNwATN1QDM5MTM00DZJ1WZ0l2PslaMHjRM0lcFH2MY65LUyT9Y1jbRGTFYuzZQCT5Z0hYlWT9Yi4YYWG8Nu5YU2G9OtyLQ2TNOv0dAXDBZvxbIiz9Ml9ZQGWVS05YRWX=" class=" btn md_btn" role="button" target="_blank">购买</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="newsstyle  col-sm-4 col-md-3">
-                    <div class="thumbnail ">
-                        <div class="thumbpic ">
-                            <a href="/news/6238250021572608/" target="_blank">
-                                <img src="http://ig.zhaoyangmao.cn/static/img/news/2017/eb667adc60fedd9c9e0d59c6ace606123690ea90.jpg" alt="【包邮】酷宝 不锈钢烟盒 20支烟">
-                                <div id="intro" class="pdetail">
-                                    天猫黑米烟具专营店39元，可用10元优惠券，实付29元包邮。普通纸质烟盒容易受压变形，造成香烟折断或者折损，让烟时影响面子。这款烟盒采用不锈钢材质，亮白光面还不生锈，超薄设计携带方便，品质高端上档次，拿出去倍有面子。
-                                </div>
-                            </a>
-                        </div>
-                        <div class="caption">
-                            <a href="/news/6238250021572608/" target="_blank">
-                                <h2>【包邮】酷宝 不锈钢烟盒 20支烟</h2>
-                                <p class="tpriceinfo">29元包邮39减10元券后送煤油打火机免费刻字</p>
-                            </a>
-                            <p class="tsrcinfo">值值值&nbsp;&nbsp;<span class="infos" title="2017-02-17T06:58:00.000Z">2小时前</span></p>
-                            <p class="binfo"><a href="/mall/?mall=淘宝" target="_blank" class="mallinfo">淘宝</a><a id="ifav6238250021572608" href="javascript:void(0);" onclick="favnews(6238250021572608);" class="favor"><i class="glyphicon glyphicon-star-empty" title="收藏"></i></a><span class="cnum"></span><a href="http://www.zhaoyangmao.com/goo/en/?u=a2lGdjFmJzR2XzRGa9MmczZyNwATN1QDM5MTM00DZJ1WZ0l2PslaMHjRM0lcFH2MY65LUyT9Y1jbRGTFYuzZQCT5Z0hYlWT9Yi4YYWG8Nu5YU2G9OtyLQ2TNOv0dAXDBZvxbIiz9Ml9ZQGWVS05YRWX=" class=" btn md_btn" role="button" target="_blank">购买</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="newsstyle  col-sm-4 col-md-3">
-                    <div class="thumbnail ">
-                        <div class="thumbpic ">
-                            <a href="/news/6238250021572608/" target="_blank">
-                                <img src="http://ig.zhaoyangmao.cn/static/img/news/2017/eb667adc60fedd9c9e0d59c6ace606123690ea90.jpg" alt="【包邮】酷宝 不锈钢烟盒 20支烟">
-                                <div id="intro" class="pdetail">
-                                    天猫黑米烟具专营店39元，可用10元优惠券，实付29元包邮。普通纸质烟盒容易受压变形，造成香烟折断或者折损，让烟时影响面子。这款烟盒采用不锈钢材质，亮白光面还不生锈，超薄设计携带方便，品质高端上档次，拿出去倍有面子。
-                                </div>
-                            </a>
-                        </div>
-                        <div class="caption">
-                            <a href="/news/6238250021572608/" target="_blank">
-                                <h2>【包邮】酷宝 不锈钢烟盒 20支烟</h2>
-                                <p class="tpriceinfo">29元包邮39减10元券后送煤油打火机免费刻字</p>
-                            </a>
-                            <p class="tsrcinfo">值值值&nbsp;&nbsp;<span class="infos" title="2017-02-17T06:58:00.000Z">2小时前</span></p>
-                            <p class="binfo"><a href="/mall/?mall=淘宝" target="_blank" class="mallinfo">淘宝</a><a id="ifav6238250021572608" href="javascript:void(0);" onclick="favnews(6238250021572608);" class="favor"><i class="glyphicon glyphicon-star-empty" title="收藏"></i></a><span class="cnum"></span><a href="http://www.zhaoyangmao.com/goo/en/?u=a2lGdjFmJzR2XzRGa9MmczZyNwATN1QDM5MTM00DZJ1WZ0l2PslaMHjRM0lcFH2MY65LUyT9Y1jbRGTFYuzZQCT5Z0hYlWT9Yi4YYWG8Nu5YU2G9OtyLQ2TNOv0dAXDBZvxbIiz9Ml9ZQGWVS05YRWX=" class=" btn md_btn" role="button" target="_blank">购买</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="newsstyle  col-sm-4 col-md-3">
-                    <div class="thumbnail ">
-                        <div class="thumbpic ">
-                            <a href="/news/6238250021572608/" target="_blank">
-                                <img src="http://ig.zhaoyangmao.cn/static/img/news/2017/eb667adc60fedd9c9e0d59c6ace606123690ea90.jpg" alt="【包邮】酷宝 不锈钢烟盒 20支烟">
-                                <div id="intro" class="pdetail">
-                                    天猫黑米烟具专营店39元，可用10元优惠券，实付29元包邮。普通纸质烟盒容易受压变形，造成香烟折断或者折损，让烟时影响面子。这款烟盒采用不锈钢材质，亮白光面还不生锈，超薄设计携带方便，品质高端上档次，拿出去倍有面子。
-                                </div>
-                            </a>
-                        </div>
-                        <div class="caption">
-                            <a href="/news/6238250021572608/" target="_blank">
-                                <h2>【包邮】酷宝 不锈钢烟盒 20支烟</h2>
-                                <p class="tpriceinfo">29元包邮39减10元券后送煤油打火机免费刻字</p>
-                            </a>
-                            <p class="tsrcinfo">值值值&nbsp;&nbsp;<span class="infos" title="2017-02-17T06:58:00.000Z">2小时前</span></p>
-                            <p class="binfo"><a href="/mall/?mall=淘宝" target="_blank" class="mallinfo">淘宝</a><a id="ifav6238250021572608" href="javascript:void(0);" onclick="favnews(6238250021572608);" class="favor"><i class="glyphicon glyphicon-star-empty" title="收藏"></i></a><span class="cnum"></span><a href="http://www.zhaoyangmao.com/goo/en/?u=a2lGdjFmJzR2XzRGa9MmczZyNwATN1QDM5MTM00DZJ1WZ0l2PslaMHjRM0lcFH2MY65LUyT9Y1jbRGTFYuzZQCT5Z0hYlWT9Yi4YYWG8Nu5YU2G9OtyLQ2TNOv0dAXDBZvxbIiz9Ml9ZQGWVS05YRWX=" class=" btn md_btn" role="button" target="_blank">购买</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="newsstyle  col-sm-4 col-md-3">
-                    <div class="thumbnail ">
-                        <div class="thumbpic ">
-                            <a href="/news/6238250021572608/" target="_blank">
-                                <img src="http://ig.zhaoyangmao.cn/static/img/news/2017/eb667adc60fedd9c9e0d59c6ace606123690ea90.jpg" alt="【包邮】酷宝 不锈钢烟盒 20支烟">
-                                <div id="intro" class="pdetail">
-                                    天猫黑米烟具专营店39元，可用10元优惠券，实付29元包邮。普通纸质烟盒容易受压变形，造成香烟折断或者折损，让烟时影响面子。这款烟盒采用不锈钢材质，亮白光面还不生锈，超薄设计携带方便，品质高端上档次，拿出去倍有面子。
-                                </div>
-                            </a>
-                        </div>
-                        <div class="caption">
-                            <a href="/news/6238250021572608/" target="_blank">
-                                <h2>【包邮】酷宝 不锈钢烟盒 20支烟</h2>
-                                <p class="tpriceinfo">29元包邮39减10元券后送煤油打火机免费刻字</p>
-                            </a>
-                            <p class="tsrcinfo">值值值&nbsp;&nbsp;<span class="infos" title="2017-02-17T06:58:00.000Z">2小时前</span></p>
-                            <p class="binfo"><a href="/mall/?mall=淘宝" target="_blank" class="mallinfo">淘宝</a><a id="ifav6238250021572608" href="javascript:void(0);" onclick="favnews(6238250021572608);" class="favor"><i class="glyphicon glyphicon-star-empty" title="收藏"></i></a><span class="cnum"></span><a href="http://www.zhaoyangmao.com/goo/en/?u=a2lGdjFmJzR2XzRGa9MmczZyNwATN1QDM5MTM00DZJ1WZ0l2PslaMHjRM0lcFH2MY65LUyT9Y1jbRGTFYuzZQCT5Z0hYlWT9Yi4YYWG8Nu5YU2G9OtyLQ2TNOv0dAXDBZvxbIiz9Ml9ZQGWVS05YRWX=" class=" btn md_btn" role="button" target="_blank">购买</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="newsstyle  col-sm-4 col-md-3">
-                    <div class="thumbnail ">
-                        <div class="thumbpic ">
-                            <a href="/news/6238250021572608/" target="_blank">
-                                <img src="http://ig.zhaoyangmao.cn/static/img/news/2017/eb667adc60fedd9c9e0d59c6ace606123690ea90.jpg" alt="【包邮】酷宝 不锈钢烟盒 20支烟">
-                                <div id="intro" class="pdetail">
-                                    天猫黑米烟具专营店39元，可用10元优惠券，实付29元包邮。普通纸质烟盒容易受压变形，造成香烟折断或者折损，让烟时影响面子。这款烟盒采用不锈钢材质，亮白光面还不生锈，超薄设计携带方便，品质高端上档次，拿出去倍有面子。
-                                </div>
-                            </a>
-                        </div>
-                        <div class="caption">
-                            <a href="/news/6238250021572608/" target="_blank">
-                                <h2>【包邮】酷宝 不锈钢烟盒 20支烟</h2>
-                                <p class="tpriceinfo">29元包邮39减10元券后送煤油打火机免费刻字</p>
-                            </a>
-                            <p class="tsrcinfo">值值值&nbsp;&nbsp;<span class="infos" title="2017-02-17T06:58:00.000Z">2小时前</span></p>
-                            <p class="binfo"><a href="/mall/?mall=淘宝" target="_blank" class="mallinfo">淘宝</a><a id="ifav6238250021572608" href="javascript:void(0);" onclick="favnews(6238250021572608);" class="favor"><i class="glyphicon glyphicon-star-empty" title="收藏"></i></a><span class="cnum"></span><a href="http://www.zhaoyangmao.com/goo/en/?u=a2lGdjFmJzR2XzRGa9MmczZyNwATN1QDM5MTM00DZJ1WZ0l2PslaMHjRM0lcFH2MY65LUyT9Y1jbRGTFYuzZQCT5Z0hYlWT9Yi4YYWG8Nu5YU2G9OtyLQ2TNOv0dAXDBZvxbIiz9Ml9ZQGWVS05YRWX=" class=" btn md_btn" role="button" target="_blank">购买</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="newsstyle  col-sm-4 col-md-3">
-                    <div class="thumbnail ">
-                        <div class="thumbpic ">
-                            <a href="/news/6238250021572608/" target="_blank">
-                                <img src="http://ig.zhaoyangmao.cn/static/img/news/2017/eb667adc60fedd9c9e0d59c6ace606123690ea90.jpg" alt="【包邮】酷宝 不锈钢烟盒 20支烟">
-                                <div id="intro" class="pdetail">
-                                    天猫黑米烟具专营店39元，可用10元优惠券，实付29元包邮。普通纸质烟盒容易受压变形，造成香烟折断或者折损，让烟时影响面子。这款烟盒采用不锈钢材质，亮白光面还不生锈，超薄设计携带方便，品质高端上档次，拿出去倍有面子。
-                                </div>
-                            </a>
-                        </div>
-                        <div class="caption">
-                            <a href="/news/6238250021572608/" target="_blank">
-                                <h2>【包邮】酷宝 不锈钢烟盒 20支烟</h2>
-                                <p class="tpriceinfo">29元包邮39减10元券后送煤油打火机免费刻字</p>
-                            </a>
-                            <p class="tsrcinfo">值值值&nbsp;&nbsp;<span class="infos" title="2017-02-17T06:58:00.000Z">2小时前</span></p>
-                            <p class="binfo"><a href="/mall/?mall=淘宝" target="_blank" class="mallinfo">淘宝</a><a id="ifav6238250021572608" href="javascript:void(0);" onclick="favnews(6238250021572608);" class="favor"><i class="glyphicon glyphicon-star-empty" title="收藏"></i></a><span class="cnum"></span><a href="http://www.zhaoyangmao.com/goo/en/?u=a2lGdjFmJzR2XzRGa9MmczZyNwATN1QDM5MTM00DZJ1WZ0l2PslaMHjRM0lcFH2MY65LUyT9Y1jbRGTFYuzZQCT5Z0hYlWT9Yi4YYWG8Nu5YU2G9OtyLQ2TNOv0dAXDBZvxbIiz9Ml9ZQGWVS05YRWX=" class=" btn md_btn" role="button" target="_blank">购买</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="newsstyle  col-sm-4 col-md-3">
-                    <div class="thumbnail ">
-                        <div class="thumbpic ">
-                            <a href="/news/6238250021572608/" target="_blank">
-                                <img src="http://ig.zhaoyangmao.cn/static/img/news/2017/eb667adc60fedd9c9e0d59c6ace606123690ea90.jpg" alt="【包邮】酷宝 不锈钢烟盒 20支烟">
-                                <div id="intro" class="pdetail">
-                                    天猫黑米烟具专营店39元，可用10元优惠券，实付29元包邮。普通纸质烟盒容易受压变形，造成香烟折断或者折损，让烟时影响面子。这款烟盒采用不锈钢材质，亮白光面还不生锈，超薄设计携带方便，品质高端上档次，拿出去倍有面子。
-                                </div>
-                            </a>
-                        </div>
-                        <div class="caption">
-                            <a href="/news/6238250021572608/" target="_blank">
-                                <h2>【包邮】酷宝 不锈钢烟盒 20支烟</h2>
-                                <p class="tpriceinfo">29元包邮39减10元券后送煤油打火机免费刻字</p>
-                            </a>
-                            <p class="tsrcinfo">值值值&nbsp;&nbsp;<span class="infos" title="2017-02-17T06:58:00.000Z">2小时前</span></p>
-                            <p class="binfo"><a href="/mall/?mall=淘宝" target="_blank" class="mallinfo">淘宝</a><a id="ifav6238250021572608" href="javascript:void(0);" onclick="favnews(6238250021572608);" class="favor"><i class="glyphicon glyphicon-star-empty" title="收藏"></i></a><span class="cnum"></span><a href="http://www.zhaoyangmao.com/goo/en/?u=a2lGdjFmJzR2XzRGa9MmczZyNwATN1QDM5MTM00DZJ1WZ0l2PslaMHjRM0lcFH2MY65LUyT9Y1jbRGTFYuzZQCT5Z0hYlWT9Yi4YYWG8Nu5YU2G9OtyLQ2TNOv0dAXDBZvxbIiz9Ml9ZQGWVS05YRWX=" class=" btn md_btn" role="button" target="_blank">购买</a></p>
-                        </div>
-                    </div>
-                </div>
+
             </div>
+            @*-----------------产品项结束-----------------*@
+
+            @*-----------------右侧公告开始------------------*@
             <div id="rightInfo" class="col-md-2" role="complementary" style="margin-top:10px">
-                <div class="list-group" >
+                <div class="list-group">
                     <li class="list-group-item">公告</li>
                     <li class="list-group-item">刘家良可以用“一代宗师”来形容，他出身武术世家，9岁开始随父亲学武，父亲刘湛是黄飞鸿入室弟子林世荣的亲传弟子，因此深得黄氏武学真传。之后更是进入电影界，参演执导电影无数，而且义薄云天，凭义气收获不少友情，更是获得获的金像奖终身成就奖纵横武术界与电影圈。</li>
-                   
                 </div>
             </div>
+            @*-----------------右侧公告结束-----------------*@
         </div>
 
     </main>
@@ -314,8 +107,8 @@
 
     <footer class="footer navbar-bottom">
         <div class="container ">
-            <p>&copy; Gulp 中文网 2015</p>
-            <p><a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备11008151号</a> | 京公网安备11010802014853</p>
+            <p>&copy;啦啦啦 中文网</p>
+            <p><a href="#" target="_blank">京ICP备11008151号</a> | 京公网安备11010802014853</p>
         </div>
     </footer>
 
@@ -323,14 +116,117 @@
     <script src="http://cdn.bootcss.com/highlight.js/8.4/highlight.min.js"></script>
     <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
     <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    @Scripts.Render("~/Js/Usp")
     <script>
         hljs.initHighlightingOnLoad();
+        var pageIndex = 1;
+        var pageSize = 20;
+        var commodityType = 0;
+        var promotionType = 0;
+        function setCommodityType(id) {
+            $("#products").html("");
+            if ($("#CommodityType").val() == id) {
+                $("#commodityType_" + id).removeClass("active")
+            } else {
+                $("#commodityType_" + id).addClass("active")
+            }
+            $("#CommodityType").val(id);
+            doSearch();
+        }
+        function setPromotionType(id) {
+            if ($("#PromotionType").val() == id) {
+                $("#promotionType_" + id).removeClass("active")
+            } else {
+                $("#promotionType_" + id).addClass("active")
+            }
+            $("#PromotionType").val(id);
+            $("#products").html("");
+            doSearch();
+        }
+        function doSearch() {
+            $.ajax({
+                type: "POST",
+                url: "Shop/GetCommodities",
+                data: {
+                    pageIndex: pageIndex,
+                    pageSize: pageSize,
+                    commodityType: $("#CommodityType").val(),
+                    promotionType: $("#PromotionType").val()
+                },
+                success: function (data) {
+                    $.each(data, function (index, value) {
+                        $("#products").append(buildHtml(value));
+                    });
+                    scollflag = true;
+                    pageIndex++;
+                }
+            });
+        };
+        function buildHtml(model) {
+            var date1 = usp.ParseUTCDateToDate(model.CreateTime);
+            var date2 = new Date();
+            return '<div class="newsstyle  col-sm-4 col-md-3">' +
+                        '<div class="thumbnail ">' +
+                            '<div class="thumbpic">' +
+                                '<a href="' + model.TBKLink + '" target="_blank">' +
+                                    '<img src="' + model.Picture + '" alt="' + model.Name + '">' +
+                                    '@*<div id="intro" class="pdetail">' +
+                                        '@item.Name' +
+                                    '</div>*@' +
+                                '</a>' +
+                            '</div>' +
+                            '<div class="caption">' +
+                                '<a href="' + model.TBKLink + '" target="_blank">' +
+                                    '<h2>' + model.Name + '</h2>' +
+                                        '<a href="' + model.CouponLink + '" target="_blank">' +
+                                            '<p class="tpriceinfo">' +
+                                                  model.CouponDenomination +
+                                            '</p>' +
+                                        '</a>' +
+                                '</a>' +
+                                '<p class="tsrcinfo">' + model.Type + '&nbsp;&nbsp;<span class="infos pull-right">' + usp.getDateDiff(date1, date2) + ' 前</span></p>' +
+                                '<p class="binfo">' +
+                                    '<a href="/mall/?mall=淘宝" target="_blank" class="mallinfo">' + model.PlatformName + '</a>' +
+                                    '<a id="' + model.ID + '" href="javascript:void(0);" onclick="javascript: void (0);" class="favor">' +
+                                        '&nbsp&nbsp<i class="glyphicon glyphicon-thumbs-up" title="赞"></i>' +
+                                    '</a>   @*<span class="cnum"></span>*@' +
+                                    '@*<a href="" class="btn md_btn" role="button" target="_blank">购买</a>*@' +
+                                    '<span style="float:right">' +
+                                        '<button class="btn btn-default btn-sm btn-danger" onclick="window.open(\'' + model.CouponLink + '\');">领卷</button>&nbsp' +
+                                        '<button class="btn btn-default btn-sm btn-danger" onclick="window.open(\'' + model.TBKLink +'\');">购买</button>' +
+                                    '</span>' +
+                                '</p>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>';
+        }
+        var scollflag = true;
         $(function () {
             $("#navleftbar > div >a").click(function () {
                 $("#navleftbar > div >a").removeClass("active");
                 $(this).addClass("active");
             })
+
+            window.onscroll = function () {
+                var marginBot = 0;
+                if (document.documentElement.scrollTop) {
+                    marginBot = document.documentElement.scrollHeight - document.documentElement.clientHeight - (document.documentElement.scrollTop + document.body.scrollTop);
+                } else {
+                    marginBot = document.body.scrollHeight - document.body.scrollTop - document.body.clientHeight;
+                }
+                if (marginBot <= 0) {
+                    if (scollflag) {
+                        scollflag = false;
+                        doSearch();
+
+                    }
+                }
+            }
+          
+            doSearch();
         });
+
+
     </script>
 </body>
 

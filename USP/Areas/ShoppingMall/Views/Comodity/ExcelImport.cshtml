@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+@section themes{
+    <link href="~/Static/Css/shop/usp.commodity.index.css" rel="stylesheet" />
+}
+<div id="p" class="easyui-panel" style="width: 100%; height: 100%">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            导入Excel
+            <button id="btnReturn" type="button" class="btn btn-primary btn-xs pull-right">返回</button>
+        </div>
+        <div class="panel-body panel-fit">
+            <input type="file" id="importUpload" />
+        </div>
+    </div>
+@section scripts{
+    <script type="text/javascript">
+        (function () {
+            usp.namespace("usp.shop.comodity.index.excelImport");
+            usp.shop.comodity.index.excelImport.init = function (id, uploadUrl) {
+                $(id).fileinput({
+                    language: 'zh', //设置语言
+                    uploadUrl: uploadUrl, //上传的地址
+                    allowedFileExtensions: ['xls'], //接收的文件后缀
+                    showCaption: false,
+                    //showPreview: false,
+                    showUpload: true, //是否显示上传按钮
+                    showCaption: false, //是否显示标题
+                    browseClass: "btn btn-primary", //按钮样式
+                    previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
+                    //initialPreview: [ //预览图片的设置
+                    //    "<img src='" + filename + "' class='file-preview-image' >"
+                    //]
+                });
+                $(id).on("fileuploaded", function (event, data, previewId, index) {
+                    if (data.jqXHR.responseJSON.flag) {
+                        toastr.error(data.jqXHR.responseJSON.message);
+                    } else {
+                        toastr.error(data.jqXHR.responseJSON.message);
+                    }
+                });
+            }
+            usp.shop.comodity.index.excelImport.btnReturnInit = function (id, basePage) {
+                $(id).on("click", function () {
+                    location.href = basePage;
+                    return false;
+                });
+            }
+        })(this);
+
+        $(function () {
+            usp.init();
+            usp.shop.comodity.index.excelImport.init("#importUpload", "ExcelImport");
+            usp.shop.comodity.index.excelImport.btnReturnInit("#btnReturn","/ShoppingMall/Comodity/Index");
+        });
+    </script>
+}

@@ -68,6 +68,7 @@ namespace USP.Context
         public virtual DbSet<SysBank> SysBank { get; set; }
         public virtual DbSet<SysDictionary> SysDictionary { get; set; }
         public virtual DbSet<CommodityType> CommodityType { get; set; }
+        public virtual DbSet<Commodity> Commodity { get; set; }
     
         public virtual int UP_AddMenu(string name, string icon)
         {
@@ -1102,6 +1103,31 @@ namespace USP.Context
                 new ObjectParameter("strOrderType", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("UP_ShowShopCommodityType", pageIndexParameter, pageSizeParameter, whereStrParameter, strOrderParameter, strOrderTypeParameter);
+        }
+    
+        public virtual ObjectResult<UP_ShowCommodity_Result> UP_ShowCommodity(Nullable<int> pageIndex, Nullable<int> pageSize, string whereStr, string strOrder, string strOrderType)
+        {
+            var pageIndexParameter = pageIndex.HasValue ?
+                new ObjectParameter("PageIndex", pageIndex) :
+                new ObjectParameter("PageIndex", typeof(int));
+    
+            var pageSizeParameter = pageSize.HasValue ?
+                new ObjectParameter("PageSize", pageSize) :
+                new ObjectParameter("PageSize", typeof(int));
+    
+            var whereStrParameter = whereStr != null ?
+                new ObjectParameter("WhereStr", whereStr) :
+                new ObjectParameter("WhereStr", typeof(string));
+    
+            var strOrderParameter = strOrder != null ?
+                new ObjectParameter("strOrder", strOrder) :
+                new ObjectParameter("strOrder", typeof(string));
+    
+            var strOrderTypeParameter = strOrderType != null ?
+                new ObjectParameter("strOrderType", strOrderType) :
+                new ObjectParameter("strOrderType", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<UP_ShowCommodity_Result>("UP_ShowCommodity", pageIndexParameter, pageSizeParameter, whereStrParameter, strOrderParameter, strOrderTypeParameter);
         }
     }
 }

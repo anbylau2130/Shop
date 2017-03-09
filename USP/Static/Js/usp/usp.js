@@ -131,12 +131,35 @@
         }
     };
 
+    usp.getDateDiff = function (dateBegin,dateEnd) {
+        var timeSpan = dateEnd.getTime() - dateBegin.getTime();
+        var days = Math.floor(timeSpan / (24 * 3600 * 1000));//计算出相差天数
+        var leave1 = timeSpan % (24 * 3600 * 1000);        //计算天数后剩余的毫秒数
+        var hours = Math.floor(leave1 / (3600 * 1000));  //计算出小时数
+        var leave2 = leave1 % (3600 * 1000);       //计算小时数后剩余的毫秒数
+        var minutes = Math.floor(leave2 / (60 * 1000));    //计算相差分钟数
+        var leave3=leave2%(60*1000)      //计算分钟数后剩余的毫秒数
+        var seconds = Math.round(leave3 / 1000) ///计算相差秒数
+        if(days==0){
+            return  hours + "小时";
+        } else if (days == 0&& hours==0) {
+            return  minutes + "分钟" ;
+        } else if (days == 0 && hours == 0 && minutes == 0) {
+            return  seconds + "秒";
+        } else {
+            return days + "天" ;
+        }
+        //return days + "天" + hours + "小时" + minutes + "分钟" + seconds + "秒";
+    }
     usp.init = function () {
         if (typeof (toastr) == 'object') {
             toastr.options.positionClass = 'toast-top-center';
             toastr.options.timeOut = '2000';
             toastr.options.extendedTimeOut = '1000';
         }
+        $(".datepicker").datetimepicker({
+            format: 'YYYY-MM-DD'
+        });
     };
 
     

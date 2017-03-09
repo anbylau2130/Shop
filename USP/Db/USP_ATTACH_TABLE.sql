@@ -43,6 +43,8 @@ CouponBeginTime DATETIME NOT NULL, --优惠券开始日期
 CouponEndTime DATETIME NOT NULL, --优惠券结束日期
 CouponLink VARCHAR(400) NOT NULL,--优惠券链接
 PromotionLink VARCHAR(400) NOT NULL, --推广链接
+CouponPrice DECIMAL(36,2) NOT NULL , --优惠券面额
+CouponCondition DECIMAL(36,2) NOT NULL , --优惠券条件
 Reserve varchar(250) null,--保留
 Remark varchar(250) null,--备注
 Creator bigint not null,--创建人

@@ -1,0 +1,412 @@
+﻿
+
+
+@{
+    ViewBag.Title = "Title";
+}
+
+@section themes{
+    @*<link href="~/Static/Css/usp/usp.shop.comodity.index.css" rel="stylesheet" />*@
+
+}
+<!--操作按钮开始-->
+<div id="toolbarmenu" class="datagrid-toolbar" style="padding-bottom: 3px">
+    <table cellspacing="0" cellpadding="0">
+        <tr>
+            <td>
+                <a class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="usp.shop.comodity.index.add('/ShoppingMall/Comodity/Add');">添加</a>
+            </td>
+            <td>
+                <span class="datagrid-btn-separator"></span>
+            </td>
+            <td>
+                <a class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="usp.shop.comodity.index.edit('#datagrid', '/ShoppingMall/Comodity/Edit?id=');">编辑</a>
+            </td>
+            <td>
+                <span class="datagrid-btn-separator"></span>
+            </td>
+            <td>
+                <a class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="usp.shop.comodity.index.cancel('#datagrid', '/ShoppingMall/Comodity/Cancel');">注销</a>
+            </td>
+            <td>
+                <span class="datagrid-btn-separator"></span>
+            </td>
+            <td>
+                <a class="easyui-linkbutton" iconCls="icon-redo" plain="true" onclick="usp.shop.comodity.index.active('#datagrid', '/ShoppingMall/Comodity/Active'); ">激活</a>
+            </td>
+            <td>
+                <span class="datagrid-btn-separator"></span>
+            </td>
+            <td>
+                <a class="easyui-linkbutton" iconCls="icon-ok" plain="true" onclick="usp.shop.comodity.index.audit('#datagrid', '/ShoppingMall/Comodity/Audit');">审核</a>
+            </td>
+            <td>
+                 <a class="easyui-linkbutton" iconCls="icon-ok" plain="true" onclick="usp.shop.comodity.index.import('/ShoppingMall/Comodity/ExcelImport')">导入</a>
+            </td>
+        </tr>
+    </table>
+</div>
+<!--操作按钮结束-->
+<!--操作按钮结束-->
+<!--搜索开始-->
+<div id="toolbarsearch" style="padding:3px" class="datagrid-toolbar">
+    <input id="searchbox" />
+    <div id="mm"></div>
+</div>
+<!--搜索结束-->
+<!--列表-->
+<table id="datagrid"></table>
+@*<div id="win">
+    <input type="file" id="importUpload" />
+</div>*@
+
+
+@section scripts{
+        <script type="text/javascript" src="~/Static/Js/datagrid-detailview.js"></script>
+    @*<script type="text/javascript" src="~/Static/Js/usp/usp.shop.comodity.index.js"></script>*@
+    <script>
+        (function () {
+            usp.namespace("usp.shop.comodity.index");
+            usp.shop.comodity.index.iniCount = 0;
+            usp.shop.comodity.index.initGrid = function (id, url, toolbarmenu, toolbarsearch) {
+                $(id).datagrid({
+                    url: url,
+                    title: '商品信息',
+                    queryParams: { actionName: 'indexdatagrid' },
+                    iconCls: 'icon-clientService',
+                    fit:true,
+                    nowrap: false,
+                    striped: true,
+                    columns: [
+                        [
+                              {
+                                   field: 'ID', title: 'ID', width: 50
+                               },
+                              //{
+                              //     field: 'Code', title: '商品id', width: 150,
+                              // },
+                              {
+                                  field: 'Type', title: '商品一级类目', width: 150,
+                              },
+                              {
+                                  field: 'Name', title: '商品名称', width: 400,
+                               },
+                              //{
+                              //    field: 'Picture', title: '商品主图', width: 50,
+                              //    //formatter: function (value, row, index) { return '<img src="' + row.Picture + '"  style="width:50px" />'; }
+                              // },
+                              //{
+                              //     field: 'DetailLink', title: '详细页', width: 150,
+                              // },
+                              //{
+                              //     field: 'TBKLink', title: '淘宝客', width: 150,
+                              // },
+                              //{
+                              //     field: 'Price', title: '商品价格', width: 150,
+                              // },
+                              {
+                                  field: 'MonthOrder', title: '月销量', width: 80, align: 'right'
+                               },
+                              {
+                                  field: 'IncomeRate', title: '收入比率', width: 80, align: 'right'
+                               },
+                              {
+                                  field: 'Commission', title: '佣金', width: 80, align: 'right'
+                               },
+                              //{
+                              //     field: 'SellerId', title: '卖家ID', width: 150,
+                              // },
+                              //{
+                              //     field: 'SellerWangWangName', title: '卖家旺旺', width: 150,
+                              // },
+                              //{
+                              //     field: 'ShopName', title: '店铺名称', width: 150,
+                              // },
+                              {
+                                  field: 'PlatformName', title: '平台名称', width: 80
+                               },
+                              //{
+                              //     field: 'CouponId', title: '优惠券Id', width: 150,
+                              // },
+                              //{
+                              //     field: 'CouponCount', title: '优惠券总数', width: 150,
+                              // },
+                              {
+                                  field: 'CouponLeft', title: '优惠券剩余量', width: 80, align: 'right'
+                               },
+                              {
+                                  field: 'CouponDenomination', title: '优惠券面额', width: 150,
+                                  
+                               },
+                              {
+                                  field: 'CouponBeginTime', title: '优惠券开始日期', width: 160,
+                                    formatter: function (val) {
+                                        return usp.ParseUTCDate(val);
+                                    }
+                               },
+                              {
+                                  field: 'CouponEndTime', title: '优惠券结束日期', width: 160,
+                                    formatter: function (val) {
+                                        return usp.ParseUTCDate(val);
+                                    }
+                               },
+                              //{
+                              //     field: 'CouponLink', title: '优惠券链接', width: 150,
+                              // },
+                              //{
+                              //     field: 'PromotionLink', title: '推广链接', width: 150,
+                              // },
+                              //{
+                              //     field: 'Reserve', title: 'Reserve', width: 150,
+                              // },
+                              //{
+                              //     field: 'Remark', title: 'Remark', width: 150,
+                              // },
+                              //{
+                              //     field: 'Creator', title: 'Creator', width: 150,
+                              // },
+                              //{
+                              //     field: 'CreateTime', title: 'CreateTime', width: 150,
+                              //      formatter: function (val) {
+                              //          return usp.ParseUTCDate(val);
+                              //      }
+                              // },
+                              //{
+                              //     field: 'Auditor', title: 'Auditor', width: 150,
+                              // },
+                              //{
+                              //     field: 'AuditTime', title: 'AuditTime', width: 150,
+                              //      formatter: function (val) {
+                              //          return usp.ParseUTCDate(val);
+                              //      }
+                              // },
+                              //{
+                              //     field: 'Canceler', title: 'Canceler', width: 150,
+                              // },
+                              //{
+                              //     field: 'CancelTime', title: 'CancelTime', width: 150,
+                              //      formatter: function (val) {
+                              //          return usp.ParseUTCDate(val);
+                              //      }
+                              // },
+                        ]
+                    ],
+                    toolbar: toolbarmenu + "," + toolbarsearch,
+                    pagination: true,
+                    rownumbers: true,
+                    singleSelect: true,
+                    view: detailview,
+                    detailFormatter: function(rowIndex, rowData){
+                        return '<table><tr>' +
+                                '<td rowspan=2 style="border:0"><img src="' + rowData.Picture + '" style="height:200px;"></td>' +
+                                '<td style="border:0">' +
+                                '<p>名称:<span style="color:red">' + rowData.Name + '</span></p>' +
+                                 '<p>平台:<span style="color:red">' + rowData.PlatformName + '</span></p>' +
+                                '<p>类目:<span style="color:red">' + rowData.Type + '</span></p>' +
+                                '<p>月销量:<span style="color:red">' + rowData.MonthOrder + '</span></p>' +
+                                '<p>价格:<span style="color:red">' + rowData.Price + '</span></p>' +
+                                '<p>佣金:<span style="color:red">' + rowData.Commission + '</span></p>' +
+                                '<p">优惠券剩余/总数: <span style="color:red">' + rowData.CouponLeft + '/' + rowData.CouponCount + '</span></p>' +
+                                '<p> 链接：<a  href="' + rowData.DetailLink + '">详细页</a>|'+
+                                '<a target="_blank" href="' + rowData.CouponLink + '">优惠券</a>|' +
+                                '<a target="_blank" href="' + rowData.PromotionLink + '">推广链接</a>|' +
+                                '<a target="_blank" href="' + rowData.TBKLink + '">淘宝客</a></p>' +
+                        '</td>' +
+                        '</tr></table>';
+                    },
+                    onLoadSuccess: function () {
+                        if (usp.shop.comodity.index.iniCount === 0) {
+                            var fields = $(datagrid).datagrid('getColumnFields');
+                            var muit = "";
+                            for (var i = 0; i < fields.length; i++) {
+                                var opts = $(datagrid).datagrid('getColumnOption', fields[i]);
+                                muit += "<div data-options=\"name:'" + fields[i] + "'\" >" + opts.title + "</div>";
+                            };
+                            $("#mm").html(muit);
+                            $('#searchbox').searchbox({
+                                prompt: '请输入',
+                                searcher: function () {
+                                    var type = $('#searchbox').searchbox('getName');
+                                    var name = $('#searchbox').searchbox('getValue');
+                                    $(datagrid).datagrid('load', { actionName: 'indexdatagrid', type: type, name: name });
+                                },
+                                menu: "#mm",
+                                width: 300
+                            });
+                            usp.shop.comodity.index.iniCount++;
+                        }
+                    }
+                });
+            }
+
+            usp.shop.comodity.index.add = function (url) {
+                location.href = url;
+            }
+
+            usp.shop.comodity.index.edit = function (datagrid, url) {
+                var model = $(datagrid).datagrid("getSelected");
+                if (model) {
+                    location.href = url + model.ID;
+                } else {
+                    $.messager.alert('提示信息', '请选择要编辑数据！');
+                }
+            }
+
+            usp.shop.comodity.index.audit = function (datagrid, url) {
+                var model = $(datagrid).datagrid("getSelected");
+                if (model) {
+                    if (model.Auditor != null) {
+                        toastr.warning('数据已通过审核，无需重复操作！');
+                        return;
+                    }
+                    if (model.Canceler != null) {
+                        toastr.warning('数据处于注销状态，无法审核！');
+                        return;
+                    }
+                    $.messager.confirm('提示信息', '确定要审核通过此操作员？', function (r) {
+                        if (r) {
+                            $.ajax({
+                                url: url,
+                                type: 'post',
+                                dataType: 'json',
+                                data: { id: model.ID },
+                                success: function (data) {
+                                    if (data.flag) {
+                                        toastr.success('审核通过成功！');
+                                        $(datagrid).datagrid('reload');
+                                    } else {
+                                        toastr.error(data.message);
+                                    }
+                                },
+                                error: function () {
+                                    toastr.error('您没有操作权限！');
+                                }
+                            });
+                        }
+                    });
+                } else {
+                    toastr.error('请选择要审核通过的数据！');
+                }
+            }
+
+            usp.shop.comodity.index.cancel = function (datagrid, url) {
+                var model = $(datagrid).datagrid('getSelected');
+                if (model) {
+                    if (model.Canceler != null) {
+                        toastr.warning('权限处于注销状态，无需重复操作！');
+                        return;
+                    }
+                    $.messager.confirm('提示信息', '确定要注销此数据？', function (r) {
+                        if (r) {
+                            $.ajax({
+                                url: url,
+                                type: 'post',
+                                dataType: 'json',
+                                data: { id: model.ID },
+                                success: function (data) {
+                                    if (data.flag) {
+                                        toastr.success('注销成功！');
+                                        $(datagrid).datagrid('reload');
+                                    } else {
+                                        toastr.error(data.message);
+                                    }
+                                },
+                                error: function () {
+                                    toastr.error('您没有操作权限！');
+                                }
+                            })
+                        }
+                    });
+                } else {
+                    toastr.error('请选择要注销的数据！');
+                }
+            }
+
+            usp.shop.comodity.index.active = function (datagrid, url) {
+                var model = $(datagrid).datagrid("getSelected");
+                if (model) {
+                    if (model.Canceler == null) {
+                        toastr.warning('权限处于激活状态，无需重复操作！');
+                        return;
+                    }
+                    $.messager.confirm('提示信息', '确定要激活此操作员？', function (r) {
+                        if (r) {
+                            $.ajax({
+                                url: url,
+                                type: 'post',
+                                dataType: 'json',
+                                data: { id: model.ID },
+                                success: function (data) {
+                                    if (data.flag) {
+                                        toastr.success('激活成功！');
+                                        $(datagrid).datagrid('reload');
+                                    } else {
+                                        toastr.error(data.message);
+                                    }
+                                },
+                                error: function () {
+                                    toastr.error('您没有操作权限！');
+                                }
+                            });
+                        }
+                    });
+                } else {
+                    toastr.error('请选择要激活的数据！');
+                }
+            }
+
+            usp.shop.comodity.index.init = function (id, url, toolbarmenu, toolbarsearch) {
+                usp.shop.comodity.index.initGrid(id, url, toolbarmenu, toolbarsearch);
+            }
+            //usp.shop.comodity.index.show = function () {
+            //    $('#win').window('open');
+            //}
+            usp.shop.comodity.index.import = function (url) {
+                location.href = url ;
+            }
+
+            usp.shop.comodity.index.initFileUpload = function (id, uploadUrl) {
+                $(id).fileinput({
+                    language: 'zh', //设置语言
+                    uploadUrl: uploadUrl, //上传的地址
+                    allowedFileExtensions: ['xls'], //接收的文件后缀
+                    showCaption: false,
+                    //showPreview: false,
+                    showUpload: true, //是否显示上传按钮
+                    showCaption: false, //是否显示标题
+                    browseClass: "btn btn-primary", //按钮样式
+                    previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
+                    //initialPreview: [ //预览图片的设置
+                    //    "<img src='" + filename + "' class='file-preview-image' >"
+                    //]
+                });
+                $(id).on("fileuploaded", function (event, data, previewId, index) {
+                    if (data.jqXHR.responseJSON.IsSuccess) {
+                        toastr.error(data.jqXHR.responseJSON.Msg);
+                        //$(hiddenid).val(data.jqXHR.responseJSON.FileName);
+                    } else {
+                        toastr.error(data.jqXHR.responseJSON.Msg);
+                    }
+                });
+            }
+
+        })(this);
+        $(function () {
+            usp.init();
+            usp.shop.comodity.index.init("#datagrid", '/ShoppingMall/Comodity/Index', "#toolbarmenu", "#toolbarsearch");
+            usp.shop.comodity.index.initFileUpload("#importUpload","ExcelImport");
+            //$('#win').window({
+            //    title: "导入Excel",
+            //    width: 600,
+            //    height: 350,
+            //    modal: true,
+            //    closed: true
+            //});
+            if ('@TempData["resultMsgType"]' == 'success') {
+                toastr.success('@TempData["resultMsg"]');
+            } else if ('@TempData["resultMsgType"]' == 'error') {
+                toastr.error('@TempData["resultMsg"]');
+            }
+        });
+    </script>
+}

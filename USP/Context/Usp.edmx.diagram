@@ -45,6 +45,7 @@
         <EntityTypeShape EntityType="UspModel.SysBank" Width="1.5" PointX="15.375" PointY="18.75" />
         <EntityTypeShape EntityType="UspModel.SysDictionary" Width="1.5" PointX="17.375" PointY="18.75" />
         <EntityTypeShape EntityType="UspModel.CommodityType" Width="1.5" PointX="5.375" PointY="19.75" />
+        <EntityTypeShape EntityType="UspModel.Commodity" Width="1.5" PointX="19.375" PointY="16.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

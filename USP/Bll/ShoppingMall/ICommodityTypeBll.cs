@@ -19,6 +19,7 @@ namespace USP.Bll.ShoppingMall
         AjaxResult IsExisName(long id, string name);
         List<TreeNode> GetTree();
         AjaxResult Delete(long iD);
+
         //List<UP_ShowCommodityType_Result> GetAll(int? pageIndex, int? pageSize, string whereStr, string strOrder, string strOrderType);
     }
 }

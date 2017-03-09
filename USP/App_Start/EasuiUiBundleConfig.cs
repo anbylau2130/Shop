@@ -12,7 +12,7 @@ namespace USP
             BundleCollection bundles = BundleTable.Bundles;
 
             bundles.Add(new ScriptBundle("~/Js/easyui").Include(
-                     "~/Static/Js/jquery.easyui-{version}.js",
+                     "~/Static/Js/jquery.easyui.min-{version}.js",
                      "~/Static/Js/locale/easyui-lang-zh_CN.js"
                             ));
 

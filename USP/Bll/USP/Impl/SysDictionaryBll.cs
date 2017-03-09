@@ -131,25 +131,26 @@ namespace USP.Bll.Impl
         public List<TreeNode> GetDictTree()
         {
             List<TreeNode> resultTree = new List<TreeNode>();
-            List<SysDictionary> dicList=  dal.GetAll();
+            List<SysDictionary> dicList = dal.GetAll();
 
-            var parentList=  dicList.Where(x => (x.Parent == 0 || x.Parent == null) && x.ID==0).ToList();
+            var parentList = dicList.Where(x => (x.Parent == 0 || x.Parent == null) && x.ID == 0).ToList();
 
             foreach (var pdic in parentList)
             {
                 TreeNode tn = new TreeNode();
                 tn.id = pdic.ID;
                 tn.text = pdic.Name;
-                tn.attributes = new  {
-                    Type =pdic.Type,
-                    Creator =pdic.Creator,
+                tn.attributes = new
+                {
+                    Type = pdic.Type,
+                    Creator = pdic.Creator,
                     CreateTime = pdic.CreateTime,
                     Auditor = pdic.Auditor,
                     AuditTime = pdic.AuditTime,
                     Canceler = pdic.Canceler,
-                    CancelTime=pdic.CancelTime,
-                    Remark=pdic.Remark,
-                    Reserve=pdic.Reserve
+                    CancelTime = pdic.CancelTime,
+                    Remark = pdic.Remark,
+                    Reserve = pdic.Reserve
                 };
                 tn.children.AddRange(GetDictTree(pdic.ID, dicList));
                 resultTree.Add(tn);
@@ -161,7 +162,7 @@ namespace USP.Bll.Impl
             List<TreeNode> result = new List<TreeNode>();
 
             var List = allDict.Where(x => x.Parent == id && x.ID != 0);
-            foreach(var item in List)
+            foreach (var item in List)
             {
                 TreeNode tn = new TreeNode();
                 tn.id = item.ID;
@@ -185,10 +186,10 @@ namespace USP.Bll.Impl
                     Remark = item.Remark,
                     Reserve = item.Reserve
                 };
-                var temp = allDict.Where(x => x.Parent == item.ID && x.ID != 0 ).ToList();
+                var temp = allDict.Where(x => x.Parent == item.ID && x.ID != 0).ToList();
                 if (temp.Count() > 0)
                 {
-                   tn.children.AddRange(GetDictTree(item.ID, allDict));
+                    tn.children.AddRange(GetDictTree(item.ID, allDict));
                 }
                 result.Add(tn);
             }
@@ -210,6 +211,11 @@ namespace USP.Bll.Impl
                 result.message = temp.ProcMsg;
             }
             return result;
+        }
+
+        public List<SysDictionary> GetSubTreeNodesByName(string nodeName)
+        {
+            return dal.GetSubTreeNodesByName(nodeName);
         }
 
 

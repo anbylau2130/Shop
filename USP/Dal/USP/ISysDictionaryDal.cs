@@ -20,5 +20,6 @@ namespace USP.Dal
         ProcResult Auditor(SysDictionary model, long auditor);
         ProcResult Add(SysDictionary model);
         ProcResult Delete(long id);
+        List<SysDictionary> GetSubTreeNodesByName(string nodeName);
     }
 }
