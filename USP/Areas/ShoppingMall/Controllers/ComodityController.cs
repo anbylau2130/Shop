@@ -180,17 +180,29 @@ namespace USP.Areas.ShoppingMall.Controllers
             if (UploadUtil.UploadFile(fileUpload, Server.MapPath("~/Upload/"), fileName))
             {
                 DataTable dt = NPOIHelper.Import(Server.MapPath("~/Upload/") + fileName);
-                //初始化创建人，创建时间列
+                //初始化创建人，创建时间列,促销类型，优惠券条件
                 var creatorCol = new DataColumn("Creator", typeof(long));
                 var createTimeCol = new DataColumn("CreateTime", typeof(DateTime));
+                var PromotionTypeCol = new DataColumn("PromotionType", typeof(long));
+                var CouponConditionCol=new DataColumn("CouponCondition", typeof(decimal));
+                var CouponPriceCol = new DataColumn("CouponPrice", typeof(decimal));
                 creatorCol.DefaultValue = 0;
                 createTimeCol.DefaultValue = DateTime.Now;
+                CouponPriceCol.DefaultValue = 0;
+                CouponConditionCol.DefaultValue = 0;
+                PromotionTypeCol.DefaultValue = 0;
+
                 dt.Columns.Add(creatorCol);
                 dt.Columns.Add(createTimeCol);
+                dt.Columns.Add(CouponPriceCol);
+                dt.Columns.Add(CouponConditionCol);
+                dt.Columns.Add(PromotionTypeCol);
+  
+
                 //处理 平台 和类目
                 var plates = dictionaryBll.GetSubTreeNodesByName("平台类型");
                 var types = comodityTypeBll.GetAll();
-
+                var dicPromotionType= dictionaryBll.GetSubTreeNodesByName("促销类型");
 
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
@@ -213,14 +225,39 @@ namespace USP.Areas.ShoppingMall.Controllers
                         }
                         //获取优惠券金额
                         var couponPrice = string.Empty;
-                        if (dt.Rows[i]["优惠券面额"].ToString().Contains("元无条件卷"))
+                        if (dt.Rows[i]["优惠券面额"].ToString().Contains("元无条件券"))
                         {
-                            couponPrice = dt.Rows[i]["优惠券面额"].ToString().TrimEnd("元无条件卷".ToCharArray());
+                            couponPrice = dt.Rows[i]["优惠券面额"].ToString().TrimEnd("元无条件券".ToCharArray());
+                            dt.Rows[i]["CouponPrice"] = decimal.Parse(couponPrice);
+                            dt.Rows[i]["CouponCondition"] = 0;
                         }
                         else
                         {
                             var  priceArray = dt.Rows[i]["优惠券面额"].ToString().TrimStart('满').TrimEnd('元').Split(new string[] { "元减" }, StringSplitOptions.None).ToList();
                             couponPrice = priceArray[1].ToString();
+                            dt.Rows[i]["CouponPrice"] = decimal.Parse(couponPrice);
+                            dt.Rows[i]["CouponCondition"] = decimal.Parse(priceArray[0].ToString());
+                        }
+                        var truePrice = decimal.Parse(dt.Rows[i]["商品价格(单位：元)"].ToString()) - decimal.Parse(dt.Rows[i]["CouponPrice"].ToString());
+                        if (truePrice <= 10)
+                        {
+                            dt.Rows[i]["PromotionType"] = dicPromotionType.Where(x => x.Name == "9块9包邮").First().ID;
+                        }
+                        if(truePrice <= 20 && truePrice > 10)
+                        {
+                            dt.Rows[i]["PromotionType"] = dicPromotionType.Where(x => x.Name == "19块9包邮").First().ID;
+                        }
+                        if (truePrice <= 30 && truePrice > 20)
+                        {
+                            dt.Rows[i]["PromotionType"] = dicPromotionType.Where(x => x.Name == "29块9包邮").First().ID;
+                        }
+                        if (truePrice <= 40 && truePrice > 30)
+                        {
+                            dt.Rows[i]["PromotionType"] = dicPromotionType.Where(x => x.Name == "39块9包邮").First().ID;
+                        }
+                        if (truePrice <= 50 && truePrice >40)
+                        {
+                            dt.Rows[i]["PromotionType"] = dicPromotionType.Where(x => x.Name == "49块9包邮").First().ID;
                         }
                     }
                     catch (Exception ex)
@@ -257,6 +294,10 @@ namespace USP.Areas.ShoppingMall.Controllers
                     bulkCopy.ColumnMappings.Add("优惠券结束时间", "CouponEndTime");
                     bulkCopy.ColumnMappings.Add("优惠券链接", "CouponLink");
                     bulkCopy.ColumnMappings.Add("商品优惠券推广链接", "PromotionLink");
+
+                    bulkCopy.ColumnMappings.Add("CouponPrice", "CouponPrice");
+                    bulkCopy.ColumnMappings.Add("PromotionType", "PromotionType");
+                    bulkCopy.ColumnMappings.Add("CouponCondition", "CouponCondition");
                     bulkCopy.ColumnMappings.Add("Creator", "Creator");
                     bulkCopy.ColumnMappings.Add("CreateTime", "CreateTime");
                     try

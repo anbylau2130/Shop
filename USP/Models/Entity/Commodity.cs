@@ -47,5 +47,8 @@ namespace USP.Models.Entity
         public Nullable<System.DateTime> AuditTime { get; set; }
         public Nullable<long> Canceler { get; set; }
         public Nullable<System.DateTime> CancelTime { get; set; }
+        public Nullable<decimal> CouponPrice { get; set; }
+        public Nullable<decimal> CouponCondition { get; set; }
+        public Nullable<long> PromotionType { get; set; }
     }
 }

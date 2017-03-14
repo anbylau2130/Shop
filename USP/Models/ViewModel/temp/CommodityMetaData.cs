@@ -207,7 +207,24 @@ namespace USP.Models.ViewModel
             get;
             set;
         }
-    	
+        [Display(Name = "优惠券价格")]
+        public virtual Nullable<decimal> CouponPrice
+        {
+            get;
+            set;
+        }
+        [Display(Name = "优惠条件")]
+        public virtual Nullable<decimal> CouponCondition
+        {
+            get;
+            set;
+        }
+        [Display(Name = "促销类型")]
+        public virtual Nullable<long> PromotionType
+        {
+            get;
+            set;
+        }
         [StringLength(250, ErrorMessage="最多可输入250个字符")]
         [Display(Name = "保留")]
         public virtual string Reserve

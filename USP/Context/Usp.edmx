@@ -46,6 +46,9 @@
           <Property Name="CouponEndTime" Type="datetime" Nullable="false" />
           <Property Name="CouponLink" Type="varchar" MaxLength="400" Nullable="false" />
           <Property Name="PromotionLink" Type="varchar" MaxLength="400" Nullable="false" />
+          <Property Name="CouponPrice" Type="decimal" Precision="36" Scale="2" />
+          <Property Name="CouponCondition" Type="decimal" Precision="36" Scale="2" />
+          <Property Name="PromotionType" Type="bigint" />
           <Property Name="Reserve" Type="varchar" MaxLength="250" />
           <Property Name="Remark" Type="varchar" MaxLength="250" />
           <Property Name="Creator" Type="bigint" Nullable="false" />
@@ -1455,7 +1458,6 @@
           </FunctionImport>
           <EntitySet Name="SysDictionary" EntityType="UspModel.SysDictionary" />
           <EntitySet Name="CommodityType" EntityType="UspModel.CommodityType" />
-          <EntitySet Name="Commodity" EntityType="UspModel.Commodity" />
           <FunctionImport Name="UP_ShowCommodity" ReturnType="Collection(UspModel.UP_ShowCommodity_Result)">
             <Parameter Name="PageIndex" Mode="In" Type="Int32" />
             <Parameter Name="PageSize" Mode="In" Type="Int32" />
@@ -1463,6 +1465,7 @@
             <Parameter Name="strOrder" Mode="In" Type="String" />
             <Parameter Name="strOrderType" Mode="In" Type="String" />
           </FunctionImport>
+          <EntitySet Name="Commodity" EntityType="UspModel.Commodity" />
           </EntityContainer>
         <EntityType Name="IdCardImg">
           <Key>
@@ -2440,6 +2443,44 @@
           <Property Name="Canceler" Type="Int64" />
           <Property Name="CancelTime" Type="DateTime" Precision="3" />
         </EntityType>
+        <ComplexType Name="UP_ShowCommodity_Result">
+          <Property Type="Int64" Name="RowNo" Nullable="true" />
+          <Property Type="Int64" Name="RowCnt" Nullable="true" />
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="Picture" Nullable="false" MaxLength="400" />
+          <Property Type="String" Name="DetailLink" Nullable="false" MaxLength="400" />
+          <Property Type="String" Name="Type" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="TBKLink" Nullable="false" MaxLength="400" />
+          <Property Type="Decimal" Name="Price" Nullable="false" Precision="36" Scale="2" />
+          <Property Type="Int64" Name="MonthOrder" Nullable="false" />
+          <Property Type="Decimal" Name="IncomeRate" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Commission" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="String" Name="SellerId" Nullable="false" MaxLength="400" />
+          <Property Type="String" Name="SellerWangWangName" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="ShopName" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="PlatformName" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="CouponId" Nullable="false" MaxLength="100" />
+          <Property Type="Int64" Name="CouponCount" Nullable="false" />
+          <Property Type="Int64" Name="CouponLeft" Nullable="false" />
+          <Property Type="String" Name="CouponDenomination" Nullable="false" MaxLength="100" />
+          <Property Type="DateTime" Name="CouponBeginTime" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="CouponEndTime" Nullable="false" Precision="23" />
+          <Property Type="String" Name="CouponLink" Nullable="false" MaxLength="400" />
+          <Property Type="String" Name="PromotionLink" Nullable="false" MaxLength="400" />
+          <Property Type="String" Name="Reserve" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="Remark" Nullable="true" MaxLength="250" />
+          <Property Type="Int64" Name="Creator" Nullable="false" />
+          <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="23" />
+          <Property Type="Int64" Name="Auditor" Nullable="true" />
+          <Property Type="DateTime" Name="AuditTime" Nullable="true" Precision="23" />
+          <Property Type="Int64" Name="Canceler" Nullable="true" />
+          <Property Type="DateTime" Name="CancelTime" Nullable="true" Precision="23" />
+          <Property Type="Decimal" Name="CouponPrice" Nullable="true" Precision="36" Scale="2" />
+          <Property Type="Decimal" Name="CouponCondition" Nullable="true" Precision="36" Scale="2" />
+          <Property Type="String" Name="PromotionType" Nullable="true" MaxLength="255" />
+        </ComplexType>
         <EntityType Name="Commodity">
           <Key>
             <PropertyRef Name="ID" />
@@ -2475,42 +2516,10 @@
           <Property Name="AuditTime" Type="DateTime" Precision="3" />
           <Property Name="Canceler" Type="Int64" />
           <Property Name="CancelTime" Type="DateTime" Precision="3" />
+          <Property Name="CouponPrice" Type="Decimal" Precision="36" Scale="2" />
+          <Property Name="CouponCondition" Type="Decimal" Precision="36" Scale="2" />
+          <Property Name="PromotionType" Type="Int64" />
         </EntityType>
-        <ComplexType Name="UP_ShowCommodity_Result">
-          <Property Type="Int64" Name="RowNo" Nullable="true" />
-          <Property Type="Int64" Name="RowCnt" Nullable="true" />
-          <Property Type="Int64" Name="ID" Nullable="false" />
-          <Property Type="String" Name="Code" Nullable="false" MaxLength="255" />
-          <Property Type="String" Name="Name" Nullable="false" MaxLength="255" />
-          <Property Type="String" Name="Picture" Nullable="false" MaxLength="400" />
-          <Property Type="String" Name="DetailLink" Nullable="false" MaxLength="400" />
-          <Property Type="String" Name="Type" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="TBKLink" Nullable="false" MaxLength="400" />
-          <Property Type="Decimal" Name="Price" Nullable="false" Precision="36" Scale="2" />
-          <Property Type="Int64" Name="MonthOrder" Nullable="false" />
-          <Property Type="Decimal" Name="IncomeRate" Nullable="false" Precision="18" Scale="2" />
-          <Property Type="Decimal" Name="Commission" Nullable="false" Precision="18" Scale="2" />
-          <Property Type="String" Name="SellerId" Nullable="false" MaxLength="400" />
-          <Property Type="String" Name="SellerWangWangName" Nullable="false" MaxLength="255" />
-          <Property Type="String" Name="ShopName" Nullable="false" MaxLength="255" />
-          <Property Type="String" Name="PlatformName" Nullable="false" MaxLength="32" />
-          <Property Type="String" Name="CouponId" Nullable="false" MaxLength="100" />
-          <Property Type="Int64" Name="CouponCount" Nullable="false" />
-          <Property Type="Int64" Name="CouponLeft" Nullable="false" />
-          <Property Type="String" Name="CouponDenomination" Nullable="false" MaxLength="100" />
-          <Property Type="DateTime" Name="CouponBeginTime" Nullable="false" Precision="23" />
-          <Property Type="DateTime" Name="CouponEndTime" Nullable="false" Precision="23" />
-          <Property Type="String" Name="CouponLink" Nullable="false" MaxLength="400" />
-          <Property Type="String" Name="PromotionLink" Nullable="false" MaxLength="400" />
-          <Property Type="String" Name="Reserve" Nullable="true" MaxLength="250" />
-          <Property Type="String" Name="Remark" Nullable="true" MaxLength="250" />
-          <Property Type="Int64" Name="Creator" Nullable="false" />
-          <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="23" />
-          <Property Type="Int64" Name="Auditor" Nullable="true" />
-          <Property Type="DateTime" Name="AuditTime" Nullable="true" Precision="23" />
-          <Property Type="Int64" Name="Canceler" Nullable="true" />
-          <Property Type="DateTime" Name="CancelTime" Nullable="true" Precision="23" />
-        </ComplexType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -3512,43 +3521,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Commodity">
-            <EntityTypeMapping TypeName="UspModel.Commodity">
-              <MappingFragment StoreEntitySet="Commodity">
-                <ScalarProperty Name="CancelTime" ColumnName="CancelTime" />
-                <ScalarProperty Name="Canceler" ColumnName="Canceler" />
-                <ScalarProperty Name="AuditTime" ColumnName="AuditTime" />
-                <ScalarProperty Name="Auditor" ColumnName="Auditor" />
-                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
-                <ScalarProperty Name="Creator" ColumnName="Creator" />
-                <ScalarProperty Name="Remark" ColumnName="Remark" />
-                <ScalarProperty Name="Reserve" ColumnName="Reserve" />
-                <ScalarProperty Name="PromotionLink" ColumnName="PromotionLink" />
-                <ScalarProperty Name="CouponLink" ColumnName="CouponLink" />
-                <ScalarProperty Name="CouponEndTime" ColumnName="CouponEndTime" />
-                <ScalarProperty Name="CouponBeginTime" ColumnName="CouponBeginTime" />
-                <ScalarProperty Name="CouponDenomination" ColumnName="CouponDenomination" />
-                <ScalarProperty Name="CouponLeft" ColumnName="CouponLeft" />
-                <ScalarProperty Name="CouponCount" ColumnName="CouponCount" />
-                <ScalarProperty Name="CouponId" ColumnName="CouponId" />
-                <ScalarProperty Name="PlatformName" ColumnName="PlatformName" />
-                <ScalarProperty Name="ShopName" ColumnName="ShopName" />
-                <ScalarProperty Name="SellerWangWangName" ColumnName="SellerWangWangName" />
-                <ScalarProperty Name="SellerId" ColumnName="SellerId" />
-                <ScalarProperty Name="Commission" ColumnName="Commission" />
-                <ScalarProperty Name="IncomeRate" ColumnName="IncomeRate" />
-                <ScalarProperty Name="MonthOrder" ColumnName="MonthOrder" />
-                <ScalarProperty Name="Price" ColumnName="Price" />
-                <ScalarProperty Name="TBKLink" ColumnName="TBKLink" />
-                <ScalarProperty Name="Type" ColumnName="Type" />
-                <ScalarProperty Name="DetailLink" ColumnName="DetailLink" />
-                <ScalarProperty Name="Picture" ColumnName="Picture" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Code" ColumnName="Code" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="UP_ShowCommodity" FunctionName="UspModel.Store.UP_ShowCommodity">
             <ResultMapping>
               <ComplexTypeMapping TypeName="UspModel.UP_ShowCommodity_Result">
@@ -3585,9 +3557,52 @@
                 <ScalarProperty Name="AuditTime" ColumnName="AuditTime" />
                 <ScalarProperty Name="Canceler" ColumnName="Canceler" />
                 <ScalarProperty Name="CancelTime" ColumnName="CancelTime" />
+                <ScalarProperty Name="CouponPrice" ColumnName="CouponPrice" />
+                <ScalarProperty Name="CouponCondition" ColumnName="CouponCondition" />
+                <ScalarProperty Name="PromotionType" ColumnName="PromotionType" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <EntitySetMapping Name="Commodity">
+            <EntityTypeMapping TypeName="UspModel.Commodity">
+              <MappingFragment StoreEntitySet="Commodity">
+                <ScalarProperty Name="PromotionType" ColumnName="PromotionType" />
+                <ScalarProperty Name="CouponCondition" ColumnName="CouponCondition" />
+                <ScalarProperty Name="CouponPrice" ColumnName="CouponPrice" />
+                <ScalarProperty Name="CancelTime" ColumnName="CancelTime" />
+                <ScalarProperty Name="Canceler" ColumnName="Canceler" />
+                <ScalarProperty Name="AuditTime" ColumnName="AuditTime" />
+                <ScalarProperty Name="Auditor" ColumnName="Auditor" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Creator" ColumnName="Creator" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Reserve" ColumnName="Reserve" />
+                <ScalarProperty Name="PromotionLink" ColumnName="PromotionLink" />
+                <ScalarProperty Name="CouponLink" ColumnName="CouponLink" />
+                <ScalarProperty Name="CouponEndTime" ColumnName="CouponEndTime" />
+                <ScalarProperty Name="CouponBeginTime" ColumnName="CouponBeginTime" />
+                <ScalarProperty Name="CouponDenomination" ColumnName="CouponDenomination" />
+                <ScalarProperty Name="CouponLeft" ColumnName="CouponLeft" />
+                <ScalarProperty Name="CouponCount" ColumnName="CouponCount" />
+                <ScalarProperty Name="CouponId" ColumnName="CouponId" />
+                <ScalarProperty Name="PlatformName" ColumnName="PlatformName" />
+                <ScalarProperty Name="ShopName" ColumnName="ShopName" />
+                <ScalarProperty Name="SellerWangWangName" ColumnName="SellerWangWangName" />
+                <ScalarProperty Name="SellerId" ColumnName="SellerId" />
+                <ScalarProperty Name="Commission" ColumnName="Commission" />
+                <ScalarProperty Name="IncomeRate" ColumnName="IncomeRate" />
+                <ScalarProperty Name="MonthOrder" ColumnName="MonthOrder" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="TBKLink" ColumnName="TBKLink" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="DetailLink" ColumnName="DetailLink" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

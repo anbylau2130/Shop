@@ -39,6 +39,9 @@ namespace USP.Models.Entity
         public System.DateTime CouponEndTime { get; set; }
         public string CouponLink { get; set; }
         public string PromotionLink { get; set; }
+        public Nullable<decimal> CouponPrice { get; set; }
+        public Nullable<decimal> CouponCondition { get; set; }
+        public Nullable<long> PromotionType { get; set; }
         public string Reserve { get; set; }
         public string Remark { get; set; }
         public long Creator { get; set; }

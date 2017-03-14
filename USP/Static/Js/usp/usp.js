@@ -140,12 +140,12 @@
         var minutes = Math.floor(leave2 / (60 * 1000));    //计算相差分钟数
         var leave3=leave2%(60*1000)      //计算分钟数后剩余的毫秒数
         var seconds = Math.round(leave3 / 1000) ///计算相差秒数
-        if(days==0){
-            return  hours + "小时";
-        } else if (days == 0&& hours==0) {
-            return  minutes + "分钟" ;
-        } else if (days == 0 && hours == 0 && minutes == 0) {
-            return  seconds + "秒";
+        if (days == 0 && hours == 0 && minutes == 0) {
+            return seconds + "秒";
+        } else if (days == 0 && hours == 0) {
+            return minutes + "分钟";
+        } else if (days == 0 ) {
+             return hours + "小时";
         } else {
             return days + "天" ;
         }

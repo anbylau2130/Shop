@@ -39,43 +39,51 @@ namespace USP
             LogUtil.Info("SystemLogger", "Application_End");
         }
 
-        /*
-        protected void Application_Error(object sender, EventArgs e)
-        {
-            HttpException exception = Server.GetLastError().GetBaseException() as HttpException;
-            LogUtil.Exception("SystemLogger", exception);
-            RouteData routeData = new RouteData();
-            routeData.Values.Add("controller", "Error");
-            if (exception != null)
-            {
+     
+        //protected void Application_Error(object sender, EventArgs e)
+        //{
+            //HttpException exception = Server.GetLastError().GetBaseException() as HttpException;
+            //LogUtil.Exception("SystemLogger", exception);
+            //RouteData routeData = new RouteData();
+            //routeData.Values.Add("controller", "Error");
+            //if (exception != null)
+            //{
                 
-                switch (exception.GetHttpCode())
-                {
-                    case 401:
-                        // page not found
-                        routeData.Values.Add("action", "Http401");
-                        break;
-                    case 404:
-                        // page not found
-                        routeData.Values.Add("action", "Http404");
-                        break;
-                    case 500:
-                        // server error
-                        routeData.Values.Add("action", "Http500");
-                        break;
-                    default:
-                        routeData.Values.Add("action", "General");
-                        break;
-                }
-            }
-            else
-            {
-                routeData.Values.Add("action", "General");
-            }
-            Server.ClearError();
-            IController errorController = new ErrorController();
-            errorController.Execute(new RequestContext(new HttpContextWrapper(Context), routeData));
-        }
-        */
+            //    switch (exception.GetHttpCode())
+            //    {
+            //        case 401:
+            //            //page not found
+            //            ///routeData.Values.Add("action", "Http401");
+            //            Response.Redirect("Error/Http401", true);
+            //            return;
+            //            break;
+            //        case 404:
+            //            // page not found
+            //            //routeData.Values.Add("action", "Http404");
+            //            Response.Redirect("Error/Http404", true);
+            //            return;
+            //            break;
+            //        case 500:
+            //            // server error
+            //            //routeData.Values.Add("action", "Http500");
+            //            Response.Redirect("Error/Http500", true);
+            //            return;
+            //            break;
+            //        default:
+            //            Response.Redirect("Error/Http500",true);
+            //            //routeData.Values.Add("action", "General");
+            //            break;
+            //    }
+            //}
+            //else
+            //{
+            //    routeData.Values.Add("action", "General");
+            //}
+            //Server.ClearError();
+            //IController errorController = new ErrorController();
+            //errorController.Execute(new RequestContext(new HttpContextWrapper(Context), routeData));
+
+        //}
+       
     }
 }

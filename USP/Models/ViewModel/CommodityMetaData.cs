@@ -232,5 +232,20 @@ namespace USP.Models.ViewModel
             get;
             set;
         }
+        public virtual Nullable<decimal> CouponPrice
+        {
+            get;
+            set;
+        }
+        public virtual Nullable<decimal> CouponCondition
+        {
+            get;
+            set;
+        }
+        public virtual Nullable<long> PromotionType
+        {
+            get;
+            set;
+        }
     }
 }

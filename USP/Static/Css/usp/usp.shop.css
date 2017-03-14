@@ -1,6 +1,11 @@
 ﻿/*
  * Override Bootstrap's default container.
  */
+.row{
+margin-left:0px;
+margin-right:0px;
+}
+
 body {
   font-family: "Helvetica Neue", "Helvetica", "Lucida Grande", "Arial", "Hiragino Sans GB", "Microsoft Yahei", "WenQuanYi Micro Hei", "sans-serif";
   font-weight: normal;
@@ -109,13 +114,14 @@ box-shadow:0 0 2px 2px #f8f8f8;
 #article_list{
 padding-right: 5px;
 }
-/*.newsstyle .thumbpic{
-height: 171px;
+
+.newsstyle .thumbpic{
+height: 180px;
 vertical-align: middle;
 text-align: middle;
 display: table-cell;
   cursor: pointer;
-}*/
+}
 
 .newsstyle .caption h2{
   font-size: 14px;
@@ -182,6 +188,8 @@ background-color: #428bca;
 .thumbpic img {
     max-height: 250px;
     max-width: 250px;
+    /*width:100vw;*/
+    /*height:calc(100vw);*/
 }
 .binfo{
    overflow: hidden;
